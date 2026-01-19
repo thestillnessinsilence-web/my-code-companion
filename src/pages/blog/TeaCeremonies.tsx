@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import teaCeremonyImg from '@/assets/blog/tea-ceremony.jpg';
+import teaCeremonyImg from '@/assets/blog/steaming-herbal-tea-ritual-chamomile-flowers.jpg';
 
 export default function TeaCeremonies() {
   return (
@@ -54,7 +54,7 @@ export default function TeaCeremonies() {
         >
           <img
             src={teaCeremonyImg}
-            alt="Tea ceremony ritual herbal tea organic chamomile lavender meditation mindfulness"
+            alt="Steaming cup of herbal tea in a ceramic bowl with a sage green teapot, surrounded by dried chamomile flowers on a wooden serving board."
             className="w-full h-[400px] object-cover rounded-lg"
           />
         </motion.div>
