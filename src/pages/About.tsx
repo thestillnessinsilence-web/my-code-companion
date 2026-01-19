@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
-import appalachianView from '@/assets/appalachian-mountain-view.jpeg';
+import blueRidgeView from '@/assets/asheville-blue-ridge-mountain-view-window.jpg';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import {
   Accordion,
@@ -117,8 +117,8 @@ export default function About() {
           className="mb-12"
         >
           <img 
-            src={appalachianView} 
-            alt="Appalachian mountain scenery local business" 
+            src={blueRidgeView} 
+            alt="Rustic window view overlooking the Blue Ridge Mountains in autumn, featuring potted ferns, old herbal books, and a ceramic tea mug on the sill." 
             className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
           />
         </motion.div>
