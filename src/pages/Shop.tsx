@@ -13,7 +13,10 @@ const sampleProducts = [
     name: 'The Oracle Bag',
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized oracle message from the universe.',
     price: 48,
-    image_url: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
+    images: [
+      'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
+      oracleBagContents
+    ],
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
   }
 ];
@@ -32,7 +35,7 @@ export default function Shop() {
       id: product.id,
       name: product.name,
       price: product.price,
-      image_url: product.image_url
+      image_url: product.images?.[0]
     });
     
     await new Promise(resolve => setTimeout(resolve, 300));
@@ -93,40 +96,6 @@ export default function Shop() {
             ))}
           </div>
         )}
-      </div>
-
-      {/* What's Inside Section */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10"
-        >
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-stone-500 mb-4 block">
-            Discover the Contents
-          </span>
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-stone-800 mb-4">
-            What's Inside the Bag
-          </h2>
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mx-auto" />
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative rounded-lg overflow-hidden shadow-xl"
-        >
-          <img
-            src={oracleBagContents}
-            alt="Oracle Bag contents including healing crystals, organic tea, candle, herbal bookmark, and oracle message"
-            className="w-full h-auto object-cover"
-            loading="lazy"
-          />
-        </motion.div>
       </div>
 
       {/* Sacred Geometry Decoration */}
