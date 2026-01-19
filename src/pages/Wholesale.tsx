@@ -60,8 +60,8 @@ export default function Wholesale() {
   return (
     <>
       <Helmet>
-        <title>Wholesale Oracle Bags & Crystal Ritual Kits | Handmade in Asheville, NC</title>
-        <meta name="description" content="Stock your boutique with handmade mystery Oracle Bags. Unique crystal & herbal ritual kits from Asheville, NC. Join our stockist program for exclusive pricing." />
+        <title>Wholesale Oracle Bags & Crystal Ceremony Kits | Handmade in Asheville, NC</title>
+        <meta name="description" content="Stock your boutique with handmade mystery Oracle Bags. Unique crystal & herbal ceremony kits from Asheville, NC. Join our stockist program for exclusive pricing." />
         <meta name="keywords" content="wholesale crystals, bulk oracle bags, metaphysical wholesale, wellness retail, crystal shop supplier, Asheville wholesale" />
         <link rel="canonical" href="https://crystalbloomery.com/wholesale" />
       </Helmet>
@@ -82,7 +82,7 @@ export default function Wholesale() {
             Partner With Us
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-800 mb-6">
-            Wholesale Crystal Ritual Kits
+            Wholesale Crystal Ceremony Kits
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-stone-600 max-w-2xl mx-auto leading-relaxed text-lg">
