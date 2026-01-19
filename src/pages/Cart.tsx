@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ShoppingBag, ArrowRight, Loader2, Lock, Plus, Minus, Trash2, Shield, Truck, Heart, ArrowLeft } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Loader2, Lock, Plus, Minus, Trash2, ShieldCheck, Truck, Heart, ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
 import { createPageUrl } from '@/utils';
 import { useCart } from '@/context/CartContext';
@@ -397,8 +397,8 @@ export default function Cart() {
                 {/* Trust Badges */}
                 <div className="flex items-center justify-center gap-8 mt-6 text-stone-400">
                   <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4" />
-                    <span className="text-xs">Secure</span>
+                    <ShieldCheck className="w-4 h-4" />
+                    <span className="text-xs">SSL</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Truck className="w-4 h-4" />
@@ -517,8 +517,8 @@ export default function Cart() {
                   {/* Trust Badges */}
                   <div className="flex flex-wrap items-center justify-center gap-4 text-stone-400 pt-6 mt-6 border-t border-stone-100">
                     <div className="flex items-center gap-2">
-                      <Shield className="w-4 h-4" />
-                      <span className="text-xs">Secure</span>
+                      <ShieldCheck className="w-4 h-4" />
+                      <span className="text-xs">SSL</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Truck className="w-4 h-4" />
