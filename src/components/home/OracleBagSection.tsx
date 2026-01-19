@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import oracleStep01 from '@/assets/oracle-step-01.png';
-import oracleTeaRitual from '@/assets/oracle-tea-ritual.png';
+import herbalRoseTeaRitual from '@/assets/herbal-rose-tea-ritual-oracle-bag-asheville.jpg';
 import crystalRitualSpellBag from '@/assets/crystal-ritual-spell-bag.png';
 import crystalHerbalBagCeremony from '@/assets/crystal-herbal-bag-ceremony-for-peace.png';
 
@@ -19,8 +19,8 @@ export default function OracleBagSection() {
       number: '02',
       title: 'Prepare the Flower Tea',
       description: 'Brew the organic floral tea included in your satchel. Each one is unique, be sure to read the properties listed on each tea box.',
-      image: oracleTeaRitual,
-      alt: 'Crystal ceremony bag tea ritual organic floral tea meditation preparation spiritual gift Asheville'
+      image: herbalRoseTeaRitual,
+      alt: 'Ceramic mug of herbal tea topped with dried rose buds, sitting on a wooden desk next to a red velvet Oracle Bag, a lit tea light, and an open journal for a meditation ritual.'
     },
     {
       number: '03',
