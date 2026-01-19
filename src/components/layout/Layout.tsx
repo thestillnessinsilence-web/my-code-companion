@@ -193,6 +193,8 @@ export default function Layout({ children }: LayoutProps) {
                 <Link to={createPageUrl('Blog')} className="text-sm hover:text-white transition-colors">Blog</Link>
                 <Link to={createPageUrl('Contact')} className="text-sm hover:text-white transition-colors">Contact</Link>
                 <Link to={createPageUrl('Wholesale')} className="text-sm hover:text-white transition-colors">Wholesale</Link>
+                <Link to={createPageUrl('Events')} className="text-sm hover:text-white transition-colors">Events</Link>
+                <Link to={createPageUrl('BookReading')} className="text-sm hover:text-white transition-colors">Book a Reading</Link>
               </div>
             </div>
             <div>
