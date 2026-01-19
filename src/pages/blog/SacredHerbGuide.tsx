@@ -40,8 +40,8 @@ export default function SacredHerbGuide() {
             Sacred Herb Guide: Appalachian Herbal Traditions
           </h1>
           <p className="font-sans text-lg text-stone-600 leading-relaxed">
-            Explore the rich heritage of Appalachian herbalism and the traditional uses of lavender, 
-            mugwort, chamomile, and other sacred plants in our collection.
+            Explore the rich heritage of Appalachian herbalism and learn about the traditional uses of lavender, 
+            chamomile, and other sacred plants that inspire the floral teas in our Oracle Bags.
           </p>
         </motion.header>
 
@@ -81,7 +81,7 @@ export default function SacredHerbGuide() {
               This fusion created a unique pharmacopoeia suited to the plants available in these mountain ecosystems.
             </p>
 
-            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Our Sacred Herb Collection</h2>
+            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Herbs That Inspire Our Floral Teas</h2>
 
             <div className="grid gap-6 my-8">
               <div className="bg-purple-50 p-6 rounded-lg">
@@ -97,8 +97,8 @@ export default function SacredHerbGuide() {
                 </p>
                 <p className="mt-3">
                   In Appalachian tradition, lavender sachets were placed under pillows for restful sleep, and 
-                  lavender tea was given to calm nervous conditions. Our Oracle Bags include organic lavender 
-                  to bring its soothing presence to your ritual space.
+                  lavender tea was given to calm nervous conditions. The floral teas included in our Oracle Bags 
+                  are inspired by these calming traditions.
                 </p>
               </div>
 
@@ -115,7 +115,7 @@ export default function SacredHerbGuide() {
                 </p>
                 <p className="mt-3">
                   Appalachian grannies kept dried chamomile in their apothecaries for "nervous stomach" and to 
-                  help fussy children sleep. The gentle tea we include in each Oracle Bag honors this tradition.
+                  help fussy children sleep. The organic floral tea included in each Oracle Bag is inspired by this gentle tradition.
                 </p>
               </div>
 
@@ -190,12 +190,13 @@ export default function SacredHerbGuide() {
 
             <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Honoring the Tradition</h2>
             <p>
-              At Crystal Bloomery, we're honored to continue the Appalachian tradition of herbal wisdom. Each 
-              Oracle Bag includes carefully selected organic herbs, along with information about their traditional 
-              uses. We source from sustainable growers who share our respect for these sacred plants.
+              At Crystal Bloomery, we're honored to draw inspiration from the Appalachian tradition of herbal wisdom. 
+              Each Oracle Bag includes an organic floral tea blend crafted with care, along with crystals, a soy candle, 
+              and a personal oracle message. While we don't sell individual herbs, we celebrate their legacy through 
+              the thoughtfully curated teas in our ceremony kits.
             </p>
             <p>
-              When you open your Oracle Bag and breathe in the scent of lavender and herbs, you're connecting 
+              When you open your Oracle Bag and brew the floral tea within, you're connecting 
               with a lineage of mountain healers, wise women, and plant lovers who understood that the earth 
               provides what we need for body, mind, and spirit.
             </p>
