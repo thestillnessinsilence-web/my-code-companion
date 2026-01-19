@@ -113,25 +113,25 @@ export default function Layout({ children }: LayoutProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-stone-100">
-            <div className="px-6 py-6 space-y-4">
+          <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-stone-100 safe-area-bottom">
+            <div className="px-6 py-6 space-y-2">
               {navLinks.map((link) => (
                 <div key={link.page}>
                   <Link
                     to={createPageUrl(link.page)}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block font-sans text-sm tracking-widest uppercase text-stone-600 py-2"
+                    className="block font-sans text-sm tracking-widest uppercase text-stone-600 py-3 min-h-[44px] flex items-center active:text-[#10665c]"
                   >
                     {link.name}
                   </Link>
                   {link.submenu && (
-                    <div className="pl-4 space-y-2 mt-2">
+                    <div className="pl-4 space-y-1 mt-1">
                       {link.submenu.map((sublink) => (
                         <Link
                           key={sublink.page}
                           to={createPageUrl(sublink.page)}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block font-sans text-xs tracking-widest uppercase text-stone-500 py-1"
+                          className="block font-sans text-xs tracking-widest uppercase text-stone-500 py-3 min-h-[44px] flex items-center active:text-[#10665c]"
                         >
                           {sublink.name}
                         </Link>
