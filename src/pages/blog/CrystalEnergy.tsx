@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import crystalEnergyImg from '@/assets/blog/crystal-energy.jpg';
+import crystalEnergyImg from '@/assets/blog/glowing-purple-crystal-energy-healing-vibrations.jpg';
 
 export default function CrystalEnergy() {
   return (
@@ -54,7 +54,7 @@ export default function CrystalEnergy() {
         >
           <img
             src={crystalEnergyImg}
-            alt="Crystal collection amethyst rose quartz healing stones spiritual energy Appalachian"
+            alt="Glowing purple crystal towers resting on soft velvet, appearing to radiate spiritual energy and healing vibrations in a mystical setting."
             className="w-full h-[400px] object-cover rounded-lg"
           />
         </motion.div>
