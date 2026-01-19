@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import moonWaterImg from '@/assets/blog/moon-water.jpg';
 import crystalHealingImg from '@/assets/blog/crystal-healing.jpg';
@@ -60,7 +61,12 @@ export default function Blog() {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50 pt-32 pb-24">
+    <>
+      <Helmet>
+        <title>About Crystal Bloomery | The Bloomery Journal</title>
+        <meta name="description" content="Explore sacred practices of crystal healing, herbalism, and mindful living through our curated collection of guides and stories from Crystal Bloomery." />
+      </Helmet>
+      <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -123,5 +129,6 @@ export default function Blog() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/home/HeroSection';
 import OracleBagSection from '@/components/home/OracleBagSection';
+
 export default function Home() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Crystal and Herbal Ceremony Ritual Bags Handmade in Asheville, NC: Crystal Bloomery</title>
+        <meta name="description" content="Find your moment of serenity with Crystal Bloomery. Our signature mystery Oracle Bags are complete contemplation ceremonies, featuring intuitively chosen crystals, calming tea, and a tea light." />
+      </Helmet>
+      <div>
       <HeroSection />
       <OracleBagSection />
       
@@ -54,6 +61,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

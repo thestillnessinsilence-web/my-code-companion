@@ -1,9 +1,15 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Globe } from 'lucide-react';
 
 export default function Events() {
   return (
-    <div className="min-h-screen bg-stone-50 pt-32 pb-24">
+    <>
+      <Helmet>
+        <title>Oracle Bag Gifts and Favors | Crystal Bloomery Events</title>
+        <meta name="description" content="Custom Oracle Bags for weddings, celebrations, and special events. Bulk pricing and personalized messages available for your sacred occasion." />
+      </Helmet>
+      <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <motion.div
@@ -134,5 +140,6 @@ export default function Events() {
         </div>
       </div>
     </div>
+    </>
   );
 }
