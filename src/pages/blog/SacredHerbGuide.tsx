@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import sacredHerbsImg from '@/assets/blog/herbal-apothecary-mortar-pestle-chamomile-lavender.jpg';
 
 export default function SacredHerbGuide() {
   return (
+    <>
+      <Helmet>
+        <title>Sacred Herb Guide: Appalachian Herbal Traditions | Crystal Bloomery</title>
+        <meta name="description" content="Explore the rich heritage of Appalachian herbalism. Learn about lavender, chamomile, and other sacred plants that inspire our floral teas." />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -228,5 +234,6 @@ export default function SacredHerbGuide() {
         </div>
       </article>
     </div>
+    </>
   );
 }

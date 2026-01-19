@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Sparkles, MapPin, Phone, Clock, Heart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Sparkles, MapPin, Phone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 

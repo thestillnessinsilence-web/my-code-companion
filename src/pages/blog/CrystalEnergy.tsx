@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import crystalEnergyImg from '@/assets/blog/glowing-purple-crystal-energy-healing-vibrations.jpg';
 
 export default function CrystalEnergy() {
   return (
+    <>
+      <Helmet>
+        <title>Understanding Crystal Energy | Crystal Bloomery</title>
+        <meta name="description" content="Dive deep into the vibrational frequencies of healing stones like amethyst and rose quartz. Learn how to work with crystal energy in your spiritual practice." />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -272,5 +278,6 @@ export default function CrystalEnergy() {
         </div>
       </article>
     </div>
+    </>
   );
 }
