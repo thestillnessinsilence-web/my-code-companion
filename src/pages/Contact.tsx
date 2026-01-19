@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -39,6 +40,12 @@ export default function Contact() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Contact Crystal Bloomery | Questions About Oracle Bags</title>
+        <meta name="description" content="Get in touch with Crystal Bloomery. Ask questions about our handcrafted Oracle Bags, wholesale inquiries, or custom event orders. We'd love to connect with you." />
+        <link rel="canonical" href="https://crystalbloomery.com/contact" />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
@@ -216,5 +223,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }
