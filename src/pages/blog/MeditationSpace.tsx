@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import meditationSpaceImg from '@/assets/blog/meditation-space.jpg';
+import meditationSpaceImg from '@/assets/blog/cozy-meditation-corner-sacred-space-decor.jpg';
 
 export default function MeditationSpace() {
   return (
@@ -54,7 +54,7 @@ export default function MeditationSpace() {
         >
           <img
             src={meditationSpaceImg}
-            alt="Peaceful meditation space with crystals candles ritual herbal spiritual sanctuary"
+            alt="Sunlit meditation corner featuring a beige floor pillow, large potted plants, and lit candles on a woven tray near a window with sheer curtains."
             className="w-full h-[400px] object-cover rounded-lg"
           />
         </motion.div>
