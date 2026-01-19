@@ -46,14 +46,25 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen bg-stone-50 font-sans">
+      {/* Skip to Content Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-stone-800 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#10665c]"
+      >
+        Skip to main content
+      </a>
+
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
-      }`}>
+      <nav
+        className={`fixed w-full z-50 transition-all duration-500 ${
+          scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        }`}
+        aria-label="Main navigation"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3" aria-label="Crystal Bloomery - Home">
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#10665c] via-[#7c4d8f] to-[#b695c8] opacity-20" />
                 <svg className="absolute inset-0 w-10 h-10" viewBox="0 0 40 40" fill="none">
@@ -98,21 +109,28 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to={createPageUrl('Cart')}
                 className="relative p-2 text-[#d4af37] hover:text-[#b8941f] transition-colors"
+                aria-label="View shopping cart"
               >
-                <Sparkles className="w-5 h-5" strokeWidth={1} />
+                <Sparkles className="w-5 h-5" strokeWidth={1} aria-hidden="true" />
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center gap-4">
-              <Link to={createPageUrl('Cart')} className="relative p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-[#d4af37]" strokeWidth={1} />
+              <Link
+                to={createPageUrl('Cart')}
+                className="relative p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="View shopping cart"
+              >
+                <Sparkles className="w-5 h-5 text-[#d4af37]" strokeWidth={1} aria-hidden="true" />
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-stone-600 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={mobileMenuOpen}
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
               </button>
             </div>
           </div>
@@ -153,7 +171,7 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
 
       {/* Main Content */}
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
 
       {/* Footer */}
       <footer className="bg-stone-900 text-stone-400 py-16">
