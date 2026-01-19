@@ -15,7 +15,8 @@ export default function BookReading() {
         "Watercolor aura reading",
         "Mediumship or Tarot Reading available",
         "Sliding Scale pricing for those in need!",
-        "$30 for 30 minutes and $60 for 60 minutes"
+        "$30 for 30 minutes and $60 for 60 minutes",
+        "Reading notes sent to you by email"
       ]
     },
     {
@@ -28,7 +29,8 @@ export default function BookReading() {
         "Mediumship or Tarot Reading available",
         "Sliding Scale pricing for those in need!",
         "$30 for 30 minutes and $60 for 60 minutes",
-        "Reading notes sent to you by email"
+        "Reading notes sent to you by email",
+        "$5 shipping charge for original otherwise sent by email"
       ]
     }
   ];
@@ -96,40 +98,6 @@ export default function BookReading() {
           </div>
         </div>
 
-        {/* How It Works */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-serif text-3xl text-stone-800 mb-4">How It Works</h2>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto" />
-          </motion.div>
-
-          <div className="grid sm:grid-cols-3 gap-8">
-            {[
-              { step: "1", title: "Reach Out", description: "Contact us to schedule your reading and share what you're seeking guidance on." },
-              { step: "2", title: "Prepare", description: "Take time to center yourself. Come with an open heart and any questions on your mind." },
-              { step: "3", title: "Receive", description: "Experience your intuitive reading and receive crystal and oracle wisdom for your path." }
-            ].map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#10665c] text-white font-serif text-xl flex items-center justify-center mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="font-serif text-lg text-stone-800 mb-2">{item.title}</h3>
-                <p className="font-sans text-sm text-stone-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
 
         {/* Contact CTA */}
         <motion.div
@@ -146,11 +114,11 @@ export default function BookReading() {
             <p className="font-sans text-stone-600 mb-8 max-w-xl mx-auto">
               Reach out to schedule your intuitive reading. We'll respond within 24-48 hours to find a time that works for you.
             </p>
-            <Link to="/contact">
+            <a href="mailto:crystalbloomery@gmail.com">
               <Button className="bg-[#10665c] hover:bg-[#0d5249] text-white px-10 py-6 font-sans text-sm tracking-widest uppercase transition-all">
-                Contact Us to Book
+                Email Us to Book
               </Button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>
