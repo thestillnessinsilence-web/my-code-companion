@@ -47,8 +47,8 @@ export default function Shop() {
   return (
     <>
       <Helmet>
-        <title>Shop Oracle Bags | Handcrafted Crystal & Herbal Ceremony Kits</title>
-        <meta name="description" content="Shop our signature Oracle Bags featuring moon-blessed crystals, organic herbal tea, soy candles, and personalized oracle messages. Handcrafted in Asheville, NC." />
+        <title>Mystery Crystal & Tea Ceremony Kit | The Oracle Bag</title>
+        <meta name="description" content="A complete ritual in a velvet bag. Includes intuitively chosen crystals, herbal tea, and a tea light. Perfect for meditation, contemplation, and peace. What message does the Oracle have for you?" />
         <meta name="keywords" content="oracle bags, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
         <link rel="canonical" href="https://crystalbloomery.com/shop" />
       </Helmet>
