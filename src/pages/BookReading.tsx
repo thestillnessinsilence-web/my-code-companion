@@ -25,12 +25,11 @@ export default function BookReading() {
       location: "Anywhere",
       description: "Can't make it to Asheville? Connect with the Oracle from wherever you are. Phone readings offer the same intuitive guidance from the comfort of your own sacred space.",
       details: [
-        "Watercolor aura reading",
+        "Watercolor aura reading ($5 shipping charge for original watercolor otherwise copy by email)",
         "Mediumship or Tarot Reading available",
         "Sliding Scale pricing for those in need!",
         "$30 for 30 minutes and $60 for 60 minutes",
-        "Reading notes sent to you by email",
-        "$5 shipping charge for original otherwise sent by email"
+        "Reading notes sent to you by email"
       ]
     }
   ];
