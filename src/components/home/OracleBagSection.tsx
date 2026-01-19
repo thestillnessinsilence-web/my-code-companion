@@ -154,13 +154,9 @@ export default function OracleBagSection() {
                     <img
                       src={step.image}
                       alt={step.alt || step.title}
-                      className="w-full h-full object-cover object-top pointer-events-none select-none"
+                      className="w-full h-full object-cover object-top"
                       loading="lazy"
-                      draggable={false}
-                      onContextMenu={(e) => e.preventDefault()}
                     />
-                    {/* Overlay to prevent image download */}
-                    <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} />
                   </div>
                   <div className="relative bg-stone-50 group-hover:bg-[#c8b5d9] px-6 py-8 text-center transition-colors duration-300">
                     <span className="font-serif text-5xl mb-4 block text-stone-400 group-hover:text-white transition-colors duration-300">
