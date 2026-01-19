@@ -23,6 +23,7 @@ const Wholesale = lazy(() => import("./pages/Wholesale"));
 const BookReading = lazy(() => import("./pages/BookReading"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 // Lazy load blog posts
 const MoonWater = lazy(() => import("./pages/blog/MoonWater"));
@@ -68,8 +69,9 @@ const App = () => (
                   <Route path="/wholesale" element={<Wholesale />} />
                   <Route path="/bookreading" element={<BookReading />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                  <Route path="/terms-of-service" element={<TermsOfService />} />
-                  <Route path="*" element={<NotFound />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
             </Layout>
