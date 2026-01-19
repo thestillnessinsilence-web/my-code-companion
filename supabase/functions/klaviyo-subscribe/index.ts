@@ -40,8 +40,8 @@ serve(async (req) => {
       );
     }
 
-    // Subscribe to Klaviyo using the Profiles API
-    const response = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
+    // Create profile in Klaviyo using the Profiles API
+    const response = await fetch('https://a.klaviyo.com/api/profiles/', {
       method: 'POST',
       headers: {
         'Authorization': `Klaviyo-API-Key ${KLAVIYO_API_KEY}`,
@@ -50,33 +50,9 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         data: {
-          type: 'profile-subscription-bulk-create-job',
+          type: 'profile',
           attributes: {
-            profiles: {
-              data: [
-                {
-                  type: 'profile',
-                  attributes: {
-                    email: email,
-                    subscriptions: {
-                      email: {
-                        marketing: {
-                          consent: 'SUBSCRIBED'
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          relationships: {
-            list: {
-              data: {
-                type: 'list',
-                id: Deno.env.get('KLAVIYO_LIST_ID') || ''
-              }
-            }
+            email: email
           }
         }
       })
@@ -86,32 +62,18 @@ serve(async (req) => {
       const errorText = await response.text();
       console.error('Klaviyo API error:', errorText);
       
-      // Try the simpler subscribe endpoint as fallback
-      const fallbackResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Klaviyo-API-Key ${KLAVIYO_API_KEY}`,
-          'Content-Type': 'application/json',
-          'revision': '2024-02-15'
-        },
-        body: JSON.stringify({
-          data: {
-            type: 'profile',
-            attributes: {
-              email: email
-            }
-          }
-        })
-      });
-
-      if (!fallbackResponse.ok) {
-        const fallbackError = await fallbackResponse.text();
-        console.error('Klaviyo fallback error:', fallbackError);
+      // Handle duplicate profile (already subscribed)
+      if (response.status === 409) {
         return new Response(
-          JSON.stringify({ error: 'Failed to subscribe. Please try again.' }),
-          { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          JSON.stringify({ success: true, message: 'Already subscribed!' }),
+          { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
+      
+      return new Response(
+        JSON.stringify({ error: 'Failed to subscribe. Please try again.' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     return new Response(
