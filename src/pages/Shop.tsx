@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ProductCard from '@/components/shop/ProductCard';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
+import { useCart } from '@/context/CartContext';
 
 // Sample products for display (in production, this would come from a database)
 const sampleProducts = [
@@ -26,15 +27,22 @@ const sampleProducts = [
 
 export default function Shop() {
   const [addingProduct, setAddingProduct] = useState<string | null>(null);
+  const { addToCart } = useCart();
   const isLoading = false;
   const products = sampleProducts;
 
   const handleAddToCart = async (product: typeof sampleProducts[0]) => {
     setAddingProduct(product.id);
     
-    // Simulate adding to cart
-    await new Promise(resolve => setTimeout(resolve, 500));
+    // Add to cart context
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image_url: product.image_url
+    });
     
+    await new Promise(resolve => setTimeout(resolve, 300));
     toast.success(`${product.name} added to your bag`);
     setAddingProduct(null);
   };
