@@ -73,7 +73,7 @@ export default function About() {
     },
     {
       question: "Return & Refund Policy",
-      answer: "Due to the intuitive, small-batch, and mystery nature of our ceremony kits, all sales are final. We do not accept returns or exchanges on opened or unopened Oracle Bags.\n\n**Your Happiness Matters**\nWe are a small business and truly value your peace of mind. If your item arrives damaged, or if you have serious concerns about your experience, please reach out to us at crystalbloomery@gmail.com. We welcome feedback and promise to work directly with you to find a fair resolution that makes you happy."
+      answer: "Due to the intuitive, small-batch, and mystery nature of our ceremony kits, all sales are final. We do not accept returns or exchanges on opened or unopened Oracle Bags.\n\n**Your Happiness Matters**\nWe are a small business and truly value your peace of mind. If your item arrives damaged, or if you have serious concerns about your experience, please reach out to us at crystalbloomery@gmail.com. We welcome feedback and promise to work directly with you to find a fair resolution in case of an unusual circumstance."
     },
     {
       question: "Privacy Policy",
