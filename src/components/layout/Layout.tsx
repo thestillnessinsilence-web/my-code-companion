@@ -22,8 +22,13 @@ export default function Layout({ children }: LayoutProps) {
   const navLinks = [
     { name: 'Home', page: 'Home' },
     { name: 'Shop', page: 'Shop' },
-    { name: 'About', page: 'About' },
-    { name: 'Contact', page: 'Contact' },
+    { name: 'About', page: 'About', submenu: [
+      { name: 'Blog', page: 'Blog' },
+      { name: 'Contact', page: 'Contact' }
+    ]},
+    { name: 'Wholesale', page: 'Wholesale', submenu: [
+      { name: 'Events', page: 'Events' }
+    ]},
   ];
 
   return (
