@@ -82,8 +82,8 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Crystal Bloomery | Handcrafted Oracle Bags from Asheville, NC</title>
-        <meta name="description" content="Learn about Crystal Bloomery's handcrafted Oracle Bags made in the heart of the Appalachian Mountains. Discover our values, story, and commitment to sacred healing." />
+        <title>About Crystal Bloomery</title>
+        <meta name="description" content="Meet the creator behind Crystal Bloomery. Handcrafting sacred oracle bags and curating crystal rituals in the Blue Ridge Mountains of Asheville, NC." />
       </Helmet>
       <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
@@ -95,10 +95,10 @@ export default function About() {
           className="text-center"
         >
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#7c4d8f] mb-4 block">
-            Our Story
+            Crystal Bloomery
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-800 mb-6">
-            Handcrafted Heritage
+            Our Story
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
         </motion.div>
