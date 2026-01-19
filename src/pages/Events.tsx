@@ -2,6 +2,41 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Globe } from 'lucide-react';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import floatingGlassNecklace from '@/assets/wholesale/floating-glass-necklace.jpg';
+import charmNecklaces from '@/assets/wholesale/charm-necklaces.jpg';
+import collectorCrystals from '@/assets/wholesale/collector-crystals.jpg';
+import weddingCustom from '@/assets/wholesale/wedding-custom.jpg';
+
+const curatedItems = [
+  {
+    image: floatingGlassNecklace,
+    title: "Floating Glass Necklaces",
+    description: "Custom botanical pendants with preserved flowers"
+  },
+  {
+    image: charmNecklaces,
+    title: "Sterling & Gold Charm Necklaces",
+    description: "Artisan moon, crystal, and botanical charms"
+  },
+  {
+    image: collectorCrystals,
+    title: "High Quality Collector Crystals",
+    description: "Museum-grade specimens for discerning collectors"
+  },
+  {
+    image: weddingCustom,
+    title: "Custom Wedding Branding",
+    description: "Personalized bridal party gifts and favors"
+  }
+];
 
 export default function Events() {
   return (
@@ -102,6 +137,53 @@ export default function Events() {
               </div>
             </div>
           </div>
+
+          {/* Curated Items Carousel */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-12"
+          >
+            <div className="text-center mb-8">
+              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">Special Items We Can Curate</h2>
+              <p className="font-sans text-stone-600 max-w-2xl mx-auto">
+                Elevate your event with unique additions to your custom Oracle Bags.
+              </p>
+            </div>
+
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-4xl mx-auto"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {curatedItems.map((item, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
+                    <div className="p-1">
+                      <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-stone-200 group">
+                        <div className="aspect-square overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="p-6 text-center">
+                          <h3 className="font-serif text-lg text-stone-800 mb-2">{item.title}</h3>
+                          <p className="font-sans text-sm text-stone-600">{item.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex -left-12 border-stone-200 hover:bg-stone-100" />
+              <CarouselNext className="hidden sm:flex -right-12 border-stone-200 hover:bg-stone-100" />
+            </Carousel>
+          </motion.div>
 
           {/* Contact CTA */}
           <motion.div
