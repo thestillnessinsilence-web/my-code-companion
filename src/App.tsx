@@ -14,6 +14,12 @@ import Blog from "./pages/Blog";
 import Events from "./pages/Events";
 import Wholesale from "./pages/Wholesale";
 import NotFound from "./pages/NotFound";
+import MoonWater from "./pages/blog/MoonWater";
+import CrystalHealing from "./pages/blog/CrystalHealing";
+import SacredHerbGuide from "./pages/blog/SacredHerbGuide";
+import MeditationSpace from "./pages/blog/MeditationSpace";
+import TeaCeremonies from "./pages/blog/TeaCeremonies";
+import CrystalEnergy from "./pages/blog/CrystalEnergy";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +39,12 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/moon-water" element={<MoonWater />} />
+              <Route path="/blog/crystal-healing" element={<CrystalHealing />} />
+              <Route path="/blog/sacred-herb-guide" element={<SacredHerbGuide />} />
+              <Route path="/blog/meditation-space" element={<MeditationSpace />} />
+              <Route path="/blog/tea-ceremonies" element={<TeaCeremonies />} />
+              <Route path="/blog/crystal-energy" element={<CrystalEnergy />} />
               <Route path="/events" element={<Events />} />
               <Route path="/wholesale" element={<Wholesale />} />
               <Route path="*" element={<NotFound />} />
