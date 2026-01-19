@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
-import moonWaterImg from '@/assets/blog/moon-water.jpg';
+import moonWaterImg from '@/assets/blog/moon-water-crystal-charging-ritual-amethyst.png';
 
 export default function MoonWater() {
   return (
@@ -54,7 +54,7 @@ export default function MoonWater() {
         >
           <img
             src={moonWaterImg}
-            alt="Full moon over water ritual herbal bag crystal ceremony spiritual gift Asheville"
+            alt="Glass jar of moon water charging under a glowing pink full moon, surrounded by raw amethyst crystals on a reflective surface in a misty forest."
             className="w-full h-[400px] object-cover rounded-lg"
           />
         </motion.div>
