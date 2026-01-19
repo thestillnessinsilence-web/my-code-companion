@@ -200,9 +200,9 @@ export default function Events() {
             className="mb-12"
           >
             <div className="text-center mb-8">
-              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">Special Items We Can Curate</h2>
+              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">Examples of Custom Curations</h2>
               <p className="font-sans text-stone-600 max-w-2xl mx-auto">
-                Elevate your event with unique additions to your custom Oracle Bags.
+                A glimpse at the unique additions we can include in your bespoke Oracle Bags.
               </p>
             </div>
 
