@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import crystalEnergyImg from '@/assets/blog/crystal-energy.jpg';
 
 export default function CrystalEnergy() {
   return (
@@ -52,7 +53,7 @@ export default function CrystalEnergy() {
           className="mb-12"
         >
           <img
-            src="https://images.unsplash.com/photo-1518047601542-79f18c655718?w=1200&q=80"
+            src={crystalEnergyImg}
             alt="Crystal collection amethyst rose quartz healing stones spiritual energy Appalachian"
             className="w-full h-[400px] object-cover rounded-lg"
           />

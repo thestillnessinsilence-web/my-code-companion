@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import meditationSpaceImg from '@/assets/blog/meditation-space.jpg';
 
 export default function MeditationSpace() {
   return (
@@ -52,7 +53,7 @@ export default function MeditationSpace() {
           className="mb-12"
         >
           <img
-            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80"
+            src={meditationSpaceImg}
             alt="Peaceful meditation space with crystals candles ritual herbal spiritual sanctuary"
             className="w-full h-[400px] object-cover rounded-lg"
           />

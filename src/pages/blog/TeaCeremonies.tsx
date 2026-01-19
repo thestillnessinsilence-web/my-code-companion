@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import teaCeremonyImg from '@/assets/blog/tea-ceremony.jpg';
 
 export default function TeaCeremonies() {
   return (
@@ -52,7 +53,7 @@ export default function TeaCeremonies() {
           className="mb-12"
         >
           <img
-            src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=1200&q=80"
+            src={teaCeremonyImg}
             alt="Tea ceremony ritual herbal tea organic chamomile lavender meditation mindfulness"
             className="w-full h-[400px] object-cover rounded-lg"
           />

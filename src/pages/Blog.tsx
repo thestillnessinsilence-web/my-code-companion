@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import moonWaterImg from '@/assets/blog/moon-water.jpg';
+import crystalHealingImg from '@/assets/blog/crystal-healing.jpg';
+import sacredHerbsImg from '@/assets/blog/sacred-herbs.jpg';
+import meditationSpaceImg from '@/assets/blog/meditation-space.jpg';
+import teaCeremonyImg from '@/assets/blog/tea-ceremony.jpg';
+import crystalEnergyImg from '@/assets/blog/crystal-energy.jpg';
 
 export default function Blog() {
   const posts = [
@@ -8,7 +14,7 @@ export default function Blog() {
       title: 'The Power of Moon Water',
       date: 'January 15, 2026',
       excerpt: 'Discover how to harness lunar energy through moon water rituals and crystal charging ceremonies.',
-      image: 'https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=800&q=80',
+      image: moonWaterImg,
       category: 'Rituals'
     },
     {
@@ -16,7 +22,7 @@ export default function Blog() {
       title: 'Crystal Healing for Beginners',
       date: 'January 10, 2026',
       excerpt: 'Learn the fundamentals of working with healing crystals and how to choose the right stones for your journey.',
-      image: 'https://images.unsplash.com/photo-1602524206684-943a0f29d0eb?w=800&q=80',
+      image: crystalHealingImg,
       category: 'Crystals'
     },
     {
@@ -24,7 +30,7 @@ export default function Blog() {
       title: 'Sacred Herb Guide',
       date: 'January 5, 2026',
       excerpt: 'Explore the magical properties of lavender, mugwort, chamomile, and other sacred herbs in our collection.',
-      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80',
+      image: sacredHerbsImg,
       category: 'Herbs'
     },
     {
@@ -32,7 +38,7 @@ export default function Blog() {
       title: 'Creating Your Meditation Space',
       date: 'December 28, 2025',
       excerpt: 'Tips for designing a peaceful sanctuary in your home where you can connect with your Oracle Bag.',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80',
+      image: meditationSpaceImg,
       category: 'Meditation'
     },
     {
@@ -40,7 +46,7 @@ export default function Blog() {
       title: 'The Art of Tea Ceremonies',
       date: 'December 20, 2025',
       excerpt: 'Transform your daily tea into a mindful ritual with our guide to sacred tea ceremonies.',
-      image: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80',
+      image: teaCeremonyImg,
       category: 'Rituals'
     },
     {
@@ -48,7 +54,7 @@ export default function Blog() {
       title: 'Understanding Crystal Energy',
       date: 'December 15, 2025',
       excerpt: 'Dive deep into the vibrational frequencies of amethyst, rose quartz, and other powerful healing stones.',
-      image: 'https://images.unsplash.com/photo-1518047601542-79f18c655718?w=800&q=80',
+      image: crystalEnergyImg,
       category: 'Crystals'
     }
   ];

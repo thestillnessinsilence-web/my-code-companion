@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
+import moonWaterImg from '@/assets/blog/moon-water.jpg';
 
 export default function MoonWater() {
   return (
@@ -52,7 +53,7 @@ export default function MoonWater() {
           className="mb-12"
         >
           <img
-            src="https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=1200&q=80"
+            src={moonWaterImg}
             alt="Full moon over water ritual herbal bag crystal ceremony spiritual gift Asheville"
             className="w-full h-[400px] object-cover rounded-lg"
           />
