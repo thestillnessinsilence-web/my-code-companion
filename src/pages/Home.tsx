@@ -11,6 +11,25 @@ export default function Home() {
       <Helmet>
         <title>Crystal and Herbal Ceremony Ritual Bags Handmade in Asheville, NC: Crystal Bloomery</title>
         <meta name="description" content="Find your moment of serenity with Crystal Bloomery. Our signature mystery Oracle Bags are complete contemplation ceremonies, featuring intuitively chosen crystals, calming tea, and a tea light." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "The Oracle Bag",
+            "description": "A complete, intuitively curated ceremony designed to nurture your spirit and ground your energy. Handmade in the Blue Ridge Mountains of Asheville, NC, each velvet vessel is a mystery—assembled with intention and components that are meant specifically for the recipient.",
+            "image": "https://crystalbloomery.com/images/oracle-bag.jpg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Crystal Bloomery"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "48.00",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <div>
       <HeroSection />
