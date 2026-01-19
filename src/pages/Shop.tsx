@@ -44,7 +44,7 @@ export default function Shop() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 pt-32 pb-24">
+    <div className="min-h-screen bg-stone-50 pt-32 pb-12">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">
         <motion.div
@@ -85,7 +85,7 @@ export default function Shop() {
             <p className="font-sans text-stone-500">Products coming soon...</p>
           </div>
         ) : (
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 auto-rows-fr">
+          <div className="max-w-4xl mx-auto">
             {products.map((product) => (
               <ProductCard
                 key={product.id}
@@ -99,7 +99,7 @@ export default function Shop() {
       </div>
 
       {/* Sacred Geometry Decoration */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
         <div className="flex justify-center opacity-10">
           <svg className="w-48 h-48" viewBox="0 0 100 100" fill="none">
             <circle cx="50" cy="50" r="48" stroke="#10665c" strokeWidth="0.3" />
