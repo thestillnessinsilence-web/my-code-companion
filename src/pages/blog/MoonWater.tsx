@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import moonWaterImg from '@/assets/blog/moon-water-crystal-charging-ritual-amethyst.png';
 
 export default function MoonWater() {
   return (
+    <>
+      <Helmet>
+        <title>The Power of Moon Water | Crystal Bloomery</title>
+        <meta name="description" content="Discover how to harness lunar energy through moon water rituals and crystal charging ceremonies. Learn to create and use moon water in your spiritual practice." />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -189,5 +195,6 @@ export default function MoonWater() {
         </div>
       </article>
     </div>
+    </>
   );
 }

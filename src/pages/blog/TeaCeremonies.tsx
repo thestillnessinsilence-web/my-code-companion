@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import teaCeremonyImg from '@/assets/blog/steaming-herbal-tea-ritual-chamomile-flowers.jpg';
 
 export default function TeaCeremonies() {
   return (
+    <>
+      <Helmet>
+        <title>The Art of Tea Ceremonies | Crystal Bloomery</title>
+        <meta name="description" content="Transform your daily tea into a mindful ritual. Learn sacred tea practices to enhance relaxation and connect with your Oracle Bag herbs." />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -258,5 +264,6 @@ export default function TeaCeremonies() {
         </div>
       </article>
     </div>
+    </>
   );
 }

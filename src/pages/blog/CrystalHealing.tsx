@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import crystalHealingImg from '@/assets/blog/amethyst-rose-quartz-crystal-towers-collection.jpeg';
 
 export default function CrystalHealing() {
   return (
+    <>
+      <Helmet>
+        <title>Crystal Healing for Beginners | Crystal Bloomery</title>
+        <meta name="description" content="Learn the fundamentals of working with healing crystals, from selecting your first stones to understanding their traditional meanings and modern applications." />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -237,5 +243,6 @@ export default function CrystalHealing() {
         </div>
       </article>
     </div>
+    </>
   );
 }

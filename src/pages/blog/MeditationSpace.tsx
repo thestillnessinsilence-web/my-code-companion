@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import meditationSpaceImg from '@/assets/blog/cozy-meditation-corner-sacred-space-decor.jpg';
 
 export default function MeditationSpace() {
   return (
+    <>
+      <Helmet>
+        <title>Creating Your Meditation Space | Crystal Bloomery</title>
+        <meta name="description" content="Design a peaceful sanctuary in your home for meditation and mindfulness. Tips for setting up your Oracle Bag ritual space." />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -230,5 +236,6 @@ export default function MeditationSpace() {
         </div>
       </article>
     </div>
+    </>
   );
 }
