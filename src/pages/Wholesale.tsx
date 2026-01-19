@@ -73,7 +73,8 @@ export default function Wholesale() {
     {
       image: floatingGlassNecklace,
       title: "Floating Glass Necklaces",
-      description: "Custom botanical pendants with preserved flowers"
+      description: "Custom botanical pendants with preserved flowers",
+      alt: "Round gold floating glass locket necklace filled with faceted amethyst, yellow sapphire, and dried lavender flowers, resting on a wooden sill in front of a sunlit mountain window view"
     },
     {
       image: charmNecklaces,
@@ -187,7 +188,7 @@ export default function Wholesale() {
                       <div className="aspect-square overflow-hidden">
                         <img
                           src={item.image}
-                          alt={item.title}
+                          alt={item.alt || item.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
