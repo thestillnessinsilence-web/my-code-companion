@@ -112,14 +112,252 @@ export default function Cart() {
               <h1 className="font-serif text-3xl text-stone-800">Checkout</h1>
             </div>
 
-            <form onSubmit={handleCheckout} className="space-y-8">
-              {/* Order Summary Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm"
-              >
+            <form onSubmit={handleCheckout} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Left Column - Forms */}
+              <div className="space-y-6 order-2 lg:order-1">
+                {/* Shipping Information */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-white rounded-xl p-6 shadow-sm"
+                >
+                  <h3 className="font-serif text-lg text-stone-800 mb-4">Shipping Information</h3>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          First Name
+                        </Label>
+                        <Input
+                          required
+                          value={checkoutData.firstName}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, firstName: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                          placeholder="John"
+                        />
+                      </div>
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          Last Name
+                        </Label>
+                        <Input
+                          required
+                          value={checkoutData.lastName}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, lastName: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                          placeholder="Doe"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                        Email
+                      </Label>
+                      <Input
+                        type="email"
+                        required
+                        value={checkoutData.email}
+                        onChange={(e) => setCheckoutData({ ...checkoutData, email: e.target.value })}
+                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                    <div>
+                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                        Address
+                      </Label>
+                      <Input
+                        required
+                        value={checkoutData.address}
+                        onChange={(e) => setCheckoutData({ ...checkoutData, address: e.target.value })}
+                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                        placeholder="123 Main Street"
+                      />
+                    </div>
+                    <div className="grid grid-cols-3 gap-4">
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          City
+                        </Label>
+                        <Input
+                          required
+                          value={checkoutData.city}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, city: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          State
+                        </Label>
+                        <Input
+                          required
+                          value={checkoutData.state}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, state: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                          placeholder="State"
+                        />
+                      </div>
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          ZIP
+                        </Label>
+                        <Input
+                          required
+                          value={checkoutData.zip}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, zip: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                          placeholder="ZIP"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Payment */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-white rounded-xl p-6 shadow-sm"
+                >
+                  <h3 className="font-serif text-lg text-stone-800 mb-4">Payment Method</h3>
+
+                  <label className="flex items-center gap-3 cursor-pointer mb-5 p-3 rounded-lg bg-stone-50 hover:bg-stone-100 transition-colors">
+                    <input
+                      type="checkbox"
+                      checked={shippingSameAsBilling}
+                      onChange={(e) => setShippingSameAsBilling(e.target.checked)}
+                      className="w-4 h-4 rounded border-stone-300 text-[#10665c] focus:ring-[#10665c]"
+                    />
+                    <span className="font-sans text-sm text-stone-600">Billing address is the same as shipping</span>
+                  </label>
+
+                  {!shippingSameAsBilling && (
+                    <div className="mb-6 space-y-4 p-4 bg-stone-50 rounded-lg">
+                      <h4 className="font-serif text-base text-stone-800">Billing Address</h4>
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          Address
+                        </Label>
+                        <Input
+                          required
+                          value={checkoutData.billingAddress}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, billingAddress: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                          placeholder="123 Main Street"
+                        />
+                      </div>
+                      <div className="grid grid-cols-3 gap-4">
+                        <div>
+                          <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                            City
+                          </Label>
+                          <Input
+                            required
+                            value={checkoutData.billingCity}
+                            onChange={(e) => setCheckoutData({ ...checkoutData, billingCity: e.target.value })}
+                            className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                            placeholder="City"
+                          />
+                        </div>
+                        <div>
+                          <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                            State
+                          </Label>
+                          <Input
+                            required
+                            value={checkoutData.billingState}
+                            onChange={(e) => setCheckoutData({ ...checkoutData, billingState: e.target.value })}
+                            className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                            placeholder="State"
+                          />
+                        </div>
+                        <div>
+                          <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                            ZIP
+                          </Label>
+                          <Input
+                            required
+                            value={checkoutData.billingZip}
+                            onChange={(e) => setCheckoutData({ ...checkoutData, billingZip: e.target.value })}
+                            className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                            placeholder="ZIP"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                        Card Number
+                      </Label>
+                      <Input
+                        placeholder="1234 5678 9012 3456"
+                        value={checkoutData.cardNumber}
+                        onChange={(e) => setCheckoutData({ ...checkoutData, cardNumber: e.target.value })}
+                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          Expiry Date
+                        </Label>
+                        <Input
+                          placeholder="MM/YY"
+                          value={checkoutData.expiry}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, expiry: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                        />
+                      </div>
+                      <div>
+                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                          CVV
+                        </Label>
+                        <Input
+                          placeholder="123"
+                          value={checkoutData.cvv}
+                          onChange={(e) => setCheckoutData({ ...checkoutData, cvv: e.target.value })}
+                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Complete Order Button */}
+                  <Button
+                    type="submit"
+                    disabled={processing}
+                    className="w-full mt-6 bg-[#10665c] hover:bg-[#0d5249] text-white py-5 font-sans text-sm tracking-widest uppercase transition-all rounded-xl shadow-lg hover:shadow-xl"
+                  >
+                    {processing ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Processing...
+                      </>
+                    ) : (
+                      <>
+                        <Lock className="w-4 h-4 mr-2" />
+                        Complete Order
+                      </>
+                    )}
+                  </Button>
+                </motion.div>
+              </div>
+
+              {/* Right Column - Order Summary */}
+              <div className="order-1 lg:order-2">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-white rounded-xl p-6 shadow-sm lg:sticky lg:top-32"
+                >
                 <h3 className="font-serif text-lg text-stone-800 mb-4">Order Summary</h3>
                 <div className="divide-y divide-stone-100">
                   {cartItems.map((item) => (
@@ -153,263 +391,23 @@ export default function Cart() {
                     <span className="text-[#10665c]">${total.toFixed(2)}</span>
                   </div>
                 </div>
-              </motion.div>
-
-              {/* Shipping Information */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white rounded-xl p-6 shadow-sm"
-              >
-                <h3 className="font-serif text-lg text-stone-800 mb-4">Shipping Information</h3>
-                <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        First Name
-                      </Label>
-                      <Input
-                        required
-                        value={checkoutData.firstName}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, firstName: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                        placeholder="John"
-                      />
+                  {/* Trust Badges */}
+                  <div className="flex flex-wrap items-center justify-center gap-4 text-stone-400 pt-6 mt-6 border-t border-stone-100">
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4" />
+                      <span className="text-xs">SSL Secure</span>
                     </div>
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        Last Name
-                      </Label>
-                      <Input
-                        required
-                        value={checkoutData.lastName}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, lastName: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                        placeholder="Doe"
-                      />
+                    <div className="flex items-center gap-2">
+                      <Truck className="w-4 h-4" />
+                      <span className="text-xs">Free Shipping</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Heart className="w-4 h-4" />
+                      <span className="text-xs">Handcrafted</span>
                     </div>
                   </div>
-                  <div>
-                    <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                      Email
-                    </Label>
-                    <Input
-                      type="email"
-                      required
-                      value={checkoutData.email}
-                      onChange={(e) => setCheckoutData({ ...checkoutData, email: e.target.value })}
-                      className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  <div>
-                    <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                      Address
-                    </Label>
-                    <Input
-                      required
-                      value={checkoutData.address}
-                      onChange={(e) => setCheckoutData({ ...checkoutData, address: e.target.value })}
-                      className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                      placeholder="123 Main Street"
-                    />
-                  </div>
-                  <div className="grid grid-cols-3 gap-4">
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        City
-                      </Label>
-                      <Input
-                        required
-                        value={checkoutData.city}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, city: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                        placeholder="City"
-                      />
-                    </div>
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        State
-                      </Label>
-                      <Input
-                        required
-                        value={checkoutData.state}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, state: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                        placeholder="State"
-                      />
-                    </div>
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        ZIP
-                      </Label>
-                      <Input
-                        required
-                        value={checkoutData.zip}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, zip: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                        placeholder="ZIP"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Payment */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="bg-white rounded-xl p-6 shadow-sm"
-              >
-                <h3 className="font-serif text-lg text-stone-800 mb-4">Payment Method</h3>
-
-                <label className="flex items-center gap-3 cursor-pointer mb-5 p-3 rounded-lg bg-stone-50 hover:bg-stone-100 transition-colors">
-                  <input
-                    type="checkbox"
-                    checked={shippingSameAsBilling}
-                    onChange={(e) => setShippingSameAsBilling(e.target.checked)}
-                    className="w-4 h-4 rounded border-stone-300 text-[#10665c] focus:ring-[#10665c]"
-                  />
-                  <span className="font-sans text-sm text-stone-600">Billing address is the same as shipping</span>
-                </label>
-
-                {!shippingSameAsBilling && (
-                  <div className="mb-6 space-y-4 p-4 bg-stone-50 rounded-lg">
-                    <h4 className="font-serif text-base text-stone-800">Billing Address</h4>
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        Address
-                      </Label>
-                      <Input
-                        required
-                        value={checkoutData.billingAddress}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, billingAddress: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                        placeholder="123 Main Street"
-                      />
-                    </div>
-                    <div className="grid grid-cols-3 gap-4">
-                      <div>
-                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                          City
-                        </Label>
-                        <Input
-                          required
-                          value={checkoutData.billingCity}
-                          onChange={(e) => setCheckoutData({ ...checkoutData, billingCity: e.target.value })}
-                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                          placeholder="City"
-                        />
-                      </div>
-                      <div>
-                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                          State
-                        </Label>
-                        <Input
-                          required
-                          value={checkoutData.billingState}
-                          onChange={(e) => setCheckoutData({ ...checkoutData, billingState: e.target.value })}
-                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                          placeholder="State"
-                        />
-                      </div>
-                      <div>
-                        <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                          ZIP
-                        </Label>
-                        <Input
-                          required
-                          value={checkoutData.billingZip}
-                          onChange={(e) => setCheckoutData({ ...checkoutData, billingZip: e.target.value })}
-                          className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                          placeholder="ZIP"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-                
-                <div className="space-y-4">
-                  <div>
-                    <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                      Card Number
-                    </Label>
-                    <Input
-                      placeholder="1234 5678 9012 3456"
-                      value={checkoutData.cardNumber}
-                      onChange={(e) => setCheckoutData({ ...checkoutData, cardNumber: e.target.value })}
-                      className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        Expiry Date
-                      </Label>
-                      <Input
-                        placeholder="MM/YY"
-                        value={checkoutData.expiry}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, expiry: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                      />
-                    </div>
-                    <div>
-                      <Label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
-                        CVV
-                      </Label>
-                      <Input
-                        placeholder="123"
-                        value={checkoutData.cvv}
-                        onChange={(e) => setCheckoutData({ ...checkoutData, cvv: e.target.value })}
-                        className="border-stone-200 rounded-lg focus:border-[#10665c] focus:ring-[#10665c]/20"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Complete Order Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                <Button
-                  type="submit"
-                  disabled={processing}
-                  className="w-full bg-[#10665c] hover:bg-[#0d5249] text-white py-5 font-sans text-sm tracking-widest uppercase transition-all rounded-xl shadow-lg hover:shadow-xl"
-                >
-                  {processing ? (
-                    <span className="flex items-center gap-2 justify-center">
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      Processing...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2 justify-center">
-                      <Lock className="w-4 h-4" />
-                      Complete Order — ${total.toFixed(2)}
-                    </span>
-                  )}
-                </Button>
-
-                {/* Trust Badges */}
-                <div className="flex items-center justify-center gap-8 mt-6 text-stone-400">
-                  <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span className="text-xs">SSL</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Truck className="w-4 h-4" />
-                    <span className="text-xs">Free Shipping</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Heart className="w-4 h-4" />
-                    <span className="text-xs">Handcrafted</span>
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </form>
           </motion.div>
         ) : (
