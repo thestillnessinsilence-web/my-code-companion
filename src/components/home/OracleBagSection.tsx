@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import oracleStep01 from '@/assets/oracle-step-01.png';
+import oracleStep02 from '@/assets/oracle-step-02.png';
 
 export default function OracleBagSection() {
   const steps = [
@@ -16,7 +17,7 @@ export default function OracleBagSection() {
       number: '02',
       title: 'Prepare the Flower Tea',
       description: 'Brew the organic floral tea included in your satchel. Each one is unique, be sure to read the properties listed on each tea box.',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/e29f62b16_Gemini_Generated_Image_lwgrmqlwgrmqlwgr.jpeg',
+      image: oracleStep02,
       alt: 'Crystal ceremony bag tea ritual organic floral tea meditation preparation spiritual gift Asheville'
     },
     {
