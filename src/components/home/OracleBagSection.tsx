@@ -149,11 +149,11 @@ export default function OracleBagSection() {
                 className="group"
               >
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                  <div className={`relative overflow-hidden bg-stone-100 ${step.number === '02' || step.number === '03' ? 'aspect-[3/3.8]' : 'aspect-[3/4]'}`}>
                     <img
                       src={step.image}
                       alt={step.alt || step.title}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${step.number === '02' || step.number === '03' ? 'object-top' : ''}`}
                       loading="lazy"
                       style={step.number === '03' ? { maxWidth: '100%', maxHeight: '100%', imageRendering: 'auto' } : undefined}
                     />
