@@ -168,7 +168,7 @@ export default function Events() {
                         <div className="aspect-square overflow-hidden">
                           <img
                             src={item.image}
-                            alt={item.title}
+                            alt={item.alt || item.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
