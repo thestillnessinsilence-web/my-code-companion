@@ -4,6 +4,7 @@ import ProductCard from '@/components/shop/ProductCard';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useCart } from '@/context/CartContext';
+import oracleBagContents from '@/assets/oracle-bag-contents.png';
 
 // Sample products for display (in production, this would come from a database)
 const sampleProducts = [
@@ -92,6 +93,40 @@ export default function Shop() {
             ))}
           </div>
         )}
+      </div>
+
+      {/* What's Inside Section */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-10"
+        >
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-stone-500 mb-4 block">
+            Discover the Contents
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-stone-800 mb-4">
+            What's Inside the Bag
+          </h2>
+          <div className="w-16 h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mx-auto" />
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative rounded-lg overflow-hidden shadow-xl"
+        >
+          <img
+            src={oracleBagContents}
+            alt="Oracle Bag contents including healing crystals, organic tea, candle, herbal bookmark, and oracle message"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </motion.div>
       </div>
 
       {/* Sacred Geometry Decoration */}
