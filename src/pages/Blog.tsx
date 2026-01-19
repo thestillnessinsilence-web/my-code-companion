@@ -7,6 +7,7 @@ import sacredHerbsImg from '@/assets/blog/sacred-herbs.jpg';
 import meditationSpaceImg from '@/assets/blog/meditation-space.jpg';
 import teaCeremonyImg from '@/assets/blog/tea-ceremony.jpg';
 import crystalEnergyImg from '@/assets/blog/crystal-energy.jpg';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Blog() {
   const posts = [
@@ -66,6 +67,10 @@ export default function Blog() {
         <title>About Crystal Bloomery | The Bloomery Journal</title>
         <meta name="description" content="Explore sacred practices of crystal healing, herbalism, and mindful living through our curated collection of guides and stories from Crystal Bloomery." />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Blog", url: "https://crystalbloomery.com/blog" }
+      ]} />
       <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

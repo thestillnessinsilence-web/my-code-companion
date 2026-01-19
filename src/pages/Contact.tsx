@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Send, Check } from 'lucide-react';
 import { toast } from 'sonner';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -46,6 +47,10 @@ export default function Contact() {
         <meta name="description" content="Get in touch with Crystal Bloomery. Ask questions about our handcrafted Oracle Bags, wholesale inquiries, or custom event orders. We'd love to connect with you." />
         <link rel="canonical" href="https://crystalbloomery.com/contact" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Contact", url: "https://crystalbloomery.com/contact" }
+      ]} />
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">

@@ -1,7 +1,18 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function TermsOfService() {
   return (
+    <>
+      <Helmet>
+        <title>Terms of Service | Crystal Bloomery</title>
+        <meta name="description" content="Crystal Bloomery terms of service. Read our terms and conditions for using our website and purchasing products." />
+      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Terms of Service", url: "https://crystalbloomery.com/terms-of-service" }
+      ]} />
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -81,5 +92,6 @@ export default function TermsOfService() {
         </div>
       </div>
     </div>
+    </>
   );
 }

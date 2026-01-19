@@ -4,6 +4,7 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/home/HeroSection';
 import OracleBagSection from '@/components/home/OracleBagSection';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
           })}
         </script>
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" }
+      ]} />
       <div>
       <HeroSection />
       <OracleBagSection />
