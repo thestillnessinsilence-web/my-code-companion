@@ -14,14 +14,6 @@ const sampleProducts = [
     price: 45,
     image_url: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Handwritten oracle message', 'Soy candle', 'Appalachian artwork']
-  },
-  {
-    id: '2',
-    name: 'The Mini Oracle',
-    description: 'A pocket-sized blessing with all the sacred energy of our signature bag. Perfect for gifting or carrying daily inspiration.',
-    price: 28,
-    image_url: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/b0c618ed1_Gemini_Generated_Image_t4n75at4n75at4n7.jpeg',
-    features: ['Crystal selection', 'Mini herb bundle', 'Oracle card']
   }
 ];
 

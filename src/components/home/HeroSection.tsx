@@ -110,10 +110,10 @@ export default function HeroSection() {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
-              to={createPageUrl('Contact')}
+              to={createPageUrl('About')}
               className="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-8 py-4 font-sans text-sm tracking-widest uppercase transition-all hover:bg-white/10"
             >
-              Shop Bloomery Bracelets
+              Our Story
             </Link>
           </div>
         </motion.div>
