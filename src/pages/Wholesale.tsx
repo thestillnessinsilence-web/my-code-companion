@@ -14,11 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-import floatingGlassNecklace from '@/assets/wholesale/floating-glass-necklace.jpg';
-import charmNecklaces from '@/assets/wholesale/charm-necklaces.jpg';
-import collectorCrystals from '@/assets/wholesale/collector-crystals.jpg';
-import weddingCustom from '@/assets/wholesale/wedding-custom.jpg';
+import { curatedItems } from '@/data/curatedItems';
 
 export default function Wholesale() {
   const [formData, setFormData] = useState({
@@ -66,31 +62,6 @@ export default function Wholesale() {
       icon: Store,
       title: "Flexible Minimums",
       description: "Reasonable minimum order quantities designed to support small, conscious retailers."
-    }
-  ];
-
-  const curatedItems = [
-    {
-      image: floatingGlassNecklace,
-      title: "Floating Glass Necklaces",
-      description: "Custom botanical pendants with preserved flowers",
-      alt: "Round gold floating glass locket necklace filled with faceted amethyst, yellow sapphire, and dried lavender flowers, resting on a wooden sill in front of a sunlit mountain window view"
-    },
-    {
-      image: charmNecklaces,
-      title: "Custom Herbal Tea Blends",
-      description: "Bespoke tea blends for your special events",
-      alt: "Close-up view of a natural paper tea bag spilling a vibrant herbal blend of dried chamomile, rose petals, calendula, lavender buds, and mint leaves onto a rustic wooden surface"
-    },
-    {
-      image: collectorCrystals,
-      title: "High Quality Collector Crystals",
-      description: "Museum-grade specimens for discerning collectors"
-    },
-    {
-      image: weddingCustom,
-      title: "Custom Wedding Branding",
-      description: "Personalized bridal party gifts and favors"
     }
   ];
 
