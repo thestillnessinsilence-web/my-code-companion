@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import oracleStep01 from '@/assets/oracle-step-01.png';
 import oracleStep02 from '@/assets/oracle-step-02.png';
 import crystalRitualSpellBag from '@/assets/crystal-ritual-spell-bag.png';
+import crystalHerbalBagCeremony from '@/assets/crystal-herbal-bag-ceremony-for-peace.png';
 
 export default function OracleBagSection() {
   const steps = [
@@ -80,7 +81,7 @@ export default function OracleBagSection() {
           >
             <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-br from-purple-50 via-stone-50 to-emerald-50">
               <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png"
+                src={crystalHerbalBagCeremony}
                 alt="Crystal ceremony bag oracle collection moon blessed crystals ritual herbal blend Appalachian art spiritual gift Asheville"
                 className="w-full h-full object-cover"
                 loading="lazy"
