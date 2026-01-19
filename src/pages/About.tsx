@@ -113,7 +113,7 @@ export default function About() {
         >
           <img 
             src={appalachianView} 
-            alt="View of the Appalachian Mountains from a window with plants" 
+            alt="Appalachian mountain scenery local business" 
             className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
           />
         </motion.div>
