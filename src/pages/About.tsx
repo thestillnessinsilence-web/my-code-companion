@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
 import {
@@ -34,11 +35,11 @@ export default function About() {
   const faqItems = [
     {
       question: "What is an Oracle Bag?",
-      answer: "An Oracle Bag is a sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, a soy candle, and a personalized oracle message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
+      answer: "An Oracle Bag is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized oracle message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
     },
     {
       question: "What materials are included in each Oracle Bag?",
-      answer: "Each Oracle Bag includes: moon-blessed healing crystals, organic loose-leaf herbal tea, a hand-poured soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal oracle message channeled just for you."
+      answer: "Each Oracle Bag includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal oracle message channeled just for you. Some bags may also have a special gift not listed! It's a mystery after all!"
     },
     {
       question: "Where are the Oracle Bags made?",
@@ -49,8 +50,8 @@ export default function About() {
       answer: "Each crystal is intuitively chosen for the recipient. We cleanse all crystals under moonlight and charge them with healing intentions before they are placed in your Oracle Bag. The selection process is guided by spiritual intuition to ensure the stones resonate with your energy."
     },
     {
-      question: "Are the herbs and teas safe to consume?",
-      answer: "Yes, all teas included in our Oracle Bags are made from organic, food-grade herbs that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming."
+      question: "Are the teas safe to consume?",
+      answer: "Yes, all teas included in our Oracle Bags are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming."
     },
     {
       question: "How should I use my Oracle Bag?",
@@ -62,7 +63,7 @@ export default function About() {
     },
     {
       question: "Do you offer custom or bulk orders for events?",
-      answer: "Yes! We offer bulk pricing and customization for weddings, celebrations, corporate retreats, and other special events. Messages can be custom written in any theme or language. Please visit our Events page or contact us directly to discuss your vision."
+      answer: "EVENTS_LINK"
     }
   ];
 
@@ -173,7 +174,17 @@ export default function About() {
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="font-sans text-stone-600 leading-relaxed pb-5">
-                  {item.answer}
+                  {item.answer === "EVENTS_LINK" ? (
+                    <>
+                      Yes! We offer bulk pricing and customization for weddings, celebrations, corporate retreats, and other special events. Messages can be custom written in any theme or language. Please visit our{' '}
+                      <Link to="/events" className="text-[#10665c] hover:text-[#0d534a] underline transition-colors">
+                        Events page
+                      </Link>{' '}
+                      or contact us directly to discuss your vision.
+                    </>
+                  ) : (
+                    item.answer
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}
