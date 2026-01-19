@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
+import apothecaryStudioHero from '@/assets/asheville-apothecary-studio-hero.png';
 
 export default function HeroSection() {
   return (
@@ -9,8 +10,8 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/d2fe50019_Gemini_Generated_Image_1vvtch1vvtch1vvt.png"
-          alt="Crystal ceremony bag with healing crystals and ritual herbal blend from Appalachian mountains Asheville spiritual gift"
+          src={apothecaryStudioHero}
+          alt="Sunlit herbal apothecary studio in Asheville featuring wooden shelves filled with loose leaf tea jars, large amethyst and citrine geodes, hanging dried herbs, and a rustic table with velvet ritual bags and scrolls."
           className="w-full h-full object-cover"
           loading="eager"
         />
