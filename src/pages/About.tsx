@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
 import {
@@ -79,7 +80,12 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50 pt-32 pb-24">
+    <>
+      <Helmet>
+        <title>About Crystal Bloomery | Handcrafted Oracle Bags from Asheville, NC</title>
+        <meta name="description" content="Learn about Crystal Bloomery's handcrafted Oracle Bags made in the heart of the Appalachian Mountains. Discover our values, story, and commitment to sacred healing." />
+      </Helmet>
+      <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">
         <motion.div
@@ -257,5 +263,6 @@ export default function About() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }
