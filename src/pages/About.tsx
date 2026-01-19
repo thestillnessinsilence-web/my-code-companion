@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
+import appalachianView from '@/assets/appalachian-mountain-view.jpeg';
 import {
   Accordion,
   AccordionContent,
@@ -101,6 +102,20 @@ export default function About() {
             Our Story
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
+        </motion.div>
+        
+        {/* Mountain View Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="mb-12"
+        >
+          <img 
+            src={appalachianView} 
+            alt="View of the Appalachian Mountains from a window with plants" 
+            className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+          />
         </motion.div>
       </div>
 
