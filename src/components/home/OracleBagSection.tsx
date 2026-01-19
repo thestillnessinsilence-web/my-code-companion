@@ -149,14 +149,17 @@ export default function OracleBagSection() {
                 className="group"
               >
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
-                  <div className={`relative overflow-hidden bg-stone-100 ${step.number === '02' || step.number === '03' ? 'aspect-[3/3.8]' : 'aspect-[3/4]'}`}>
+                  <div className="relative aspect-[3/3.8] overflow-hidden bg-stone-100">
                     <img
                       src={step.image}
                       alt={step.alt || step.title}
-                      className={`w-full h-full object-cover ${step.number === '02' || step.number === '03' ? 'object-top' : ''}`}
+                      className="w-full h-full object-cover object-top pointer-events-none select-none"
                       loading="lazy"
-                      style={step.number === '03' ? { maxWidth: '100%', maxHeight: '100%', imageRendering: 'auto' } : undefined}
+                      draggable={false}
+                      onContextMenu={(e) => e.preventDefault()}
                     />
+                    {/* Overlay to prevent image download */}
+                    <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} />
                   </div>
                   <div className="relative bg-stone-50 group-hover:bg-[#c8b5d9] px-6 py-8 text-center transition-colors duration-300">
                     <span className="font-serif text-5xl mb-4 block text-stone-400 group-hover:text-white transition-colors duration-300">
