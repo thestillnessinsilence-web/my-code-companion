@@ -12,10 +12,10 @@ export default function BookReading() {
       location: "Asheville, NC",
       description: "Experience a deeply personal intuitive reading in the heart of the Blue Ridge Mountains. Reading will take place at the Crystal Bloomery workshop.",
       details: [
-        "30 or 60 minute sessions available",
-        "Crystal and oracle card guidance",
-        "Personalized energy reading",
-        "Take-home crystal recommendation"
+        "Watercolor aura reading",
+        "Mediumship or Tarot Reading available",
+        "Sliding Scale pricing for those in need!",
+        "$30 for 30 minutes and $60 for 60 minutes"
       ]
     },
     {
