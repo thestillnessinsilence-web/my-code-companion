@@ -3,12 +3,14 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/home/HeroSection';
 import OracleBagSection from '@/components/home/OracleBagSection';
+import TestimonialSection from '@/components/home/TestimonialSection';
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
       <OracleBagSection />
+      <TestimonialSection />
       
       {/* Call to Action */}
       <section className="py-24 bg-stone-900 relative overflow-hidden">

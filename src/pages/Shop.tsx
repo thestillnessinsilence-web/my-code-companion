@@ -1,79 +1,87 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import ProductCard from '@/components/shop/ProductCard';
+import { toast } from 'sonner';
 
-const products = [
+// Sample products for display (in production, this would come from a database)
+const sampleProducts = [
   {
-    id: 1,
-    name: 'The Oracle Bag - Classic',
+    id: '1',
+    name: 'The Oracle Bag',
+    description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized oracle message from the universe.',
     price: 45,
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
-    description: 'Crystals, herbs, and a personal oracle message'
+    image_url: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
+    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Handwritten oracle message', 'Soy candle', 'Appalachian artwork']
   },
   {
-    id: 2,
-    name: 'The Oracle Bag - Deluxe',
-    price: 75,
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/b0c618ed1_Gemini_Generated_Image_t4n75at4n75at4n7.jpeg',
-    description: 'Premium crystals, rare herbs, soy candle, and artwork'
-  },
-  {
-    id: 3,
-    name: 'Crystal Bracelet - Amethyst',
+    id: '2',
+    name: 'The Mini Oracle',
+    description: 'A pocket-sized blessing with all the sacred energy of our signature bag. Perfect for gifting or carrying daily inspiration.',
     price: 28,
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/e29f62b16_Gemini_Generated_Image_lwgrmqlwgrmqlwgr.jpeg',
-    description: 'Hand-strung healing amethyst beads'
-  },
+    image_url: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/b0c618ed1_Gemini_Generated_Image_t4n75at4n75at4n7.jpeg',
+    features: ['Crystal selection', 'Mini herb bundle', 'Oracle card']
+  }
 ];
 
 export default function Shop() {
+  const handleAddToCart = (product: typeof sampleProducts[0]) => {
+    toast.success(`${product.name} added to your bag`);
+  };
+
   return (
-    <div className="min-h-screen bg-stone-50 pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="min-h-screen bg-stone-50 pt-32 pb-24">
+      {/* Hero Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center"
         >
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#7c4d8f] mb-4 block">
             Sacred Offerings
           </span>
-          <h1 className="font-serif text-4xl md:text-5xl text-stone-800 mb-6">
-            Shop Our Collection
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-800 mb-6">
+            The Oracle Bag
           </h1>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto" />
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
+          <p className="font-sans text-sm sm:text-base text-stone-600 max-w-2xl mx-auto leading-relaxed">
+            True clarity requires a pause. A moment to disconnect from external noise and listen to inner wisdom.
+            <br /><br />
+            The Oracle Bag is the space inbetween the pause.
+            <br /><br />
+            Pour the tea. Be with Stillness. Feel the Resonance of the Crystals.
+            <br /><br />
+            Untie the twine to open.
+            <br /><br />
+            The Oracle has a message that's been waiting for you.
+          </p>
         </motion.div>
+      </div>
 
-        {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <motion.div
+      {/* Products Grid */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 auto-rows-fr">
+          {sampleProducts.map((product) => (
+            <ProductCard
               key={product.id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl text-stone-800 mb-2">{product.name}</h3>
-                <p className="font-sans text-sm text-stone-500 mb-4">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-serif text-2xl text-[#10665c]">${product.price}</span>
-                  <button className="bg-gradient-to-r from-[#9b6cb0] to-[#7c4d8f] text-white px-6 py-2 font-sans text-sm tracking-widest uppercase rounded-full hover:shadow-lg transition-shadow">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </motion.div>
+              product={product}
+              onAddToCart={handleAddToCart}
+              isAdding={false}
+            />
           ))}
+        </div>
+      </div>
+
+      {/* Sacred Geometry Decoration */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-24">
+        <div className="flex justify-center opacity-10">
+          <svg className="w-48 h-48" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="48" stroke="#10665c" strokeWidth="0.3" />
+            <circle cx="50" cy="50" r="35" stroke="#7c4d8f" strokeWidth="0.3" />
+            <circle cx="50" cy="50" r="22" stroke="#b695c8" strokeWidth="0.3" />
+            <polygon points="50,5 95,50 50,95 5,50" stroke="#10665c" strokeWidth="0.3" />
+            <polygon points="50,20 80,50 50,80 20,50" stroke="#9b6cb0" strokeWidth="0.3" />
+          </svg>
         </div>
       </div>
     </div>

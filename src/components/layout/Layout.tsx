@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Menu, X, Sparkles } from 'lucide-react';
 
+interface NavLink {
+  name: string;
+  page: string;
+  submenu?: { name: string; page: string }[];
+}
+
 interface LayoutProps {
   children: ReactNode;
 }
@@ -19,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { name: 'Home', page: 'Home' },
     { name: 'Shop', page: 'Shop' },
     { name: 'About', page: 'About', submenu: [
@@ -65,6 +71,21 @@ export default function Layout({ children }: LayoutProps) {
                     {link.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#9b6cb0] transition-all duration-300 group-hover:w-full" />
                   </Link>
+                  {link.submenu && (
+                    <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="bg-white/95 backdrop-blur-md shadow-lg border border-stone-200/50 py-2 min-w-[160px]">
+                        {link.submenu.map((sublink) => (
+                          <Link
+                            key={sublink.page}
+                            to={createPageUrl(sublink.page)}
+                            className="block px-4 py-2 font-sans text-sm tracking-widest uppercase text-stone-600 hover:text-[#10665c] hover:bg-stone-50 transition-colors"
+                          >
+                            {sublink.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
               <Link
@@ -95,14 +116,29 @@ export default function Layout({ children }: LayoutProps) {
           <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-stone-100">
             <div className="px-6 py-6 space-y-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.page}
-                  to={createPageUrl(link.page)}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block font-sans text-sm tracking-widest uppercase text-stone-600 py-2"
-                >
-                  {link.name}
-                </Link>
+                <div key={link.page}>
+                  <Link
+                    to={createPageUrl(link.page)}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block font-sans text-sm tracking-widest uppercase text-stone-600 py-2"
+                  >
+                    {link.name}
+                  </Link>
+                  {link.submenu && (
+                    <div className="pl-4 space-y-2 mt-2">
+                      {link.submenu.map((sublink) => (
+                        <Link
+                          key={sublink.page}
+                          to={createPageUrl(sublink.page)}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block font-sans text-xs tracking-widest uppercase text-stone-500 py-1"
+                        >
+                          {sublink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -127,19 +163,30 @@ export default function Layout({ children }: LayoutProps) {
               <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-4">Navigate</h4>
               <div className="space-y-2">
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.page}
-                    to={createPageUrl(link.page)}
-                    className="block text-sm hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  <div key={link.page}>
+                    <Link
+                      to={createPageUrl(link.page)}
+                      className="block text-sm hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                    {link.submenu && link.submenu.map((sublink) => (
+                      <Link
+                        key={sublink.page}
+                        to={createPageUrl(sublink.page)}
+                        className="block text-sm text-stone-500 hover:text-white transition-colors pl-4 mt-1"
+                      >
+                        {sublink.name}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
             <div>
               <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-4">Connect</h4>
               <p className="text-sm mb-2">crystalbloomery@gmail.com</p>
+              <p className="text-sm">(910) 922-1549</p>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-stone-800 text-center text-xs opacity-60">

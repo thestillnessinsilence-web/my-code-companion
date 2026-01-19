@@ -1,28 +1,30 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag, ArrowRight } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 
 export default function Cart() {
   return (
-    <div className="min-h-screen bg-stone-50 pt-32 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-32 pb-24 bg-[#ebe8e3]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center py-20"
         >
-          <ShoppingBag className="w-16 h-16 text-stone-300 mx-auto mb-6" />
-          <h1 className="font-serif text-4xl text-stone-800 mb-4">Your Cart is Empty</h1>
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#e8f5f2] to-[#f3eef5] flex items-center justify-center mx-auto mb-6">
+            <ShoppingBag className="w-10 h-10 text-[#10665c]" strokeWidth={1} />
+          </div>
+          <h2 className="font-serif text-2xl text-stone-800 mb-4">Your bag is empty</h2>
           <p className="font-sans text-stone-500 mb-8">
-            Discover our sacred collection and add some magic to your journey.
+            Discover our Oracle Bags and begin your journey.
           </p>
           <Link
-            to="/shop"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#9b6cb0] to-[#7c4d8f] text-white px-10 py-4 font-sans text-sm tracking-widest uppercase rounded-full hover:shadow-lg transition-shadow"
+            to={createPageUrl('Shop')}
+            className="inline-flex items-center gap-3 bg-stone-900 text-white px-8 py-4 font-sans text-xs tracking-widest uppercase hover:bg-stone-800 transition-colors"
           >
-            Browse Shop
-            <span>→</span>
+            Continue Shopping
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
       </div>
