@@ -185,7 +185,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <div>
               <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-4">Connect</h4>
-              <p className="text-sm mb-2">crystalbloomery@gmail.com</p>
+              <a href="mailto:crystalbloomery@gmail.com" className="text-sm mb-2 hover:text-white transition-colors">crystalbloomery@gmail.com</a>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-stone-800 text-center text-xs opacity-60">
