@@ -51,7 +51,7 @@ export default function About() {
     },
     {
       question: "Are the teas safe to consume?",
-      answer: "Yes, all teas included in our Oracle Bags are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming."
+      answer: "Yes, all teas included in our Oracle Bags are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming and speak to your health care provider."
     },
     {
       question: "How should I use my Oracle Bag?",
