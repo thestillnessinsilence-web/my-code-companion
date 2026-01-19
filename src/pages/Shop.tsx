@@ -13,7 +13,7 @@ const sampleProducts = [
     id: '1',
     name: 'The Oracle Bag',
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized oracle message from the universe.',
-    price: 49,
+    price: 48,
     images: [
       'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
       appalachianCeremonyBag
