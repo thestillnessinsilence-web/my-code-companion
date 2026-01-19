@@ -3,7 +3,7 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import oracleStep01 from '@/assets/oracle-step-01.png';
 import oracleStep02 from '@/assets/oracle-step-02.png';
-import oracleStep03 from '@/assets/oracle-step-03.png';
+import crystalRitualSpellBag from '@/assets/crystal-ritual-spell-bag.png';
 
 export default function OracleBagSection() {
   const steps = [
@@ -25,7 +25,7 @@ export default function OracleBagSection() {
       number: '03',
       title: 'Enter Deep Meditation',
       description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal oracle message and receive the universe\'s guidance meant for you.',
-      image: oracleStep03,
+      image: crystalRitualSpellBag,
       alt: 'Healing crystal meditation ritual herbal bag oracle message Appalachian art spiritual journey'
     },
   ];
@@ -149,12 +149,13 @@ export default function OracleBagSection() {
                 className="group"
               >
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
-                  <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
                     <img
                       src={step.image}
                       alt={step.alt || step.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      style={step.number === '03' ? { maxWidth: '100%', maxHeight: '100%', imageRendering: 'auto' } : undefined}
                     />
                   </div>
                   <div className="relative bg-stone-50 group-hover:bg-[#c8b5d9] px-6 py-8 text-center transition-colors duration-300">
