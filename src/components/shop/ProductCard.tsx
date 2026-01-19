@@ -35,7 +35,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
       <div className="relative aspect-square overflow-hidden mb-6">
         <img
           src={product.image_url || 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=600&q=80'}
-          alt={`${product.name} - spiritual gift bag with healing crystals and sacred meditation tools`}
+          alt={`${product.name} - ritual herbal bag crystal ceremony spiritual gift Asheville Appalachian art`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           loading="lazy"
         />

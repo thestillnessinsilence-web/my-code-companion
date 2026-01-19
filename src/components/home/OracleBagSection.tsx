@@ -9,21 +9,21 @@ export default function OracleBagSection() {
       title: 'Unwrap the Velvet Satchel',
       description: 'Find a quiet, peaceful space. Gently open your Oracle Bag and discover the crystals, herbs, soy candle, and Appalachian artwork made just for you.',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/b0c618ed1_Gemini_Generated_Image_t4n75at4n75at4n7.jpeg',
-      alt: 'Spiritual gift bag unwrapping ritual with velvet pouch crystals and sacred herbs'
+      alt: 'Ritual herbal bag unwrapping ceremony with velvet pouch crystals and Appalachian art spiritual gift Asheville'
     },
     {
       number: '02',
       title: 'Prepare the Flower Tea',
       description: 'Brew the organic floral tea included in your satchel. Each one is unique, be sure to read the properties listed on each tea box.',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/e29f62b16_Gemini_Generated_Image_lwgrmqlwgrmqlwgr.jpeg',
-      alt: 'Tea ceremony ritual with organic floral tea and meditation preparation'
+      alt: 'Crystal ceremony bag tea ritual organic floral tea meditation preparation spiritual gift Asheville'
     },
     {
       number: '03',
       title: 'Enter Deep Meditation',
       description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal oracle message and receive the universe\'s guidance meant for you.',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/d85a6b53e_Gemini_Generated_Image_t4n75bt4n75bt4n7.jpeg',
-      alt: 'Meditation ritual with healing crystals oracle message spiritual journey'
+      alt: 'Healing crystal meditation ritual herbal bag oracle message Appalachian art spiritual journey'
     },
   ];
 
@@ -78,7 +78,7 @@ export default function OracleBagSection() {
             <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-br from-purple-50 via-stone-50 to-emerald-50">
               <img
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png"
-                alt="Spiritual gift bag oracle collection with moon blessed crystals sacred herbs and meditation tools"
+                alt="Crystal ceremony bag oracle collection moon blessed crystals ritual herbal blend Appalachian art spiritual gift Asheville"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
