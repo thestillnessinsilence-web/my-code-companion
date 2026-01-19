@@ -3,7 +3,7 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import oracleStep01 from '@/assets/oracle-step-01.png';
 import herbalRoseTeaRitual from '@/assets/herbal-rose-tea-ritual-oracle-bag-asheville.jpg';
-import crystalRitualSpellBag from '@/assets/crystal-ritual-spell-bag.png';
+import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag-crystals-tea.png';
 import crystalHerbalBagCeremony from '@/assets/crystal-herbal-bag-ceremony-for-peace.png';
 
 export default function OracleBagSection() {
@@ -26,8 +26,8 @@ export default function OracleBagSection() {
       number: '03',
       title: 'Enter Deep Meditation',
       description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal oracle message and receive the universe\'s guidance meant for you.',
-      image: crystalRitualSpellBag,
-      alt: 'Healing crystal meditation ritual herbal bag oracle message Appalachian art spiritual journey'
+      image: meditationRitualKit,
+      alt: 'Woman meditating at a low altar table with the Crystal Bloomery Oracle Bag, a cup of rose herbal tea, a lit tea light, and a selection of healing crystals including amethyst and fluorite.'
     },
   ];
 

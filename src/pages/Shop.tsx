@@ -5,7 +5,7 @@ import ProductCard from '@/components/shop/ProductCard';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useCart } from '@/context/CartContext';
-import appalachianCeremonyBag from '@/assets/appalachian-herbal-and-crystal-ceremony-bag.png';
+import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag-crystals-tea.png';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 // Sample products for display (in production, this would come from a database)
@@ -17,7 +17,7 @@ const sampleProducts = [
     price: 48,
     images: [
       'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
-      appalachianCeremonyBag
+      meditationRitualKit
     ],
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
   }
