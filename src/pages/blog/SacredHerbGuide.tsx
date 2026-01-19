@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import sacredHerbsImg from '@/assets/blog/sacred-herbs.jpg';
+import sacredHerbsImg from '@/assets/blog/herbal-apothecary-mortar-pestle-chamomile-lavender.jpg';
 
 export default function SacredHerbGuide() {
   return (
@@ -54,7 +54,7 @@ export default function SacredHerbGuide() {
         >
           <img
             src={sacredHerbsImg}
-            alt="Sacred herbs lavender mugwort ritual herbal bag Appalachian traditional medicine"
+            alt="Wooden mortar and pestle filled with fresh chamomile flowers and ground herbs, sitting next to a bundle of purple lavender on a rustic wooden table in the sunlight."
             className="w-full h-[400px] object-cover rounded-lg"
           />
         </motion.div>
