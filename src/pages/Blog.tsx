@@ -15,9 +15,9 @@ export default function Blog() {
       slug: 'moon-water',
       title: 'The Power of Moon Water',
       date: 'January 15, 2026',
-      excerpt: 'Discover how to harness lunar energy through moon water rituals and crystal charging ceremonies.',
+      excerpt: 'Discover how to harness lunar energy through moon water ceremonies and crystal charging.',
       image: moonWaterImg,
-      category: 'Rituals'
+      category: 'Ceremonies'
     },
     {
       slug: 'crystal-healing',
@@ -47,9 +47,9 @@ export default function Blog() {
       slug: 'tea-ceremonies',
       title: 'The Art of Tea Ceremonies',
       date: 'December 20, 2025',
-      excerpt: 'Transform your daily tea into a mindful ritual with our guide to sacred tea ceremonies.',
+      excerpt: 'Transform your daily tea into a mindful ceremony with our guide to sacred tea practices.',
       image: teaCeremonyImg,
-      category: 'Rituals'
+      category: 'Ceremonies'
     },
     {
       slug: 'crystal-energy',
