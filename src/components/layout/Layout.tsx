@@ -1,5 +1,5 @@
 import { useState, useEffect, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Menu, X, Sparkles } from 'lucide-react';
 
@@ -16,6 +16,12 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,25 +119,25 @@ export default function Layout({ children }: LayoutProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-stone-100 safe-area-bottom">
+          <div className="md:hidden bg-white border-t border-stone-200 shadow-lg safe-area-bottom">
             <div className="px-6 py-6 space-y-2">
               {navLinks.map((link) => (
                 <div key={link.page}>
                   <Link
                     to={createPageUrl(link.page)}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block font-sans text-sm tracking-widest uppercase text-stone-600 py-3 min-h-[44px] flex items-center active:text-[#10665c]"
+                    className="block font-sans text-sm tracking-widest uppercase text-stone-800 py-3 min-h-[44px] flex items-center hover:text-[#10665c] active:text-[#10665c] transition-colors"
                   >
                     {link.name}
                   </Link>
                   {link.submenu && (
-                    <div className="pl-4 space-y-1 mt-1">
+                    <div className="pl-4 space-y-1 mt-1 border-l-2 border-stone-200">
                       {link.submenu.map((sublink) => (
                         <Link
                           key={sublink.page}
                           to={createPageUrl(sublink.page)}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block font-sans text-xs tracking-widest uppercase text-stone-500 py-3 min-h-[44px] flex items-center active:text-[#10665c]"
+                          className="block font-sans text-xs tracking-widest uppercase text-stone-600 py-3 min-h-[44px] flex items-center hover:text-[#10665c] active:text-[#10665c] transition-colors"
                         >
                           {sublink.name}
                         </Link>
