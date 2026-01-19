@@ -20,14 +20,14 @@ export default function BookReading() {
     },
     {
       icon: Phone,
-      title: "Phone Reading",
+      title: "Phone Readings",
       location: "Anywhere",
       description: "Can't make it to Asheville? Connect with the Oracle from wherever you are. Phone readings offer the same intuitive guidance from the comfort of your own sacred space.",
       details: [
         "30 or 60 minute sessions available",
         "Crystal and oracle card guidance",
         "Recorded session available upon request",
-        "Follow-up email with insights"
+        "Reading notes sent to you by email"
       ]
     }
   ];
