@@ -35,6 +35,7 @@ export default function Layout({ children }: LayoutProps) {
     { name: 'Home', page: 'Home' },
     { name: 'Shop', page: 'Shop' },
     { name: 'About', page: 'About', submenu: [
+      { name: 'Book a Reading', page: 'BookReading' },
       { name: 'Blog', page: 'Blog' },
       { name: 'Contact', page: 'Contact' }
     ]},

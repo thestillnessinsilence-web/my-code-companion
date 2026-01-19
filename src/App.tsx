@@ -14,6 +14,7 @@ import Cart from "./pages/Cart";
 import Blog from "./pages/Blog";
 import Events from "./pages/Events";
 import Wholesale from "./pages/Wholesale";
+import BookReading from "./pages/BookReading";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
@@ -51,6 +52,7 @@ const App = () => (
                 <Route path="/blog/crystal-energy" element={<CrystalEnergy />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/wholesale" element={<Wholesale />} />
+                <Route path="/book-reading" element={<BookReading />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="*" element={<NotFound />} />
