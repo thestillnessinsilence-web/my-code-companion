@@ -170,7 +170,7 @@ export default function Events() {
               <div className="bg-gradient-to-br from-[#f3eef5] to-white p-6 rounded-lg border border-[#b695c8]/20">
                 <h3 className="font-serif text-xl text-stone-800 mb-4">The Contents</h3>
                 <p className="font-sans text-stone-600 leading-relaxed">
-                  Choose from our signature herbal tea blends and hand-selected crystals, or elevate the experience 
+                  Let us create a special tea blend for your event, paired with hand-selected crystals, or elevate the experience 
                   with fine or curated artisan jewelry, chosen for beauty, symbolism, and craftsmanship. Each selection 
                   is thoughtfully aligned with the tone, meaning, and intention of your event.
                 </p>
