@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
+import oracleStep01 from '@/assets/oracle-step-01.png';
 
 export default function OracleBagSection() {
   const steps = [
@@ -8,7 +9,7 @@ export default function OracleBagSection() {
       number: '01',
       title: 'Unwrap the Velvet Satchel',
       description: 'Find a quiet, peaceful space. Gently open your Oracle Bag and discover the crystals, herbs, soy candle, and Appalachian artwork made just for you.',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/b0c618ed1_Gemini_Generated_Image_t4n75at4n75at4n7.jpeg',
+      image: oracleStep01,
       alt: 'Ritual herbal bag unwrapping ceremony with velvet pouch crystals and Appalachian art spiritual gift Asheville'
     },
     {
