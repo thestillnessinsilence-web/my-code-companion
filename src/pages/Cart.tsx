@@ -427,9 +427,9 @@ export default function Cart() {
             </div>
 
             {/* Side by Side Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <div className="flex flex-col sm:flex-row gap-6">
               {/* Cart Items - Left Side */}
-              <div className="md:col-span-3">
+              <div className="flex-1 sm:flex-[3]">
                 <div className="bg-white rounded-xl shadow-sm overflow-hidden divide-y divide-stone-100">
                   <AnimatePresence>
                     {cartItems.map((item) => (
@@ -482,8 +482,8 @@ export default function Cart() {
               </div>
 
               {/* Order Summary - Right Side */}
-              <div className="md:col-span-2">
-                <div className="bg-white rounded-xl shadow-sm p-6 md:sticky md:top-28">
+              <div className="sm:flex-[2]">
+                <div className="bg-white rounded-xl shadow-sm p-6 sm:sticky sm:top-28">
                   <h2 className="font-serif text-xl text-stone-800 mb-5">Order Summary</h2>
                   <div className="space-y-3 mb-5">
                     <div className="flex justify-between text-sm">
