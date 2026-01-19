@@ -125,7 +125,7 @@ All colors MUST be HSL.
     padding-bottom: env(safe-area-inset-bottom);
   }
 
-  /* Better touch targets for mobile */
+  /* Better touch targets for mobile - minimum 44x44px recommended */
   button,
   a,
   input,
@@ -134,10 +134,26 @@ All colors MUST be HSL.
     touch-action: manipulation;
   }
 
+  /* Ensure minimum touch target size for accessibility */
+  button:not(.inline-btn),
+  [role="button"],
+  a:not(.inline-link) {
+    min-height: 44px;
+  }
+
   /* Prevent text selection highlight on interactive elements */
   button,
   [role="button"] {
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Active states for touch feedback */
+  button:active,
+  [role="button"]:active,
+  a:active {
+    transform: scale(0.98);
   }
 
   /* Improve input appearance on iOS */
@@ -187,5 +203,21 @@ All colors MUST be HSL.
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+  }
+
+  /* Improve touch scrolling */
+  .touch-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+
+  /* Focus visible for keyboard navigation (not touch) */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }
