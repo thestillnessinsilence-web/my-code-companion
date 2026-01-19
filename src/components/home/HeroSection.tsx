@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/d2fe50019_Gemini_Generated_Image_1vvtch1vvtch1vvt.png"
-          alt="Spiritual gift bag with healing crystals and sacred herbs from Appalachian mountains"
+          alt="Crystal ceremony bag with healing crystals and ritual herbal blend from Appalachian mountains Asheville spiritual gift"
           className="w-full h-full object-cover"
           loading="eager"
         />
