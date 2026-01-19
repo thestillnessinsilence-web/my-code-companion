@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useCart } from '@/context/CartContext';
 import appalachianCeremonyBag from '@/assets/appalachian-herbal-and-crystal-ceremony-bag.png';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 // Sample products for display (in production, this would come from a database)
 const sampleProducts = [
@@ -52,6 +53,10 @@ export default function Shop() {
         <meta name="keywords" content="oracle bags, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
         <link rel="canonical" href="https://crystalbloomery.com/shop" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Shop", url: "https://crystalbloomery.com/shop" }
+      ]} />
     <div className="min-h-screen bg-stone-50 pt-32 pb-12">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">

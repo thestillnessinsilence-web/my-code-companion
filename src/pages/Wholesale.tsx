@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Wholesale() {
   const [formData, setFormData] = useState({
@@ -64,6 +65,10 @@ export default function Wholesale() {
         <meta name="keywords" content="wholesale crystals, bulk oracle bags, metaphysical wholesale, wellness retail, crystal shop supplier, Asheville wholesale" />
         <link rel="canonical" href="https://crystalbloomery.com/wholesale" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Wholesale", url: "https://crystalbloomery.com/wholesale" }
+      ]} />
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">

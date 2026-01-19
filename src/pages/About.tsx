@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
 import appalachianView from '@/assets/appalachian-mountain-view.jpeg';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import {
   Accordion,
   AccordionContent,
@@ -86,6 +87,10 @@ export default function About() {
         <title>About Crystal Bloomery</title>
         <meta name="description" content="Meet the creator behind Crystal Bloomery. Handcrafting sacred oracle bags and curating crystal rituals in the Blue Ridge Mountains of Asheville, NC." />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "About", url: "https://crystalbloomery.com/about" }
+      ]} />
       <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">

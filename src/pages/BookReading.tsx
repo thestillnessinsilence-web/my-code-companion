@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, MapPin, Phone, Clock, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function BookReading() {
   const readingOptions = [
@@ -41,6 +42,11 @@ export default function BookReading() {
         <meta name="description" content="Book an intuitive reading with Crystal Bloomery. Available in-person in Asheville, NC or via phone. Crystal guidance and oracle card readings for clarity and peace." />
         <link rel="canonical" href="https://crystalbloomery.com/book-reading" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "About", url: "https://crystalbloomery.com/about" },
+        { name: "Book a Reading", url: "https://crystalbloomery.com/bookreading" }
+      ]} />
       
       <div className="min-h-screen bg-stone-50 pt-32 pb-24">
         {/* Hero Section */}

@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Globe } from 'lucide-react';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Events() {
   return (
@@ -9,6 +10,10 @@ export default function Events() {
         <title>Oracle Bag Gifts and Favors | Crystal Bloomery Events</title>
         <meta name="description" content="Custom Oracle Bags for weddings, celebrations, and special events. Bulk pricing and personalized messages available for your sacred occasion." />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Events", url: "https://crystalbloomery.com/events" }
+      ]} />
       <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">

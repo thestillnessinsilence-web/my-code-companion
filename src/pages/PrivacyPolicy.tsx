@@ -1,7 +1,18 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function PrivacyPolicy() {
   return (
+    <>
+      <Helmet>
+        <title>Privacy Policy | Crystal Bloomery</title>
+        <meta name="description" content="Crystal Bloomery privacy policy. Learn how we collect, use, and protect your personal information." />
+      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Privacy Policy", url: "https://crystalbloomery.com/privacy-policy" }
+      ]} />
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -80,5 +91,6 @@ export default function PrivacyPolicy() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -9,6 +9,7 @@ import { ShoppingBag, ArrowRight, Loader2, Lock, Plus, Minus, Trash2, ShieldChec
 import { toast } from 'sonner';
 import { createPageUrl } from '@/utils';
 import { useCart } from '@/context/CartContext';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Cart() {
   const { cartItems, updateQuantity, removeFromCart, clearCart, totalPrice } = useCart();
@@ -71,6 +72,10 @@ export default function Cart() {
         <meta name="description" content="Review your Crystal Bloomery order. Secure checkout for handcrafted Oracle Bags with free shipping." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://crystalbloomery.com/" },
+        { name: "Cart", url: "https://crystalbloomery.com/cart" }
+      ]} />
     <div className="min-h-screen pt-28 pb-16 bg-gradient-to-b from-stone-100 to-stone-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {cartItems.length === 0 ? (
