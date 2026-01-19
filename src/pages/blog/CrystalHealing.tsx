@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import crystalHealingImg from '@/assets/blog/crystal-healing.jpg';
+import crystalHealingImg from '@/assets/blog/amethyst-rose-quartz-crystal-towers-collection.jpeg';
 
 export default function CrystalHealing() {
   return (
@@ -54,7 +54,7 @@ export default function CrystalHealing() {
         >
           <img
             src={crystalHealingImg}
-            alt="Healing crystals collection amethyst rose quartz clear quartz spiritual gift Asheville Appalachian"
+            alt="Collection of healing crystals including polished Amethyst towers, raw Rose Quartz chunks, and crystal points resting on a soft white cloth in dappled sunlight."
             className="w-full h-[400px] object-cover rounded-lg"
           />
         </motion.div>
