@@ -72,7 +72,7 @@ export default function Cart() {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
     <div className="min-h-screen pt-28 pb-16 bg-gradient-to-b from-stone-100 to-stone-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {cartItems.length === 0 ? (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -426,102 +426,110 @@ export default function Cart() {
               </span>
             </div>
 
-            {/* Cart Items */}
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden divide-y divide-stone-100">
-              <AnimatePresence>
-                {cartItems.map((item) => (
-                  <motion.div
-                    key={item.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    className="flex gap-5 p-5"
-                  >
-                    <img
-                      src={item.image_url || 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=200&q=80'}
-                      alt={item.name}
-                      className="w-24 h-24 object-cover rounded-lg"
-                    />
-                    <div className="flex-1 flex flex-col justify-between">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h3 className="font-serif text-lg text-stone-800">{item.name}</h3>
-                          <p className="font-serif text-[#10665c] mt-1">${item.price.toFixed(2)}</p>
+            {/* Side by Side Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+              {/* Cart Items - Left Side */}
+              <div className="lg:col-span-3">
+                <div className="bg-white rounded-xl shadow-sm overflow-hidden divide-y divide-stone-100">
+                  <AnimatePresence>
+                    {cartItems.map((item) => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, x: -100 }}
+                        className="flex gap-5 p-5"
+                      >
+                        <img
+                          src={item.image_url || 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=200&q=80'}
+                          alt={item.name}
+                          className="w-24 h-24 object-cover rounded-lg"
+                        />
+                        <div className="flex-1 flex flex-col justify-between">
+                          <div className="flex justify-between items-start">
+                            <div>
+                              <h3 className="font-serif text-lg text-stone-800">{item.name}</h3>
+                              <p className="font-serif text-[#10665c] mt-1">${item.price.toFixed(2)}</p>
+                            </div>
+                            <button
+                              onClick={() => handleRemoveItem(item.id)}
+                              className="text-stone-300 hover:text-stone-500 transition-colors p-2 -m-2"
+                              aria-label="Remove item"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </div>
+                          <div className="flex items-center gap-1 mt-3">
+                            <button
+                              onClick={() => handleQuantityChange(item.id, -1, item.quantity)}
+                              className="w-9 h-9 flex items-center justify-center rounded-lg border border-stone-200 hover:border-stone-300 hover:bg-stone-50 transition-all"
+                            >
+                              <Minus className="w-3 h-3" />
+                            </button>
+                            <span className="font-sans text-sm w-10 text-center">{item.quantity}</span>
+                            <button
+                              onClick={() => handleQuantityChange(item.id, 1, item.quantity)}
+                              className="w-9 h-9 flex items-center justify-center rounded-lg border border-stone-200 hover:border-stone-300 hover:bg-stone-50 transition-all"
+                            >
+                              <Plus className="w-3 h-3" />
+                            </button>
+                          </div>
                         </div>
-                        <button
-                          onClick={() => handleRemoveItem(item.id)}
-                          className="text-stone-300 hover:text-stone-500 transition-colors p-2 -m-2"
-                          aria-label="Remove item"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                      <div className="flex items-center gap-1 mt-3">
-                        <button
-                          onClick={() => handleQuantityChange(item.id, -1, item.quantity)}
-                          className="w-9 h-9 flex items-center justify-center rounded-lg border border-stone-200 hover:border-stone-300 hover:bg-stone-50 transition-all"
-                        >
-                          <Minus className="w-3 h-3" />
-                        </button>
-                        <span className="font-sans text-sm w-10 text-center">{item.quantity}</span>
-                        <button
-                          onClick={() => handleQuantityChange(item.id, 1, item.quantity)}
-                          className="w-9 h-9 flex items-center justify-center rounded-lg border border-stone-200 hover:border-stone-300 hover:bg-stone-50 transition-all"
-                        >
-                          <Plus className="w-3 h-3" />
-                        </button>
-                      </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+              </div>
+
+              {/* Order Summary - Right Side */}
+              <div className="lg:col-span-2">
+                <div className="bg-white rounded-xl shadow-sm p-6 lg:sticky lg:top-28">
+                  <h2 className="font-serif text-xl text-stone-800 mb-5">Order Summary</h2>
+                  <div className="space-y-3 mb-5">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-stone-500">Subtotal</span>
+                      <span className="text-stone-800">${subtotal.toFixed(2)}</span>
                     </div>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-stone-500">Shipping</span>
+                      <span className="text-[#10665c]">Free</span>
+                    </div>
+                  </div>
+                  <div className="border-t border-stone-100 pt-4 mb-6">
+                    <div className="flex justify-between font-serif text-2xl">
+                      <span className="text-stone-800">Total</span>
+                      <span className="text-[#10665c]">${total.toFixed(2)}</span>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => setCheckoutMode(true)}
+                    className="w-full bg-[#10665c] hover:bg-[#0d5249] text-white py-5 font-sans text-sm tracking-widest uppercase transition-all rounded-xl shadow-lg hover:shadow-xl"
+                  >
+                    Proceed to Checkout
+                  </Button>
+                  <Link
+                    to={createPageUrl('Shop')}
+                    className="block text-center font-sans text-sm text-stone-500 hover:text-stone-700 mt-4 transition-colors"
+                  >
+                    Continue Shopping
+                  </Link>
 
-            {/* Order Summary */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
-              <div className="space-y-3 mb-5">
-                <div className="flex justify-between text-sm">
-                  <span className="text-stone-500">Subtotal</span>
-                  <span className="text-stone-800">${subtotal.toFixed(2)}</span>
+                  {/* Trust Badges */}
+                  <div className="flex flex-wrap items-center justify-center gap-4 text-stone-400 pt-6 mt-6 border-t border-stone-100">
+                    <div className="flex items-center gap-2">
+                      <Shield className="w-4 h-4" />
+                      <span className="text-xs">Secure</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Truck className="w-4 h-4" />
+                      <span className="text-xs">Free Shipping</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Heart className="w-4 h-4" />
+                      <span className="text-xs">Handcrafted</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-stone-500">Shipping</span>
-                  <span className="text-[#10665c]">Free</span>
-                </div>
-              </div>
-              <div className="border-t border-stone-100 pt-4 mb-6">
-                <div className="flex justify-between font-serif text-2xl">
-                  <span className="text-stone-800">Total</span>
-                  <span className="text-[#10665c]">${total.toFixed(2)}</span>
-                </div>
-              </div>
-              <Button
-                onClick={() => setCheckoutMode(true)}
-                className="w-full bg-[#10665c] hover:bg-[#0d5249] text-white py-5 font-sans text-sm tracking-widest uppercase transition-all rounded-xl shadow-lg hover:shadow-xl"
-              >
-                Proceed to Checkout
-              </Button>
-              <Link
-                to={createPageUrl('Shop')}
-                className="block text-center font-sans text-sm text-stone-500 hover:text-stone-700 mt-4 transition-colors"
-              >
-                Continue Shopping
-              </Link>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="flex items-center justify-center gap-8 text-stone-400 py-4">
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                <span className="text-xs">Secure Payment</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Truck className="w-4 h-4" />
-                <span className="text-xs">Free Shipping</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Heart className="w-4 h-4" />
-                <span className="text-xs">Handcrafted</span>
               </div>
             </div>
           </motion.div>
