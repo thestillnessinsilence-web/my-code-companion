@@ -5,7 +5,7 @@ import ProductCard from '@/components/shop/ProductCard';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useCart } from '@/context/CartContext';
-import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag-crystals-tea.png';
+import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag.png';
 import greenVelvetRitualBag from '@/assets/green-velvet-forest-ritual-bag-crystals.png';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
