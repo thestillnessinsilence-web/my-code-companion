@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function About() {
   const values = [
@@ -22,6 +28,60 @@ export default function About() {
       icon: Sparkles,
       title: "Unique Blessings",
       description: "No two bags are alike. Each one is intuitively crafted to carry its own distinct energy and vibration."
+    }
+  ];
+
+  const faqItems = [
+    {
+      question: "What is an Oracle Bag?",
+      answer: "An Oracle Bag is a sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, a soy candle, and a personalized oracle message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
+    },
+    {
+      question: "What materials are included in each Oracle Bag?",
+      answer: "Each Oracle Bag includes: moon-blessed healing crystals, organic loose-leaf herbal tea, a hand-poured soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal oracle message channeled just for you."
+    },
+    {
+      question: "Where are the Oracle Bags made?",
+      answer: "All Oracle Bags are hand-assembled in the heart of the Appalachian Mountains in Asheville, North Carolina. We work in rhythm with nature, honoring the lineage of herbal wisdom that has been passed down through generations in this sacred region."
+    },
+    {
+      question: "How are the crystals selected for my bag?",
+      answer: "Each crystal is intuitively chosen for the recipient. We cleanse all crystals under moonlight and charge them with healing intentions before they are placed in your Oracle Bag. The selection process is guided by spiritual intuition to ensure the stones resonate with your energy."
+    },
+    {
+      question: "Are the herbs and teas safe to consume?",
+      answer: "Yes, all teas included in our Oracle Bags are made from organic, food-grade herbs that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming."
+    },
+    {
+      question: "How should I use my Oracle Bag?",
+      answer: "Find a quiet, peaceful space. Unwrap your velvet satchel and discover the contents within. Brew your organic floral tea while holding your crystals. Enter a meditative state, close your eyes, and let the energy flow through you. Finally, read your personal oracle message and receive the universe's guidance meant for you."
+    },
+    {
+      question: "Can I purchase Oracle Bags as gifts?",
+      answer: "Absolutely! Oracle Bags make meaningful gifts for birthdays, weddings, baby showers, and other special occasions. Each bag arrives beautifully presented and ready to gift. The intuitive nature of our selection process means the bag will resonate with whoever receives it."
+    },
+    {
+      question: "Do you offer custom or bulk orders for events?",
+      answer: "Yes! We offer bulk pricing and customization for weddings, celebrations, corporate retreats, and other special events. Messages can be custom written in any theme or language. Please visit our Events page or contact us directly to discuss your vision."
+    }
+  ];
+
+  const policyItems = [
+    {
+      question: "Shipping Information",
+      answer: "We are pleased to offer FREE standard shipping on all orders.\n\nPlease allow 1-3 business days for us to intuitively select, prepare, and dispatch your mystery Oracle Bag. Once shipped, you will receive a confirmation email with tracking information."
+    },
+    {
+      question: "Return & Refund Policy",
+      answer: "Due to the intuitive, small-batch, and mystery nature of our ceremony kits, all sales are final. We do not accept returns or exchanges on opened or unopened Oracle Bags.\n\n**Your Happiness Matters**\nWe are a small business and truly value your peace of mind. If your item arrives damaged, or if you have serious concerns about your experience, please reach out to us at crystalbloomery@gmail.com. We welcome feedback and promise to work directly with you to find a fair resolution that makes you happy."
+    },
+    {
+      question: "Privacy Policy",
+      answer: "Your privacy is important to us. This policy describes how your personal information is collected, used, and shared when you visit or make a purchase from Crystal Bloomery.\n\n**Information We Collect**\nWhen you make a purchase, we collect certain information from you, including your name, billing address, shipping address, payment information (processed securely via Shopify Payments), email address, and phone number.\n\n**How We Use Your Information**\nWe use this information solely to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations) and to communicate with you regarding your order.\n\n**Sharing Your Information**\nWe share your Personal Information with third parties only to help us conduct our business. For example, we use Shopify to power our online store. We do not sell your personal data to others.\n\n**Contact Us**\nFor more information about our privacy practices, or if you have questions, please contact us by email at crystalbloomery@gmail.com."
+    },
+    {
+      question: "Terms of Service",
+      answer: "**Overview**\nThis website is operated by Crystal Bloomery. Throughout the site, the terms \"we\", \"us\" and \"our\" refer to Crystal Bloomery. By visiting our site and/or purchasing something from us, you agree to be bound by the following terms.\n\n**General Conditions**\nWe reserve the right to refuse service to anyone for any reason at any time. You agree not to reproduce, duplicate, copy, sell, or exploit any portion of the Service or materials on the website without express written permission by us.\n\n**Accuracy of Information**\nYou agree to provide current, complete, and accurate purchase and account information for all purchases made at our store so that we can complete your transactions and contact you as needed.\n\n**Product Disclaimer**\nOur Oracle Bags, including the crystals, teas, and ritual components within, are sold as curios for contemplation, meditation, and entertainment purposes. They are meant to support a personal spiritual practice and are not a substitute for professional medical, psychological, financial, or legal advice. Please use herbs and candles responsibly.\n\n**Changes to Terms**\nYou can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates to our website."
     }
   ];
 
@@ -96,6 +156,68 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+
+        {/* FAQ Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-20"
+        >
+          <h2 className="font-serif text-2xl sm:text-3xl text-center text-stone-800 mb-4">Frequently Asked Questions</h2>
+          <p className="font-sans text-stone-600 text-center mb-8 max-w-2xl mx-auto">
+            Everything you need to know about our Oracle Bags and how to use them.
+          </p>
+          
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqItems.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`faq-${index}`}
+                className="bg-white border border-stone-200 rounded-lg px-6 data-[state=open]:shadow-sm transition-shadow"
+              >
+                <AccordionTrigger className="font-serif text-lg text-stone-800 hover:text-[#10665c] py-5 text-left">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="font-sans text-stone-600 leading-relaxed pb-5">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+
+        {/* Policies Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mb-20"
+        >
+          <h2 className="font-serif text-2xl sm:text-3xl text-center text-stone-800 mb-4">Policies & Information</h2>
+          <p className="font-sans text-stone-600 text-center mb-8 max-w-2xl mx-auto">
+            Important information about shipping, returns, and your privacy.
+          </p>
+          
+          <Accordion type="single" collapsible className="space-y-3">
+            {policyItems.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`policy-${index}`}
+                className="bg-gradient-to-br from-[#e8f5f2]/50 to-[#f3eef5]/50 border border-stone-200 rounded-lg px-6 data-[state=open]:shadow-sm transition-shadow"
+              >
+                <AccordionTrigger className="font-serif text-lg text-stone-800 hover:text-[#10665c] py-5 text-left">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="font-sans text-stone-600 leading-relaxed pb-5 whitespace-pre-line">
+                  {item.answer.split('**').map((part, i) => 
+                    i % 2 === 1 ? <strong key={i} className="text-stone-800">{part}</strong> : part
+                  )}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </motion.div>
 
         {/* Sacred Geometry Decoration */}
