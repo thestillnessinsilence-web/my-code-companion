@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, Phone, Send, Check } from 'lucide-react';
+import { Mail, Send, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function Contact() {
@@ -30,12 +30,6 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '(910) 922-1549',
-      href: 'tel:+19109221549'
-    },
     {
       icon: Mail,
       label: 'Email',
