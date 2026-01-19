@@ -13,6 +13,8 @@ import Cart from "./pages/Cart";
 import Blog from "./pages/Blog";
 import Events from "./pages/Events";
 import Wholesale from "./pages/Wholesale";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import MoonWater from "./pages/blog/MoonWater";
 import CrystalHealing from "./pages/blog/CrystalHealing";
@@ -47,6 +49,8 @@ const App = () => (
               <Route path="/blog/crystal-energy" element={<CrystalEnergy />} />
               <Route path="/events" element={<Events />} />
               <Route path="/wholesale" element={<Wholesale />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
