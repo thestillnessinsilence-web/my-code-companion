@@ -19,7 +19,7 @@ const curatedItems = [
   {
     image: floatingGlassNecklace,
     title: "Floating Glass Necklaces",
-    description: "Custom botanical pendants with preserved flowers",
+    description: "Add charms, flowers, herbs, or fine gemstones to our floating glass necklaces",
     alt: "Round gold floating glass locket necklace filled with faceted amethyst, yellow sapphire, and dried lavender flowers, resting on a wooden sill in front of a sunlit mountain window view"
   },
   {
