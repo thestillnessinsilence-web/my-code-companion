@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Store, Package, Heart, Sparkles, CheckCircle, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -56,6 +57,13 @@ export default function Wholesale() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Wholesale Oracle Bags for Retailers | Crystal Bloomery Partnership</title>
+        <meta name="description" content="Partner with Crystal Bloomery for wholesale Oracle Bags. Perfect for boutiques, wellness centers, yoga studios, and metaphysical shops. Flexible minimums and exclusive offerings." />
+        <meta name="keywords" content="wholesale crystals, bulk oracle bags, metaphysical wholesale, wellness retail, crystal shop supplier, Asheville wholesale" />
+        <link rel="canonical" href="https://crystalbloomery.com/wholesale" />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
@@ -272,5 +280,6 @@ export default function Wholesale() {
         </div>
       </div>
     </div>
+    </>
   );
 }

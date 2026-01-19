@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ProductCard from '@/components/shop/ProductCard';
 import { Loader2 } from 'lucide-react';
@@ -44,6 +45,13 @@ export default function Shop() {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>Shop Oracle Bags | Handcrafted Crystal & Herbal Ceremony Kits</title>
+        <meta name="description" content="Shop our signature Oracle Bags featuring moon-blessed crystals, organic herbal tea, soy candles, and personalized oracle messages. Handcrafted in Asheville, NC." />
+        <meta name="keywords" content="oracle bags, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
+        <link rel="canonical" href="https://crystalbloomery.com/shop" />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-12">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">
@@ -111,5 +119,6 @@ export default function Shop() {
         </div>
       </div>
     </div>
+    </>
   );
 }

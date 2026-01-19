@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -64,6 +65,12 @@ export default function Cart() {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>Your Shopping Bag | Crystal Bloomery</title>
+        <meta name="description" content="Review your Crystal Bloomery order. Secure checkout for handcrafted Oracle Bags with free shipping." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
     <div className="min-h-screen pt-28 pb-16 bg-gradient-to-b from-stone-100 to-stone-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {cartItems.length === 0 ? (
@@ -521,5 +528,6 @@ export default function Cart() {
         )}
       </div>
     </div>
+    </>
   );
 }
