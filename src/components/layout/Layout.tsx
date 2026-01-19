@@ -186,26 +186,13 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <div>
               <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-4">Navigate</h4>
-              <div className="space-y-2">
-                {navLinks.map((link) => (
-                  <div key={link.page}>
-                    <Link
-                      to={createPageUrl(link.page)}
-                      className="block text-sm hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                    {link.submenu && link.submenu.map((sublink) => (
-                      <Link
-                        key={sublink.page}
-                        to={createPageUrl(sublink.page)}
-                        className="block text-sm text-stone-500 hover:text-white transition-colors pl-4 mt-1"
-                      >
-                        {sublink.name}
-                      </Link>
-                    ))}
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+                <Link to={createPageUrl('Home')} className="text-sm hover:text-white transition-colors">Home</Link>
+                <Link to={createPageUrl('Shop')} className="text-sm hover:text-white transition-colors">Shop</Link>
+                <Link to={createPageUrl('About')} className="text-sm hover:text-white transition-colors">About</Link>
+                <Link to={createPageUrl('Blog')} className="text-sm hover:text-white transition-colors">Blog</Link>
+                <Link to={createPageUrl('Contact')} className="text-sm hover:text-white transition-colors">Contact</Link>
+                <Link to={createPageUrl('Wholesale')} className="text-sm hover:text-white transition-colors">Wholesale</Link>
               </div>
             </div>
             <div>
