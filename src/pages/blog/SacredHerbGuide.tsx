@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import sacredHerbsImg from '@/assets/blog/sacred-herbs.jpg';
 
 export default function SacredHerbGuide() {
   return (
@@ -52,7 +53,7 @@ export default function SacredHerbGuide() {
           className="mb-12"
         >
           <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80"
+            src={sacredHerbsImg}
             alt="Sacred herbs lavender mugwort ritual herbal bag Appalachian traditional medicine"
             className="w-full h-[400px] object-cover rounded-lg"
           />
