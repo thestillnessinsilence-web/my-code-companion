@@ -13,7 +13,7 @@ const sampleProducts = [
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized oracle message from the universe.',
     price: 48,
     image_url: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/24360c6a1_image.png',
-    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Handwritten oracle message', 'Soy candle', 'Appalachian artwork']
+    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
   }
 ];
 
