@@ -3,6 +3,7 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import oracleStep01 from '@/assets/oracle-step-01.png';
 import oracleStep02 from '@/assets/oracle-step-02.png';
+import oracleStep03 from '@/assets/oracle-step-03.png';
 
 export default function OracleBagSection() {
   const steps = [
@@ -24,7 +25,7 @@ export default function OracleBagSection() {
       number: '03',
       title: 'Enter Deep Meditation',
       description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal oracle message and receive the universe\'s guidance meant for you.',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958433b395a7679475e55c6/d85a6b53e_Gemini_Generated_Image_t4n75bt4n75bt4n7.jpeg',
+      image: oracleStep03,
       alt: 'Healing crystal meditation ritual herbal bag oracle message Appalachian art spiritual journey'
     },
   ];
