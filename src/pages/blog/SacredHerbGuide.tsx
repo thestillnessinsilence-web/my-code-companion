@@ -200,13 +200,6 @@ export default function SacredHerbGuide() {
               provides what we need for body, mind, and spirit.
             </p>
 
-            <div className="border-t border-stone-200 mt-12 pt-8">
-              <p className="text-sm text-stone-500 italic">
-                Sources: The Appalachian Magazine, "Medicinal Plants and Home Remedies of Appalachia" by 
-                Judith L. Bolyard, PubMed research on chamomile and lavender, Journal of Ethnopharmacology. 
-                This information is for educational purposes and should not replace professional medical advice.
-              </p>
-            </div>
           </div>
         </motion.div>
 

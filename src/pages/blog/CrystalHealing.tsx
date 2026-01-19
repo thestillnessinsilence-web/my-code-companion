@@ -210,13 +210,6 @@ export default function CrystalHealing() {
               and intention.
             </p>
 
-            <div className="border-t border-stone-200 mt-12 pt-8">
-              <p className="text-sm text-stone-500 italic">
-                Sources: HowStuffWorks Science, historical references from Ancient Egyptian and Greek texts, 
-                mineral properties from geological research. Crystal healing is a complementary practice and 
-                should not replace professional medical care.
-              </p>
-            </div>
           </div>
         </motion.div>
 

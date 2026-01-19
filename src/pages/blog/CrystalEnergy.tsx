@@ -245,13 +245,6 @@ export default function CrystalEnergy() {
               and turn our attention inward. In our fast-paced digital world, this alone is valuable.
             </p>
 
-            <div className="border-t border-stone-200 mt-12 pt-8">
-              <p className="text-sm text-stone-500 italic">
-                Sources: HowStuffWorks Science, geological research on crystal formation, historical 
-                references from various cultural traditions. Crystal healing is a complementary 
-                practice and should not replace professional medical care.
-              </p>
-            </div>
           </div>
         </motion.div>
 
