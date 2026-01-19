@@ -60,9 +60,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Navigation */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ${
-          scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
-        }`}
+        className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
