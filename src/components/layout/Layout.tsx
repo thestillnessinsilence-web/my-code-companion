@@ -2,7 +2,7 @@ import { useState, useEffect, ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Menu, X, Sparkles } from 'lucide-react';
-
+import NewsletterSignup from '@/components/NewsletterSignup';
 interface NavLink {
   name: string;
   page: string;
@@ -227,6 +227,12 @@ export default function Layout({ children }: LayoutProps) {
                     </svg>
                   </a>
                 </div>
+              </div>
+              
+              {/* Newsletter Signup */}
+              <div className="mt-6 pt-6 border-t border-stone-700">
+                <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-2">Newsletter</h4>
+                <NewsletterSignup />
               </div>
             </div>
           </div>
