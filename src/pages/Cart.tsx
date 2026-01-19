@@ -32,6 +32,30 @@ export default function Cart() {
   });
   const [processing, setProcessing] = useState(false);
   const [shippingSameAsBilling, setShippingSameAsBilling] = useState(true);
+  const [promoCode, setPromoCode] = useState('');
+  const [promoApplied, setPromoApplied] = useState(false);
+  const [promoDiscount, setPromoDiscount] = useState(0);
+
+  const shipping = 4.99;
+
+  const handleApplyPromo = () => {
+    if (promoCode.toUpperCase() === 'ORACLE10') {
+      setPromoDiscount(totalPrice * 0.10);
+      setPromoApplied(true);
+      toast.success('Promo code applied! 10% off your order.');
+    } else if (promoCode.trim() === '') {
+      toast.error('Please enter a promo code');
+    } else {
+      toast.error('Invalid promo code');
+    }
+  };
+
+  const handleRemovePromo = () => {
+    setPromoCode('');
+    setPromoApplied(false);
+    setPromoDiscount(0);
+    toast.success('Promo code removed');
+  };
 
   const handleQuantityChange = (id: string, delta: number, currentQuantity: number) => {
     const newQuantity = currentQuantity + delta;
@@ -51,7 +75,7 @@ export default function Cart() {
   };
 
   const subtotal = totalPrice;
-  const total = subtotal;
+  const total = subtotal + shipping - promoDiscount;
 
   const handleCheckout = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -389,8 +413,14 @@ export default function Cart() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-stone-500">Shipping</span>
-                    <span className="text-[#10665c]">Free</span>
+                    <span className="text-stone-800">${shipping.toFixed(2)}</span>
                   </div>
+                  {promoApplied && (
+                    <div className="flex justify-between text-sm">
+                      <span className="text-[#10665c]">Promo Discount</span>
+                      <span className="text-[#10665c]">-${promoDiscount.toFixed(2)}</span>
+                    </div>
+                  )}
                   <div className="flex justify-between font-serif text-xl pt-2">
                     <span className="text-stone-800">Total</span>
                     <span className="text-[#10665c]">${total.toFixed(2)}</span>
@@ -404,7 +434,7 @@ export default function Cart() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Truck className="w-4 h-4" />
-                      <span className="text-xs">Free Shipping</span>
+                      <span className="text-xs">Fast Shipping</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Heart className="w-4 h-4" />
@@ -495,9 +525,51 @@ export default function Cart() {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-stone-500">Shipping</span>
-                      <span className="text-[#10665c]">Free</span>
+                      <span className="text-stone-800">${shipping.toFixed(2)}</span>
                     </div>
+                    {promoApplied && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-[#10665c]">Promo Discount</span>
+                        <span className="text-[#10665c]">-${promoDiscount.toFixed(2)}</span>
+                      </div>
+                    )}
                   </div>
+
+                  {/* Promo Code Section */}
+                  <div className="mb-5 pb-5 border-b border-stone-100">
+                    <label className="font-sans text-xs tracking-wider uppercase text-stone-500 mb-2 block">
+                      Promo Code
+                    </label>
+                    {promoApplied ? (
+                      <div className="flex items-center justify-between bg-[#e8f5f2] p-3 rounded-lg">
+                        <span className="font-sans text-sm text-[#10665c]">{promoCode.toUpperCase()} applied</span>
+                        <button
+                          onClick={handleRemovePromo}
+                          className="text-stone-500 hover:text-stone-700 text-sm underline"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex gap-2">
+                        <Input
+                          value={promoCode}
+                          onChange={(e) => setPromoCode(e.target.value)}
+                          placeholder="Enter code"
+                          className="flex-1 border-stone-200 rounded-lg"
+                        />
+                        <Button
+                          type="button"
+                          onClick={handleApplyPromo}
+                          variant="outline"
+                          className="border-stone-200 hover:bg-stone-50 text-stone-700"
+                        >
+                          Apply
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+
                   <div className="border-t border-stone-100 pt-4 mb-6">
                     <div className="flex justify-between font-serif text-2xl">
                       <span className="text-stone-800">Total</span>
@@ -525,7 +597,7 @@ export default function Cart() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Truck className="w-4 h-4" />
-                      <span className="text-xs">Free Shipping</span>
+                      <span className="text-xs">Fast Shipping</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Heart className="w-4 h-4" />
