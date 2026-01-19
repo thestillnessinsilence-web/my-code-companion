@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
-import oracleStep01 from '@/assets/oracle-step-01.png';
+import oracleBagWildflowers from '@/assets/oracle-bag-wildflowers-journal.jpg';
 import herbalRoseTeaRitual from '@/assets/herbal-rose-tea-ritual-oracle-bag-asheville.jpg';
 import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag-crystals-tea.png';
 import crystalHerbalBagCeremony from '@/assets/crystal-herbal-bag-ceremony-for-peace.png';
@@ -12,8 +12,8 @@ export default function OracleBagSection() {
       number: '01',
       title: 'Unwrap the Velvet Satchel',
       description: 'Find a quiet, peaceful space. Gently open your Oracle Bag and discover the crystals, herbs, soy candle, and Appalachian artwork made just for you.',
-      image: oracleStep01,
-      alt: 'Ritual herbal bag unwrapping ceremony with velvet pouch crystals and Appalachian art spiritual gift Asheville'
+      image: oracleBagWildflowers,
+      alt: 'Red velvet Oracle Bag resting on a rustic wooden desk next to a vase of wildflowers and an open journal near a window.'
     },
     {
       number: '02',
