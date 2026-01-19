@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import oracleBagWildflowers from '@/assets/oracle-bag-wildflowers-journal.jpg';
 import herbalRoseTeaRitual from '@/assets/herbal-rose-tea-ritual-oracle-bag-asheville.jpg';
 import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag-crystals-tea.png';
-import crystalHerbalBagCeremony from '@/assets/crystal-herbal-bag-ceremony-for-peace.png';
+import apothecaryStudio from '@/assets/crystal-bloomery-apothecary-studio-asheville.png';
 
 export default function OracleBagSection() {
   const steps = [
@@ -81,8 +81,8 @@ export default function OracleBagSection() {
           >
             <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-br from-purple-50 via-stone-50 to-emerald-50">
               <img
-                src={crystalHerbalBagCeremony}
-                alt="Crystal ceremony bag oracle collection moon blessed crystals ritual herbal blend Appalachian art spiritual gift Asheville"
+                src={apothecaryStudio}
+                alt="Sunlit herbal apothecary studio in Asheville featuring wooden shelves filled with loose leaf tea jars, large amethyst and citrine geodes, hanging dried herbs, and a rustic table with velvet ritual bags and scrolls."
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
