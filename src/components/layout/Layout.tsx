@@ -186,7 +186,6 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-4">Connect</h4>
               <p className="text-sm mb-2">crystalbloomery@gmail.com</p>
-              <p className="text-sm">(910) 922-1549</p>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-stone-800 text-center text-xs opacity-60">
