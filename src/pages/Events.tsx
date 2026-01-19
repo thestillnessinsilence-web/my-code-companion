@@ -140,11 +140,63 @@ export default function Events() {
             </div>
           </div>
 
-          {/* Curated Items Carousel */}
+          {/* The Bespoke Oracle Bag Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-16"
+          >
+            <div className="text-center mb-8">
+              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2">The Bespoke Oracle Bag</h2>
+              <p className="font-sans text-sm tracking-wide text-[#7c4d8f] uppercase">
+                A Custom Ritual Favor for Weddings & Private Events
+              </p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-8 sm:p-10 rounded-lg border border-stone-200 mb-8">
+              <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto mb-8">
+                Move beyond the ordinary. Our signature velvet Oracle Bags are thoughtfully crafted, fully customizable 
+                ritual favors designed to hold the unique energy of your gathering. Whether celebrating a wedding, hosting 
+                a private retreat, or marking a meaningful milestone, each Oracle Bag is curated with intention to reflect 
+                your vision and the spirit of the moment.
+              </p>
+              <p className="font-serif text-lg text-stone-700 text-center italic">
+                Every element is selected to create a lasting keepsake—one your guests will feel, treasure, and remember.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-br from-[#f3eef5] to-white p-6 rounded-lg border border-[#b695c8]/20">
+                <h3 className="font-serif text-xl text-stone-800 mb-4">The Contents</h3>
+                <p className="font-sans text-stone-600 leading-relaxed">
+                  Choose from our signature herbal tea blends and hand-selected crystals, or elevate the experience 
+                  with fine or curated artisan jewelry, chosen for beauty, symbolism, and craftsmanship. Each selection 
+                  is thoughtfully aligned with the tone, meaning, and intention of your event.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-[#e8f5f2] to-white p-6 rounded-lg border border-[#10665c]/20">
+                <h3 className="font-serif text-xl text-stone-800 mb-4">The Art</h3>
+                <p className="font-sans text-stone-600 leading-relaxed">
+                  Complete your Oracle Bags with custom watercolor artwork, created exclusively for your celebration. 
+                  Artwork is painted to reflect your color palette, theme, or seasonal inspiration, ensuring each piece 
+                  feels personal and one-of-a-kind.
+                </p>
+              </div>
+            </div>
+
+            <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto">
+              From simple, elegant herbal sachets to luxurious jewelry keepsakes, we collaborate with you to create 
+              ritual favors that feel intentional, beautiful, and unforgettable—designed to honor both the occasion 
+              and the people you share it with.
+            </p>
+          </motion.div>
+
+          {/* Curated Items Carousel */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-12"
           >
             <div className="text-center mb-8">
