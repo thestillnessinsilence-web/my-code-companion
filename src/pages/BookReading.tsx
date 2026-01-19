@@ -24,9 +24,10 @@ export default function BookReading() {
       location: "Anywhere",
       description: "Can't make it to Asheville? Connect with the Oracle from wherever you are. Phone readings offer the same intuitive guidance from the comfort of your own sacred space.",
       details: [
-        "30 or 60 minute sessions available",
-        "Crystal and oracle card guidance",
-        "Recorded session available upon request",
+        "Watercolor aura reading",
+        "Mediumship or Tarot Reading available",
+        "Sliding Scale pricing for those in need!",
+        "$30 for 30 minutes and $60 for 60 minutes",
         "Reading notes sent to you by email"
       ]
     }
