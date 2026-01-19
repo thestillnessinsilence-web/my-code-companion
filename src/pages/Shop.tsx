@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProductCard from '@/components/shop/ProductCard';
+import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 // Sample products for display (in production, this would come from a database)
@@ -23,8 +25,18 @@ const sampleProducts = [
 ];
 
 export default function Shop() {
-  const handleAddToCart = (product: typeof sampleProducts[0]) => {
+  const [addingProduct, setAddingProduct] = useState<string | null>(null);
+  const isLoading = false;
+  const products = sampleProducts;
+
+  const handleAddToCart = async (product: typeof sampleProducts[0]) => {
+    setAddingProduct(product.id);
+    
+    // Simulate adding to cart
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
     toast.success(`${product.name} added to your bag`);
+    setAddingProduct(null);
   };
 
   return (
@@ -60,16 +72,26 @@ export default function Shop() {
 
       {/* Products Grid */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 auto-rows-fr">
-          {sampleProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onAddToCart={handleAddToCart}
-              isAdding={false}
-            />
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="flex justify-center py-20">
+            <Loader2 className="w-8 h-8 text-[#10665c] animate-spin" />
+          </div>
+        ) : products.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="font-sans text-stone-500">Products coming soon...</p>
+          </div>
+        ) : (
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 auto-rows-fr">
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onAddToCart={handleAddToCart}
+                isAdding={addingProduct === product.id}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Sacred Geometry Decoration */}
