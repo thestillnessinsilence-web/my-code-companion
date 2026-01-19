@@ -40,7 +40,7 @@ export default function Home() {
       <OracleBagSection />
       
       {/* Call to Action */}
-      <section className="py-24 bg-stone-900 relative overflow-hidden">
+      <section className="pt-24 pb-16 bg-stone-900 relative overflow-hidden">
         {/* Sacred Geometry Background */}
         <div className="absolute inset-0 opacity-5">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
