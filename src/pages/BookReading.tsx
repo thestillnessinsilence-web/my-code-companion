@@ -10,7 +10,7 @@ export default function BookReading() {
       icon: MapPin,
       title: "In-Person Reading",
       location: "Asheville, NC",
-      description: "Experience a deeply personal intuitive reading in the heart of the Blue Ridge Mountains. Meet in a peaceful, sacred space where we can connect face-to-face.",
+      description: "Experience a deeply personal intuitive reading in the heart of the Blue Ridge Mountains. Reading will take place at the Crystal Bloomery workshop.",
       details: [
         "30 or 60 minute sessions available",
         "Crystal and oracle card guidance",
