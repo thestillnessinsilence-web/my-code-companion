@@ -24,8 +24,9 @@ const curatedItems = [
   },
   {
     image: charmNecklaces,
-    title: "Sterling & Gold Charm Necklaces",
-    description: "Artisan moon, crystal, and botanical charms"
+    title: "Custom Herbal Tea Blends",
+    description: "Bespoke tea blends for your special events",
+    alt: "Close-up view of a natural paper tea bag spilling a vibrant herbal blend of dried chamomile, rose petals, calendula, lavender buds, and mint leaves onto a rustic wooden surface"
   },
   {
     image: collectorCrystals,
