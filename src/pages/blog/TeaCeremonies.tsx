@@ -231,14 +231,6 @@ export default function TeaCeremonies() {
               for you, and allow your practice to evolve.
             </p>
 
-            <div className="border-t border-stone-200 mt-12 pt-8">
-              <p className="text-sm text-stone-500 italic">
-                Sources: Nutrition and Food Technology systematic review on tea and psychological well-being, 
-                Phytotherapy Research on chamomile, traditional Japanese and Chinese tea ceremony principles. 
-                Herbal teas are generally safe but consult healthcare providers if pregnant, nursing, or 
-                taking medications.
-              </p>
-            </div>
           </div>
         </motion.div>
 

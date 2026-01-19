@@ -203,13 +203,6 @@ export default function MeditationSpace() {
               simplest corner, approached with reverence, can become a powerful sanctuary for inner peace.
             </p>
 
-            <div className="border-t border-stone-200 mt-12 pt-8">
-              <p className="text-sm text-stone-500 italic">
-                References: Journal of Environmental Psychology research on environmental priming, 
-                mindfulness and space design studies. Your meditation practice is personal—adapt 
-                these suggestions to serve your unique needs.
-              </p>
-            </div>
           </div>
         </motion.div>
 
