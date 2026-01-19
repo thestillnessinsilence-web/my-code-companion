@@ -188,8 +188,8 @@ export default function Events() {
             <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto">
               From simple, elegant herbal sachets to luxurious jewelry keepsakes, we collaborate with you to create 
               ritual favors that feel intentional, beautiful, and unforgettable—designed to honor both the occasion 
-              and the people you share it with. Above all, our focus is on delivering a special message of love, peace, 
-              and happiness in each of our Oracle Bags.
+              and the people you share it with. In keeping true with our mission, our focus is on delivering a special 
+              message of love, peace, and happiness in each of our Oracle Bags.
             </p>
           </motion.div>
 
