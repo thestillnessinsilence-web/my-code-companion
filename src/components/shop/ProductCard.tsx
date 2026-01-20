@@ -131,7 +131,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
         
         {/* Features */}
         {product.features && product.features.length > 0 && (
-          <ul className="space-y-1 mb-6">
+          <ul className="space-y-1 mb-4">
             {product.features.map((feature, index) => (
               <li key={index} className="flex items-center gap-2 text-xs sm:text-sm text-stone-500">
                 <Check className="w-3 h-3 text-[#10665c]" />
@@ -143,7 +143,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
 
         {/* Zodiac Sign Selector */}
         {product.requiresZodiac && (
-          <div className="space-y-4 mb-6">
+          <div className="space-y-4 mb-4">
             {/* Zodiac Sign Dropdown */}
             <div>
               <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
@@ -213,7 +213,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
         )}
 
         {/* Price & Action */}
-        <div className="flex items-center justify-between pt-4 border-t border-stone-100 mt-auto">
+        <div className="flex items-center justify-between pt-3 border-t border-stone-100 mt-2">
           <span className="font-serif text-xl sm:text-2xl text-[#10665c]">${product.price}</span>
           <button
             onClick={handleAddToCart}
