@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
 
-const SUPABASE_URL = "https://2d4faa0b-efd0-4042-adf0-cf7a958b11df.supabase.co";
+// Lovable Cloud edge function URL
+const SUPABASE_FUNCTIONS_URL = "https://2d4faa0b-efd0-4042-adf0-cf7a958b11df.supabase.co/functions/v1";
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('');
@@ -25,7 +26,7 @@ export default function NewsletterSignup() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${SUPABASE_URL}/functions/v1/klaviyo-subscribe`, {
+      const response = await fetch(`${SUPABASE_FUNCTIONS_URL}/klaviyo-subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
