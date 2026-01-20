@@ -21,6 +21,17 @@ const sampleProducts = [
       meditationRitualKit
     ],
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
+  },
+  {
+    id: '2',
+    name: 'The Astrology Bag',
+    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy. For a general zodiac report, only your date of birth is needed. For a more accurate natal chart reading, please provide your date, time, and place of birth.',
+    price: 69,
+    images: [
+      meditationRitualKit,
+      greenVelvetRitualBag
+    ],
+    features: ['Custom birth chart report', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Birth chart reference card', 'Celestial soy candle']
   }
 ];
 
