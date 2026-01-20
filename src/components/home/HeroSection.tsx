@@ -99,7 +99,7 @@ export default function HeroSection() {
 
           <p className="font-sans text-base sm:text-lg text-stone-300 leading-relaxed mb-10 max-w-lg">
             Handcrafted and assembled in the heart of the Appalachian mountains. Crystals and herbs 
-            woven together—each Oracle bag carries a unique blessing curated for you.
+            woven together—each Spirit Bloom carries a unique blessing curated for you.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -107,7 +107,7 @@ export default function HeroSection() {
               to={createPageUrl('Shop')}
               className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#10665c] to-[#0d534a] text-white px-8 py-4 font-sans text-sm tracking-widest uppercase transition-all hover:shadow-lg hover:shadow-emerald-900/30"
             >
-              The Oracle Bag
+              Unfold a Spirit Bloom
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
