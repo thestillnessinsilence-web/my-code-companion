@@ -202,7 +202,7 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="font-serif text-lg text-white">Crystal Bloomery</span>
               </Link>
               <p className="text-xs leading-relaxed text-stone-500 mb-3">
-                Handcrafted in the Appalachian mountains. Each Spirit Bloom carries a unique blessing.
+                Handcrafted and assembled in the heart of the Appalachian mountains. Crystals and herbs woven together—each Spirit Bloom carries a unique blessing curated for you.
               </p>
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/crystalbloomery" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="Instagram">
@@ -240,7 +240,7 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h4 className="font-sans text-xs tracking-widest uppercase text-stone-500 mb-3">Newsletter</h4>
               <NewsletterSignup />
-              <p className="text-xs text-stone-600 mt-2">Wisdom, offers & herbal info.</p>
+              <p className="text-xs text-stone-600 mt-2">Wisdom for your unfolding, exclusive offers, and crystal and herbal information.</p>
               <a href="mailto:crystalbloomery@gmail.com" className="block mt-2 text-xs text-[#b695c8] hover:text-white transition-colors">
                 crystalbloomery@gmail.com
               </a>
