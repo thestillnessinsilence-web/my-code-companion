@@ -100,7 +100,7 @@ export default function TermsOfService() {
               crystals are exactly alike. Variations in color, shape, size, and texture are natural and expected.
             </p>
             <p className="font-sans text-stone-600 leading-relaxed">
-              <strong>Mystery Items:</strong> The "Oracle Bag" is a mystery item. By purchasing, you acknowledge 
+              <strong>Mystery Items:</strong> "Spirit Blooms" is a mystery item. By purchasing, you acknowledge 
               that the contents are intuitively selected and you may not choose specific stones or messages. These 
               natural variations are not considered defects.
             </p>
@@ -151,7 +151,7 @@ export default function TermsOfService() {
               contact us within 48 hours of delivery with photos of the damage.
             </p>
             <p className="font-sans text-stone-600 leading-relaxed">
-              <strong>Mystery Bags:</strong> "The Oracle Bag" is a final sale item due to its mystery nature, 
+              <strong>Mystery Bags:</strong> "Spirit Blooms" is a final sale item due to its mystery nature, 
               unless the item is defective.
             </p>
           </section>

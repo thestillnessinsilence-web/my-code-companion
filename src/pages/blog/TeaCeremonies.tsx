@@ -9,7 +9,7 @@ export default function TeaCeremonies() {
     <>
       <Helmet>
         <title>The Art of Tea Ceremonies | Crystal Bloomery</title>
-        <meta name="description" content="Transform your daily tea into a mindful ritual. Learn sacred tea practices to enhance relaxation and connect with your Oracle Bag herbs." />
+        <meta name="description" content="Transform your daily tea into a mindful ritual. Learn sacred tea practices to enhance relaxation and connect with your Spirit Blooms herbs." />
       </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export default function TeaCeremonies() {
           </h1>
           <p className="font-sans text-lg text-stone-600 leading-relaxed">
             Learn how to elevate your daily tea into a mindful ritual that promotes relaxation, 
-            presence, and connection with the herbs in your Oracle Bag.
+            presence, and connection with the herbs in your Spirit Blooms.
           </p>
         </motion.header>
 
@@ -95,7 +95,7 @@ export default function TeaCeremonies() {
               in tea—can promote relaxation without drowsiness.
             </p>
             <p>
-              Chamomile, included in many Oracle Bags, has been studied extensively. A review in 
+              Chamomile, included in many Spirit Blooms, has been studied extensively. A review in 
               Phytotherapy Research found evidence supporting its traditional use for promoting calm 
               and supporting sleep. The ritual of preparation may amplify these effects by activating 
               the parasympathetic nervous system—the "rest and digest" response.
@@ -112,7 +112,7 @@ export default function TeaCeremonies() {
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li>Clear your tea-making area of clutter</li>
-                <li>Light a candle (the soy candle from your Oracle Bag is perfect)</li>
+                <li>Light a candle (the soy candle from your Spirit Blooms is perfect)</li>
                 <li>Set out your favorite cup and teaware</li>
                 <li>Consider placing your crystals nearby</li>
               </ul>
@@ -147,14 +147,14 @@ export default function TeaCeremonies() {
               </ul>
             </div>
 
-            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Oracle Bag Tea Ritual</h2>
+            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Spirit Blooms Tea Ritual</h2>
             <p>
-              Each Oracle Bag includes organic herbal tea carefully selected to complement your 
+              Each Spirit Blooms includes organic herbal tea carefully selected to complement your 
               crystal and oracle message experience. Here's a complete ritual for working with your bag:
             </p>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
-                <strong>Set Your Intention:</strong> Before opening your Oracle Bag, take three deep 
+                <strong>Set Your Intention:</strong> Before opening your Spirit Blooms, take three deep 
                 breaths. Set an intention for what you hope to receive—guidance, clarity, peace.
               </li>
               <li>

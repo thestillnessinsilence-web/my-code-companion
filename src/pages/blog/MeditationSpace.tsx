@@ -9,7 +9,7 @@ export default function MeditationSpace() {
     <>
       <Helmet>
         <title>Creating Your Meditation Space | Crystal Bloomery</title>
-        <meta name="description" content="Design a peaceful sanctuary in your home for meditation and mindfulness. Tips for setting up your Oracle Bag ritual space." />
+        <meta name="description" content="Design a peaceful sanctuary in your home for meditation and mindfulness. Tips for setting up your Spirit Blooms ritual space." />
       </Helmet>
     <div className="min-h-screen bg-stone-50 pt-32 pb-24">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +46,7 @@ export default function MeditationSpace() {
             Creating Your Meditation Space: A Sanctuary for Inner Peace
           </h1>
           <p className="font-sans text-lg text-stone-600 leading-relaxed">
-            Design a peaceful sanctuary in your home where you can connect with your Oracle Bag, 
+            Design a peaceful sanctuary in your home where you can connect with your Spirit Blooms, 
             practice mindfulness, and nurture your spiritual well-being.
           </p>
         </motion.header>
@@ -122,8 +122,8 @@ export default function MeditationSpace() {
                 Consider including:
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
-                <li>Your Oracle Bag crystals and oracle message</li>
-                <li>Candles (soy candles like those in our Oracle Bags are clean-burning)</li>
+                <li>Your Spirit Blooms crystals and oracle message</li>
+                <li>Candles (soy candles like those in our Spirit Blooms are clean-burning)</li>
                 <li>Fresh flowers or plants</li>
                 <li>Meaningful photographs or artwork</li>
                 <li>Religious or spiritual symbols that resonate with you</li>
@@ -144,9 +144,9 @@ export default function MeditationSpace() {
               </ul>
             </div>
 
-            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Setting Up Your Oracle Bag Ritual Space</h2>
+            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Setting Up Your Spirit Blooms Ritual Space</h2>
             <p>
-              Your Oracle Bag contains everything you need for a meaningful meditation ritual. Here's how 
+              Your Spirit Blooms contains everything you need for a meaningful meditation ritual. Here's how 
               to create a dedicated space for working with your bag:
             </p>
             <ol className="list-decimal pl-6 space-y-4">
@@ -164,7 +164,7 @@ export default function MeditationSpace() {
               </li>
               <li>
                 <strong>Display Your Artwork:</strong> Frame and hang the Appalachian artwork from your 
-                Oracle Bag as a visual anchor for your practice.
+                Spirit Blooms as a visual anchor for your practice.
               </li>
             </ol>
 

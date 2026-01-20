@@ -39,7 +39,7 @@ export default function Blog() {
       slug: 'meditation-space',
       title: 'Creating Your Meditation Space',
       date: 'December 28, 2025',
-      excerpt: 'Tips for designing a peaceful sanctuary in your home where you can connect with your Oracle Bag.',
+      excerpt: 'Tips for designing a peaceful sanctuary in your home where you can connect with your Spirit Blooms.',
       image: meditationSpaceImg,
       category: 'Meditation'
     },
