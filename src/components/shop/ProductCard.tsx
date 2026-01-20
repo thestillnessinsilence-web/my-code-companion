@@ -35,7 +35,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="group relative bg-white h-full flex flex-col md:flex-row md:gap-8"
+      className="group relative bg-white h-full flex flex-col"
     >
       {/* Decorative Frame */}
       <div className="absolute -inset-2 border border-stone-200/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -45,7 +45,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
       <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#9b6cb0]/0 group-hover:border-[#9b6cb0]/40 transition-colors duration-300" />
 
       {/* Image Carousel */}
-      <div className="relative aspect-square md:w-1/2 md:flex-shrink-0 overflow-hidden mb-6 md:mb-0">
+      <div className="relative aspect-square overflow-hidden mb-6">
         <img
           src={images[currentImageIndex]}
           alt={`${product.name} - ritual herbal bag crystal ceremony spiritual gift Asheville Appalachian art`}
@@ -100,7 +100,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
       </div>
 
       {/* Content */}
-      <div className="px-4 sm:px-6 md:px-0 flex-1 flex flex-col md:py-4">
+      <div className="px-4 sm:px-6 flex-1 flex flex-col pb-6">
         <h3 className="font-serif text-xl sm:text-2xl text-stone-800 mb-3 select-text">
           {product.name}
         </h3>
