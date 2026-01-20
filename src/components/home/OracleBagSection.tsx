@@ -97,8 +97,8 @@ export default function OracleBagSection() {
             transition={{ duration: 0.8 }}
           >
           <p className="font-serif text-xl sm:text-2xl text-stone-700 leading-relaxed mb-8">
-              Each Spirit Blooms is a sacred vessel containing carefully selected healing crystals, 
-              dried herbs, and a personalized message from the universe.
+              Each Spirit Bloom is a sacred vessel containing carefully selected healing crystals, 
+              floral tea, and a personalized message from the universe.
             </p>
             <p className="font-sans text-stone-600 leading-relaxed mb-8">
               More than just a gift, it's a bridge to ancient wisdom. Whether for yourself or someone 
