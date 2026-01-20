@@ -95,7 +95,7 @@ export default function Wholesale() {
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-stone-600 max-w-2xl mx-auto leading-relaxed text-lg">
             Join our community of conscious retailers who share sacred healing tools with their communities. 
-            We work with boutiques, wellness centers, yoga studios, metaphysical shops, and mindful retailers.
+            We work with boutiques, wellness centers, yoga studios, metaphysical shops, and other retailers interested in mindfulness.
           </p>
         </motion.div>
       </div>
