@@ -9,6 +9,10 @@ import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag.png';
 import greenVelvetRitualBag from '@/assets/green-velvet-forest-ritual-bag-crystals.png';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
+export const ZODIAC_SIGNS = [
+  'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
+  'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'
+] as const;
 // Sample products for display (in production, this would come from a database)
 const sampleProducts = [
   {
@@ -25,13 +29,14 @@ const sampleProducts = [
   {
     id: '2',
     name: 'Spirit Bloom: Zodiac',
-    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy. For a general zodiac report, only your date of birth is needed. For a more accurate natal chart reading, please provide your date, time, and place of birth.',
+    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy.',
     price: 69,
     images: [
       meditationRitualKit,
       greenVelvetRitualBag
     ],
-    features: ['Custom birth chart report', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Birth chart reference card', 'Celestial soy candle']
+    features: ['Custom birth chart report', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Birth chart reference card', 'Celestial soy candle'],
+    requiresZodiac: true
   }
 ];
 
@@ -41,13 +46,13 @@ export default function Shop() {
   const isLoading = false;
   const products = sampleProducts;
 
-  const handleAddToCart = async (product: typeof sampleProducts[0]) => {
+  const handleAddToCart = async (product: typeof sampleProducts[0], zodiacSign?: string) => {
     setAddingProduct(product.id);
     
-    // Add to cart context
+    // Add to cart context with zodiac sign if provided
     addToCart({
       id: product.id,
-      name: product.name,
+      name: zodiacSign ? `${product.name} (${zodiacSign})` : product.name,
       price: product.price,
       image_url: product.images?.[0]
     });
