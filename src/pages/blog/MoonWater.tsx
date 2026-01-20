@@ -157,7 +157,7 @@ export default function MoonWater() {
               <li>Add to cleaning solutions for space clearing</li>
             </ul>
             <p>
-              At Crystal Bloomery, our Oracle Bags are prepared during specific lunar phases, with crystals 
+              At Crystal Bloomery, our Spirit Blooms are prepared during specific lunar phases, with crystals 
               cleansed under full moon light before being carefully wrapped for their journey to you.
             </p>
 

@@ -222,9 +222,9 @@ export default function CrystalEnergy() {
               </li>
             </ul>
 
-            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Working With Your Oracle Bag Crystals</h2>
+            <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Working With Your Spirit Blooms Crystals</h2>
             <p>
-              Each Oracle Bag from Crystal Bloomery contains crystals selected to work together 
+              Each Spirit Blooms from Crystal Bloomery contains crystals selected to work together 
               harmoniously. Your bag includes crystal information cards explaining the traditional 
               properties of your specific stones.
             </p>

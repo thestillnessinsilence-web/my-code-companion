@@ -46,7 +46,7 @@ export default function Wholesale() {
     {
       icon: Package,
       title: "Curated Collections",
-      description: "Access to our full range of handcrafted Oracle Bags and crystal offerings at wholesale pricing."
+      description: "Access to our full range of handcrafted Spirit Blooms and crystal offerings at wholesale pricing."
     },
     {
       icon: Heart,
@@ -68,9 +68,9 @@ export default function Wholesale() {
   return (
     <>
       <Helmet>
-        <title>Wholesale Oracle Bags & Crystal Ceremony Kits | Handmade in Asheville, NC</title>
-        <meta name="description" content="Stock your boutique with handmade mystery Oracle Bags. Unique crystal & herbal ceremony kits from Asheville, NC. Join our stockist program for exclusive pricing." />
-        <meta name="keywords" content="wholesale crystals, bulk oracle bags, metaphysical wholesale, wellness retail, crystal shop supplier, Asheville wholesale" />
+        <title>Wholesale Spirit Blooms & Crystal Ceremony Kits | Handmade in Asheville, NC</title>
+        <meta name="description" content="Stock your boutique with handmade mystery Spirit Blooms. Unique crystal & herbal ceremony kits from Asheville, NC. Join our stockist program for exclusive pricing." />
+        <meta name="keywords" content="wholesale crystals, bulk spirit blooms, metaphysical wholesale, wellness retail, crystal shop supplier, Asheville wholesale" />
         <link rel="canonical" href="https://crystalbloomery.com/wholesale" />
       </Helmet>
       <BreadcrumbSchema items={[
@@ -140,7 +140,7 @@ export default function Wholesale() {
           <div className="text-center mb-12">
             <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">Custom Curations</h2>
             <p className="font-sans text-stone-600 max-w-2xl mx-auto">
-              Beyond our signature Oracle Bags, we offer special items that can be curated 
+              Beyond our signature Spirit Blooms, we offer special items that can be curated 
               exclusively for your store or event.
             </p>
           </div>

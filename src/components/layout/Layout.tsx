@@ -192,7 +192,7 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h3 className="font-serif text-2xl text-white mb-4">Crystal Bloomery</h3>
               <p className="text-sm leading-relaxed opacity-80">
-                Where nature's wisdom meets crystalline energy. Each oracle bag is crafted with intention 
+                Where nature's wisdom meets crystalline energy. Each Spirit Blooms is crafted with intention 
                 and blessed with healing vibrations.
               </p>
             </div>
