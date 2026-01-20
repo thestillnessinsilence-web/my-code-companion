@@ -43,8 +43,8 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Crystal Bloomery | Questions About Spirit Blooms</title>
-        <meta name="description" content="Get in touch with Crystal Bloomery. Ask questions about our handcrafted Spirit Blooms, wholesale inquiries, or custom event orders. We'd love to connect with you." />
+        <title>Contact Crystal Bloomery | Questions About Spirit Bloom</title>
+        <meta name="description" content="Get in touch with Crystal Bloomery. Ask questions about our handcrafted Spirit Bloom, wholesale inquiries, or custom event orders. We'd love to connect with you." />
         <link rel="canonical" href="https://crystalbloomery.com/contact" />
       </Helmet>
       <BreadcrumbSchema items={[
@@ -68,7 +68,7 @@ export default function Contact() {
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-stone-600 max-w-xl mx-auto leading-relaxed">
-            We'd love to hear from you. Whether you have questions about our Spirit Blooms 
+            We'd love to hear from you. Whether you have questions about our Spirit Bloom 
             or simply want to connect, reach out and let's start a conversation.
           </p>
         </motion.div>
@@ -113,7 +113,7 @@ export default function Contact() {
               
               <p className="font-serif text-lg sm:text-xl text-stone-700 italic leading-relaxed">
                 "Each interaction is sacred. We honor your questions and curiosities 
-                with the same intention we pour into every Spirit Blooms."
+                with the same intention we pour into every Spirit Bloom."
               </p>
               <div className="mt-4 w-16 h-px bg-[#9b6cb0]/40" />
             </div>
