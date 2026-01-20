@@ -14,7 +14,7 @@ const sampleProducts = [
   {
     id: '1',
     name: 'Spirit Blooms',
-    description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized oracle message from the universe.',
+    description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
     price: 48,
     images: [
       greenVelvetRitualBag,

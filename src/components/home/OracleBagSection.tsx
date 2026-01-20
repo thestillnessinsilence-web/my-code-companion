@@ -25,7 +25,7 @@ export default function OracleBagSection() {
     {
       number: '03',
       title: 'Enter Deep Meditation',
-      description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal oracle message and receive the universe\'s guidance meant for you.',
+      description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal message from the universe and receive the guidance meant for you.',
       image: meditationRitualKit,
       alt: 'Overhead view of a self-care ritual setup on a low wooden table, featuring a red velvet Oracle Bag, a cup of rose herbal tea, a lit candle, a rolled scroll, and various healing crystals including amazonite and an amethyst heart.'
     },
