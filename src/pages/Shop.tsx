@@ -46,13 +46,24 @@ export default function Shop() {
   const isLoading = false;
   const products = sampleProducts;
 
-  const handleAddToCart = async (product: typeof sampleProducts[0], zodiacSign?: string) => {
+  const handleAddToCart = async (
+    product: typeof sampleProducts[0], 
+    zodiacSign?: string,
+    birthDate?: Date,
+    birthTime?: string
+  ) => {
     setAddingProduct(product.id);
     
-    // Add to cart context with zodiac sign if provided
+    // Build product name with zodiac info if provided
+    let displayName = product.name;
+    if (zodiacSign) {
+      displayName = `${product.name} (${zodiacSign})`;
+    }
+    
+    // Add to cart context
     addToCart({
       id: product.id,
-      name: zodiacSign ? `${product.name} (${zodiacSign})` : product.name,
+      name: displayName,
       price: product.price,
       image_url: product.images?.[0]
     });
