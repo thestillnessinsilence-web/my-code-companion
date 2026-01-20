@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Check, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { ZODIAC_SIGNS } from '@/pages/Shop';
 
 interface Product {
   id: string;
@@ -10,17 +18,26 @@ interface Product {
   image_url?: string;
   images?: string[];
   features?: string[];
+  requiresZodiac?: boolean;
 }
 
 interface ProductCardProps {
   product: Product;
-  onAddToCart: (product: Product) => void;
+  onAddToCart: (product: Product, zodiacSign?: string) => void;
   isAdding: boolean;
 }
 
 export default function ProductCard({ product, onAddToCart, isAdding }: ProductCardProps) {
   const images = product.images || (product.image_url ? [product.image_url] : ['https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=600&q=80']);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedZodiac, setSelectedZodiac] = useState<string>('');
+
+  const handleAddToCart = () => {
+    if (product.requiresZodiac && !selectedZodiac) {
+      return;
+    }
+    onAddToCart(product, product.requiresZodiac ? selectedZodiac : undefined);
+  };
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -105,13 +122,34 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
           </ul>
         )}
 
+        {/* Zodiac Sign Selector */}
+        {product.requiresZodiac && (
+          <div className="mb-6">
+            <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
+              Select Your Zodiac Sign
+            </label>
+            <Select value={selectedZodiac} onValueChange={setSelectedZodiac}>
+              <SelectTrigger className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0]">
+                <SelectValue placeholder="Choose your sign..." />
+              </SelectTrigger>
+              <SelectContent className="bg-white border-stone-200">
+                {ZODIAC_SIGNS.map((sign) => (
+                  <SelectItem key={sign} value={sign} className="cursor-pointer hover:bg-stone-50">
+                    {sign}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
+
         {/* Price & Action */}
         <div className="flex items-center justify-between pt-4 border-t border-stone-100 mt-auto">
           <span className="font-serif text-xl sm:text-2xl text-[#10665c]">${product.price}</span>
           <button
-            onClick={() => onAddToCart(product)}
-            disabled={isAdding}
-            className="relative bg-gradient-to-r from-[#d4af37] to-[#c9a961] hover:from-[#c9a961] hover:to-[#d4af37] text-stone-900 font-sans text-xs tracking-widest uppercase px-6 sm:px-8 py-3 sm:py-4 shadow-lg transition-all duration-300 disabled:opacity-50 min-h-[44px]"
+            onClick={handleAddToCart}
+            disabled={isAdding || (product.requiresZodiac && !selectedZodiac)}
+            className="relative bg-gradient-to-r from-[#d4af37] to-[#c9a961] hover:from-[#c9a961] hover:to-[#d4af37] text-stone-900 font-sans text-xs tracking-widest uppercase px-6 sm:px-8 py-3 sm:py-4 shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
             style={{
               borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
               clipPath: 'ellipse(45% 38% at 50% 50%)'
