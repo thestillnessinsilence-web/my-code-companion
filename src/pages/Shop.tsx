@@ -13,7 +13,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 const sampleProducts = [
   {
     id: '1',
-    name: 'Spirit Bloom',
+    name: 'Spirit Bloom: Oracle Edition',
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
     price: 48,
     images: [
