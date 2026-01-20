@@ -31,6 +31,7 @@ serve(async (req) => {
     }
 
     const KLAVIYO_API_KEY = Deno.env.get('KLAVIYO_API_KEY');
+    const KLAVIYO_LIST_ID = Deno.env.get('KLAVIYO_LIST_ID');
     
     if (!KLAVIYO_API_KEY) {
       console.error('KLAVIYO_API_KEY not configured');
@@ -40,8 +41,9 @@ serve(async (req) => {
       );
     }
 
-    // Create profile in Klaviyo using the Profiles API
-    const response = await fetch('https://a.klaviyo.com/api/profiles/', {
+    // Use the Subscribe Profiles to List endpoint (recommended for newsletter signups)
+    // This creates the profile if it doesn't exist AND subscribes them
+    const subscribeResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
       method: 'POST',
       headers: {
         'Authorization': `Klaviyo-API-Key ${KLAVIYO_API_KEY}`,
@@ -50,25 +52,41 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         data: {
-          type: 'profile',
+          type: 'profile-subscription-bulk-create-job',
           attributes: {
-            email: email
-          }
+            profiles: {
+              data: [
+                {
+                  type: 'profile',
+                  attributes: {
+                    email: email,
+                    subscriptions: {
+                      email: {
+                        marketing: {
+                          consent: 'SUBSCRIBED'
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          relationships: KLAVIYO_LIST_ID ? {
+            list: {
+              data: {
+                type: 'list',
+                id: KLAVIYO_LIST_ID
+              }
+            }
+          } : undefined
         }
       })
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Klaviyo API error:', errorText);
-      
-      // Handle duplicate profile (already subscribed)
-      if (response.status === 409) {
-        return new Response(
-          JSON.stringify({ success: true, message: 'Already subscribed!' }),
-          { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
+    if (!subscribeResponse.ok) {
+      const errorText = await subscribeResponse.text();
+      console.error('Klaviyo API error:', subscribeResponse.status, errorText);
       
       return new Response(
         JSON.stringify({ error: 'Failed to subscribe. Please try again.' }),
@@ -76,6 +94,8 @@ serve(async (req) => {
       );
     }
 
+    console.log('Successfully subscribed:', email);
+    
     return new Response(
       JSON.stringify({ success: true, message: 'Successfully subscribed!' }),
       { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
