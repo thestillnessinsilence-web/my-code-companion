@@ -38,11 +38,11 @@ export default function About() {
   const faqItems = [
     {
       question: "What is Spirit Blooms?",
-      answer: "Spirit Blooms is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized oracle message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
+      answer: "Spirit Blooms is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
     },
     {
       question: "What materials are included in each Spirit Blooms?",
-      answer: "Each Spirit Blooms includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal oracle message channeled just for you. Some bags may also have a special gift not listed! It's a mystery after all!"
+      answer: "Each Spirit Blooms includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal message from the universe channeled just for you. Some bags may also have a special gift not listed! It's a mystery after all!"
     },
     {
       question: "Where is Spirit Blooms made?",
@@ -58,7 +58,7 @@ export default function About() {
     },
     {
       question: "How should I use my Spirit Blooms?",
-      answer: "Find a quiet, peaceful space. Unwrap your velvet satchel and discover the contents within. Brew your organic floral tea while holding your crystals. Enter a meditative state, close your eyes, and let the energy flow through you. Finally, read your personal oracle message and receive the universe's guidance meant for you."
+      answer: "Find a quiet, peaceful space. Unwrap your velvet satchel and discover the contents within. Brew your organic floral tea while holding your crystals. Enter a meditative state, close your eyes, and let the energy flow through you. Finally, read your personal message from the universe and receive the guidance meant for you."
     },
     {
       question: "Can I purchase Spirit Blooms as gifts?",

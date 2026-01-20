@@ -150,7 +150,7 @@ export default function TeaCeremonies() {
             <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Spirit Blooms Tea Ritual</h2>
             <p>
               Each Spirit Blooms includes organic herbal tea carefully selected to complement your 
-              crystal and oracle message experience. Here's a complete ritual for working with your bag:
+              crystal and message from the universe experience. Here's a complete ritual for working with your bag:
             </p>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
@@ -170,8 +170,8 @@ export default function TeaCeremonies() {
                 Use this time to hold your crystals and breathe deeply.
               </li>
               <li>
-                <strong>Read Your Oracle Message:</strong> As your tea steeps, open and read your 
-                personalized oracle message. Let the words settle without immediately analyzing.
+                <strong>Read Your Message:</strong> As your tea steeps, open and read your 
+                personalized message from the universe. Let the words settle without immediately analyzing.
               </li>
               <li>
                 <strong>Drink in Silence:</strong> Spend at least five minutes drinking your tea in 

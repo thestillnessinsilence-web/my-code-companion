@@ -197,8 +197,8 @@ export default function SacredHerbGuide() {
             <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Honoring the Tradition</h2>
             <p>
               At Crystal Bloomery, we're honored to draw inspiration from the Appalachian tradition of herbal wisdom. 
-              Each Oracle Bag includes an organic floral tea blend crafted with care, along with crystals, a soy candle, 
-              and a personal oracle message. While we don't sell individual herbs, we celebrate their legacy through 
+              Each Spirit Blooms includes an organic floral tea blend crafted with care, along with crystals, a soy candle, 
+              and a personal message from the universe. While we don't sell individual herbs, we celebrate their legacy through 
               the thoughtfully curated teas in our ceremony kits.
             </p>
             <p>

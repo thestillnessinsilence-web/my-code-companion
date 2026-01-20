@@ -122,7 +122,7 @@ export default function MeditationSpace() {
                 Consider including:
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
-                <li>Your Spirit Blooms crystals and oracle message</li>
+                <li>Your Spirit Blooms crystals and message from the universe</li>
                 <li>Candles (soy candles like those in our Spirit Blooms are clean-burning)</li>
                 <li>Fresh flowers or plants</li>
                 <li>Meaningful photographs or artwork</li>
@@ -152,7 +152,7 @@ export default function MeditationSpace() {
             <ol className="list-decimal pl-6 space-y-4">
               <li>
                 <strong>Create a Small Altar:</strong> Place a cloth or tray where you can display your 
-                crystals, the soy candle, and your oracle message.
+                crystals, the soy candle, and your message from the universe.
               </li>
               <li>
                 <strong>Tea Station:</strong> Keep a small electric kettle nearby for brewing the organic 
@@ -160,7 +160,7 @@ export default function MeditationSpace() {
               </li>
               <li>
                 <strong>Journal Space:</strong> Have a journal and pen ready for recording insights from 
-                your oracle messages and meditation experiences.
+                your messages from the universe and meditation experiences.
               </li>
               <li>
                 <strong>Display Your Artwork:</strong> Frame and hang the Appalachian artwork from your 
