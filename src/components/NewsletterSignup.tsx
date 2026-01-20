@@ -80,9 +80,6 @@ export default function NewsletterSignup() {
           )}
         </button>
       </div>
-      <p className="text-xs text-stone-500 mt-2">
-        Receive oracle wisdom, exclusive offers, and crystal guidance.
-      </p>
     </form>
   );
 }
