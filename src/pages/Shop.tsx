@@ -88,7 +88,7 @@ export default function Shop() {
           <p className="font-sans text-sm sm:text-base text-stone-600 max-w-2xl mx-auto leading-relaxed">
             True clarity requires a pause. A moment to disconnect from external noise and listen to inner wisdom.
             <br /><br />
-            Spirit Blooms is the space inbetween the pause.
+            Spirit Blooms are the space inbetween the pause.
             <br /><br />
             Pour the tea. Be with Stillness. Feel the Resonance of the Crystals.
             <br /><br />
