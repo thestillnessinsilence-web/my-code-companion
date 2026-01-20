@@ -24,7 +24,7 @@ const sampleProducts = [
   },
   {
     id: '2',
-    name: 'The Astrology Bag',
+    name: 'The Zodiac Bag',
     description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy. For a general zodiac report, only your date of birth is needed. For a more accurate natal chart reading, please provide your date, time, and place of birth.',
     price: 69,
     images: [
