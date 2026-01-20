@@ -3,7 +3,7 @@ import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
 
 // Lovable Cloud edge function URL
-const SUPABASE_FUNCTIONS_URL = "https://2d4faa0b-efd0-4042-adf0-cf7a958b11df.supabase.co/functions/v1";
+const SUPABASE_FUNCTIONS_URL = "https://hdvdshevmjbnntbwjjfd.supabase.co/functions/v1";
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('');
