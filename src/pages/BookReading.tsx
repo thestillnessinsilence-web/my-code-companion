@@ -14,8 +14,7 @@ export default function BookReading() {
       details: [
         "Watercolor aura reading",
         "Mediumship or Tarot Reading available",
-        "Sliding Scale pricing for those in need!",
-        "$30 for 30 minutes and $60 for 60 minutes",
+        "$60 for 30 minutes",
         "Reading notes sent to you by email"
       ]
     },
@@ -27,8 +26,7 @@ export default function BookReading() {
       details: [
         "Watercolor aura reading ($5 shipping charge for original watercolor otherwise copy by email)",
         "Mediumship or Tarot Reading available",
-        "Sliding Scale pricing for those in need!",
-        "$30 for 30 minutes and $60 for 60 minutes",
+        "$60 for 30 minutes",
         "Reading notes sent to you by email"
       ]
     }
