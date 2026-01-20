@@ -94,7 +94,7 @@ export default function Shop() {
             <br /><br />
             Untie the twine to open.
             <br /><br />
-            The Oracle has a message that's been waiting for you.
+            The universe has a message that's been waiting for you.
           </p>
         </motion.div>
       </div>
