@@ -245,6 +245,9 @@ export default function Layout({ children }: LayoutProps) {
               <div className="mt-6 pt-6 border-t border-stone-700">
                 <h4 className="font-sans text-xs tracking-widest uppercase text-[#b695c8] mb-2">Newsletter</h4>
                 <NewsletterSignup />
+                <p className="text-xs text-stone-500 mt-3 leading-relaxed">
+                  Wisdom for your unfolding, exclusive offers, and crystal and herbal information.
+                </p>
               </div>
             </div>
           </div>
