@@ -16,7 +16,7 @@ export default function About() {
     {
       icon: Heart,
       title: "Intention & Love",
-      description: "Every Spirit Blooms is crafted with pure intention, love, and sacred energy."
+      description: "Every Spirit Bloom is crafted with pure intention, love, and sacred energy."
     },
     {
       icon: Leaf,
