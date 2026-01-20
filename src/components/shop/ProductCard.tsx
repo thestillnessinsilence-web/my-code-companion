@@ -72,21 +72,6 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
               <ChevronRight className="w-6 h-6 sm:w-5 sm:h-5 text-stone-700" />
             </button>
             
-            {/* Dots Indicator */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-3 sm:gap-2">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-3 h-3 sm:w-2 sm:h-2 rounded-full transition-all duration-200 ${
-                    index === currentImageIndex 
-                      ? 'bg-white w-5 sm:w-4' 
-                      : 'bg-white/50 hover:bg-white/70 active:bg-white/80'
-                  }`}
-                  aria-label={`Go to image ${index + 1}`}
-                />
-              ))}
-            </div>
           </>
         )}
         
