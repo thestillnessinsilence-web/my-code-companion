@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Check, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Sparkles, Check, ChevronLeft, ChevronRight, CalendarIcon } from 'lucide-react';
+import { format } from 'date-fns';
+import { cn } from '@/lib/utils';
 import {
   Select,
   SelectContent,
@@ -8,6 +10,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+import { Calendar } from '@/components/ui/calendar';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { ZODIAC_SIGNS } from '@/pages/Shop';
 
 interface Product {
@@ -23,7 +33,7 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
-  onAddToCart: (product: Product, zodiacSign?: string) => void;
+  onAddToCart: (product: Product, zodiacSign?: string, birthDate?: Date, birthTime?: string) => void;
   isAdding: boolean;
 }
 
@@ -31,13 +41,22 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
   const images = product.images || (product.image_url ? [product.image_url] : ['https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=600&q=80']);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedZodiac, setSelectedZodiac] = useState<string>('');
+  const [birthDate, setBirthDate] = useState<Date | undefined>(undefined);
+  const [birthTime, setBirthTime] = useState<string>('');
 
   const handleAddToCart = () => {
-    if (product.requiresZodiac && !selectedZodiac) {
+    if (product.requiresZodiac && (!selectedZodiac || !birthDate)) {
       return;
     }
-    onAddToCart(product, product.requiresZodiac ? selectedZodiac : undefined);
+    onAddToCart(
+      product, 
+      product.requiresZodiac ? selectedZodiac : undefined,
+      product.requiresZodiac ? birthDate : undefined,
+      product.requiresZodiac && birthTime ? birthTime : undefined
+    );
   };
+
+  const isZodiacFormValid = !product.requiresZodiac || (selectedZodiac && birthDate);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -124,22 +143,72 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
 
         {/* Zodiac Sign Selector */}
         {product.requiresZodiac && (
-          <div className="mb-6">
-            <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
-              Select Your Zodiac Sign
-            </label>
-            <Select value={selectedZodiac} onValueChange={setSelectedZodiac}>
-              <SelectTrigger className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0]">
-                <SelectValue placeholder="Choose your sign..." />
-              </SelectTrigger>
-              <SelectContent className="bg-white border-stone-200">
-                {ZODIAC_SIGNS.map((sign) => (
-                  <SelectItem key={sign} value={sign} className="cursor-pointer hover:bg-stone-50">
-                    {sign}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <div className="space-y-4 mb-6">
+            {/* Zodiac Sign Dropdown */}
+            <div>
+              <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
+                Select Your Zodiac Sign *
+              </label>
+              <Select value={selectedZodiac} onValueChange={setSelectedZodiac}>
+                <SelectTrigger className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0]">
+                  <SelectValue placeholder="Choose your sign..." />
+                </SelectTrigger>
+                <SelectContent className="bg-white border-stone-200">
+                  {ZODIAC_SIGNS.map((sign) => (
+                    <SelectItem key={sign} value={sign} className="cursor-pointer hover:bg-stone-50">
+                      {sign}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Date of Birth */}
+            <div>
+              <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
+                Date of Birth *
+              </label>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-full justify-start text-left font-normal bg-white border-stone-200 hover:bg-stone-50",
+                      !birthDate && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {birthDate ? format(birthDate, "MMMM d, yyyy") : <span>Select your birth date...</span>}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0 bg-white" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={birthDate}
+                    onSelect={setBirthDate}
+                    disabled={(date) =>
+                      date > new Date() || date < new Date("1900-01-01")
+                    }
+                    initialFocus
+                    className={cn("p-3 pointer-events-auto")}
+                  />
+                </PopoverContent>
+              </Popover>
+            </div>
+
+            {/* Birth Time (Optional) */}
+            <div>
+              <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
+                Birth Time <span className="normal-case text-stone-400">(optional, for more accuracy)</span>
+              </label>
+              <Input
+                type="time"
+                value={birthTime}
+                onChange={(e) => setBirthTime(e.target.value)}
+                className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0]"
+                placeholder="e.g., 14:30"
+              />
+            </div>
           </div>
         )}
 
@@ -148,7 +217,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
           <span className="font-serif text-xl sm:text-2xl text-[#10665c]">${product.price}</span>
           <button
             onClick={handleAddToCart}
-            disabled={isAdding || (product.requiresZodiac && !selectedZodiac)}
+            disabled={isAdding || !isZodiacFormValid}
             className="relative bg-gradient-to-r from-[#d4af37] to-[#c9a961] hover:from-[#c9a961] hover:to-[#d4af37] text-stone-900 font-sans text-xs tracking-widest uppercase px-6 sm:px-8 py-3 sm:py-4 shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
             style={{
               borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
