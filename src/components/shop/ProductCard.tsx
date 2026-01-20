@@ -45,7 +45,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
   const [birthTime, setBirthTime] = useState<string>('');
 
   const handleAddToCart = () => {
-    if (product.requiresZodiac && (!selectedZodiac || !birthDate)) {
+    if (product.requiresZodiac && !selectedZodiac) {
       return;
     }
     onAddToCart(
@@ -56,7 +56,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
     );
   };
 
-  const isZodiacFormValid = !product.requiresZodiac || (selectedZodiac && birthDate);
+  const isZodiacFormValid = !product.requiresZodiac || selectedZodiac;
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -166,7 +166,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
             {/* Date of Birth */}
             <div>
               <label className="block font-sans text-xs uppercase tracking-widest text-stone-500 mb-2">
-                Date of Birth *
+                Date of Birth <span className="normal-case text-stone-400">(optional, for more accuracy)</span>
               </label>
               <Popover>
                 <PopoverTrigger asChild>
