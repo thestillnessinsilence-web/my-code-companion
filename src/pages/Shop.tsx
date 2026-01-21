@@ -27,7 +27,7 @@ const sampleProducts = [
       greenVelvetRitualBag
     ],
     imageAlt: 'Meditation ritual kit with crystals, tea, and candle',
-    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
+    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Sacred Message just for you', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
   },
   {
     id: '2',
