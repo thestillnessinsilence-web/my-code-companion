@@ -41,7 +41,7 @@ const sampleProducts = [
   {
     id: '3',
     name: 'Astro Bloom',
-    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a zodiac chart with crystals and herbs aligned to your zodiac energy.',
+    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a zodiac chart with crystals and herbs aligned to your zodiac sign.',
     price: 89,
     images: [greenVelvetRitualBag],
     imageAlt: 'Green velvet ritual bag with crystals and herbs',
