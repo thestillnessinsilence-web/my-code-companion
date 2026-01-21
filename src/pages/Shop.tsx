@@ -41,7 +41,7 @@ const sampleProducts = [
   {
     id: '3',
     name: 'Astro Bloom',
-    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy.',
+    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a zodiac chart with crystals and herbs aligned to your zodiac energy.',
     price: 89,
     images: [greenVelvetRitualBag],
     imageAlt: 'Green velvet ritual bag with crystals and herbs',
@@ -58,9 +58,7 @@ export default function Shop() {
 
   const handleAddToCart = async (
     product: typeof sampleProducts[0], 
-    zodiacSign?: string,
-    birthDate?: Date,
-    birthTime?: string
+    zodiacSign?: string
   ) => {
     setAddingProduct(product.id);
     
