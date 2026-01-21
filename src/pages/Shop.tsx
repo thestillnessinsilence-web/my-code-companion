@@ -7,6 +7,8 @@ import { toast } from 'sonner';
 import { useCart } from '@/context/CartContext';
 import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag.png';
 import greenVelvetRitualBag from '@/assets/green-velvet-forest-ritual-bag-crystals.png';
+import meditationSpace from '@/assets/blog/meditation-space.jpg';
+import greenVelvetPouchClosed from '@/assets/green-velvet-pouch-closed.jpg';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const ZODIAC_SIGNS = [
@@ -17,24 +19,25 @@ export const ZODIAC_SIGNS = [
 const sampleProducts = [
   {
     id: '1',
-    name: 'Oracle Bloom',
-    description: 'A curated collection of healing crystals accompanied by a personalized message from the universe, perfect for those beginning their crystal journey.',
-    price: 22,
-    images: [greenVelvetRitualBag],
-    imageAlt: 'Green velvet ritual bag with crystals and herbs',
-    features: ['Hand-selected crystals', 'Message from the oracle', 'Crystal information cards']
-  },
-  {
-    id: '2',
     name: 'Winter Bloom',
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
     price: 48,
     images: [
+      meditationSpace,
       meditationRitualKit,
       greenVelvetRitualBag
     ],
-    imageAlt: 'Meditation ritual kit with crystals, tea, and candle',
+    imageAlt: 'Woman meditating in peaceful sacred space with crystals',
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
+  },
+  {
+    id: '2',
+    name: 'Oracle Bloom',
+    description: 'A curated collection of healing crystals accompanied by a personalized message from the universe, perfect for those beginning their crystal journey.',
+    price: 22,
+    images: [greenVelvetPouchClosed],
+    imageAlt: 'Closed green velvet ritual pouch',
+    features: ['Hand-selected crystals', 'Message from the oracle', 'Crystal information cards']
   },
   {
     id: '3',
