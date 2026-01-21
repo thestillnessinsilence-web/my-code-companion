@@ -1,9 +1,10 @@
 import { useState, useEffect, ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Menu, X, ShoppingBag } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import NewsletterSignup from '@/components/NewsletterSignup';
-import { useCart } from '@/context/CartContext';
+import { CartDrawer } from '@/components/shop/CartDrawer';
+import { useCartStore } from '@/stores/cartStore';
 interface NavLink {
   name: string;
   page: string;
@@ -18,9 +19,9 @@ export default function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const { cartItems } = useCart();
+  const items = useCartStore((state) => state.items);
   
-  const cartItemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const cartItemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   // Scroll to top on route change
   useEffect(() => {
@@ -108,34 +109,12 @@ export default function Layout({ children }: LayoutProps) {
                   )}
                 </div>
               ))}
-              <Link
-                to={createPageUrl('Cart')}
-                className="relative p-2 text-stone-600 hover:text-[#10665c] transition-colors"
-                aria-label={`View shopping cart${cartItemCount > 0 ? `, ${cartItemCount} items` : ''}`}
-              >
-                <ShoppingBag className="w-5 h-5" strokeWidth={1.5} aria-hidden="true" />
-                {cartItemCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-[#10665c] text-white text-xs font-medium rounded-full flex items-center justify-center">
-                    {cartItemCount > 99 ? '99+' : cartItemCount}
-                  </span>
-                )}
-              </Link>
+              <CartDrawer />
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center gap-4">
-              <Link
-                to={createPageUrl('Cart')}
-                className="relative p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-stone-600"
-                aria-label={`View shopping cart${cartItemCount > 0 ? `, ${cartItemCount} items` : ''}`}
-              >
-                <ShoppingBag className="w-5 h-5" strokeWidth={1.5} aria-hidden="true" />
-                {cartItemCount > 0 && (
-                  <span className="absolute top-0.5 right-0.5 w-5 h-5 bg-[#10665c] text-white text-xs font-medium rounded-full flex items-center justify-center">
-                    {cartItemCount > 99 ? '99+' : cartItemCount}
-                  </span>
-                )}
-              </Link>
+              <CartDrawer />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-stone-600 min-w-[44px] min-h-[44px] flex items-center justify-center"
