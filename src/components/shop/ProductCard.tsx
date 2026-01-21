@@ -27,6 +27,7 @@ interface Product {
   price: number;
   image_url?: string;
   images?: string[];
+  imageAlt?: string;
   features?: string[];
   requiresZodiac?: boolean;
 }
@@ -84,7 +85,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
       <div className="relative aspect-square overflow-hidden mb-6">
         <img
           src={images[currentImageIndex]}
-          alt={`${product.name} - ritual herbal bag crystal ceremony spiritual gift Asheville Appalachian art`}
+          alt={product.imageAlt || `${product.name} - ritual herbal bag crystal ceremony spiritual gift Asheville Appalachian art`}
           className="w-full h-full object-cover transition-opacity duration-300"
           loading="lazy"
         />

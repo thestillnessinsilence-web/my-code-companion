@@ -20,10 +20,8 @@ const sampleProducts = [
     name: 'Oracle Bloom',
     description: 'A curated collection of healing crystals accompanied by a personalized message from the universe, perfect for those beginning their crystal journey.',
     price: 22,
-    images: [
-      greenVelvetRitualBag,
-      meditationRitualKit
-    ],
+    images: [greenVelvetRitualBag],
+    imageAlt: 'Green velvet ritual bag with crystals and herbs',
     features: ['Hand-selected crystals', 'Message from the oracle', 'Crystal information cards']
   },
   {
@@ -35,6 +33,7 @@ const sampleProducts = [
       meditationRitualKit,
       greenVelvetRitualBag
     ],
+    imageAlt: 'Meditation ritual kit with crystals, tea, and candle',
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
   },
   {
@@ -42,10 +41,8 @@ const sampleProducts = [
     name: 'Astro Bloom',
     description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy.',
     price: 69,
-    images: [
-      meditationRitualKit,
-      greenVelvetRitualBag
-    ],
+    images: [greenVelvetRitualBag],
+    imageAlt: 'Green velvet ritual bag with crystals and herbs',
     features: ['Custom birth chart report', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Birth chart reference card', 'Celestial soy candle'],
     requiresZodiac: true
   }
