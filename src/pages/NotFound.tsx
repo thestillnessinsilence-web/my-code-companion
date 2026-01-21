@@ -76,7 +76,7 @@ const NotFound = () => {
             {/* Primary CTA */}
             <Link to="/shop">
               <Button className="bg-[#10665c] hover:bg-[#0d5249] text-white px-10 py-6 font-sans text-sm tracking-widest uppercase transition-all">
-                Explore Spirit Blooms
+                Explore Bloom Satchels
               </Button>
             </Link>
           </motion.div>

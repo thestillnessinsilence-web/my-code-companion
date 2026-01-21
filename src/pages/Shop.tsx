@@ -17,7 +17,7 @@ export default function Shop() {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const fetchedProducts = await fetchShopifyProducts(50, 'product_type:Spirit Bloom');
+        const fetchedProducts = await fetchShopifyProducts(50, 'product_type:Bloom Satchel');
         setProducts(fetchedProducts);
       } catch (error) {
         console.error('Failed to load products:', error);
@@ -54,9 +54,9 @@ export default function Shop() {
   return (
     <>
       <Helmet>
-        <title>Mystery Crystal & Tea Ceremony Kit | Spirit Blooms</title>
+        <title>Mystery Crystal & Tea Ceremony Kit | Bloom Satchels</title>
         <meta name="description" content="A complete ritual in a velvet bag. Includes intuitively chosen crystals, herbal tea, and a tea light. Perfect for meditation, contemplation, and peace. What message does the Oracle have for you?" />
-        <meta name="keywords" content="spirit blooms, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
+        <meta name="keywords" content="bloom satchels, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
         <link rel="canonical" href="https://crystalbloomery.com/shop" />
       </Helmet>
       <BreadcrumbSchema items={[
@@ -76,13 +76,13 @@ export default function Shop() {
             Sacred Offerings
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-800 mb-6">
-            Spirit Blooms
+            Bloom Satchels
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-sm sm:text-base text-stone-600 max-w-2xl mx-auto leading-relaxed">
             True clarity requires a pause. A moment to disconnect from external noise and listen to inner wisdom.
             <br /><br />
-            Spirit Blooms are the space inbetween the pause.
+            Bloom Satchels are the space inbetween the pause.
             <br /><br />
             Pour the tea. Be with Stillness. Feel the Resonance of the Crystals.
             <br /><br />

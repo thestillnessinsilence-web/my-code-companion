@@ -15,8 +15,8 @@ export default function Events() {
   return (
     <>
       <Helmet>
-        <title>Spirit Bloom Gifts and Favors | Crystal Bloomery Events</title>
-        <meta name="description" content="Custom Spirit Bloom gifts for weddings, celebrations, and special events. Bulk pricing and personalized messages available for your sacred occasion." />
+        <title>Bloom Satchel Gifts and Favors | Crystal Bloomery Events</title>
+        <meta name="description" content="Custom Bloom Satchel gifts for weddings, celebrations, and special events. Bulk pricing and personalized messages available for your sacred occasion." />
       </Helmet>
       <BreadcrumbSchema items={[
         { name: "Home", url: "https://crystalbloomery.com/" },
@@ -39,7 +39,7 @@ export default function Events() {
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-stone-600 max-w-2xl mx-auto leading-relaxed text-lg">
-            Celebrate life's sacred moments with custom Spirit Bloom gifts for weddings and special events.
+            Celebrate life's sacred moments with custom Bloom Satchel gifts for weddings and special events.
           </p>
         </motion.div>
       </div>
@@ -119,7 +119,7 @@ export default function Events() {
             className="mb-16"
           >
             <div className="text-center mb-8">
-              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2">The Bespoke Spirit Bloom</h2>
+              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2">The Bespoke Bloom Satchel</h2>
               <p className="font-sans text-sm tracking-wide text-[#7c4d8f] uppercase">
                 A Custom Ritual Favor for Weddings & Private Events
               </p>
@@ -127,9 +127,9 @@ export default function Events() {
 
             <div className="bg-white/80 backdrop-blur-sm p-8 sm:p-10 rounded-lg border border-stone-200 mb-8">
               <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto mb-8">
-                Move beyond the ordinary. Our signature velvet Spirit Bloom is a thoughtfully crafted, fully customizable 
+                Move beyond the ordinary. Our signature velvet Bloom Satchel is a thoughtfully crafted, fully customizable 
                 ritual favor designed to hold the unique energy of your gathering. Whether celebrating a wedding, hosting 
-                a private retreat, or marking a meaningful milestone, each Spirit Bloom is curated with intention to reflect 
+                a private retreat, or marking a meaningful milestone, each Bloom Satchel is curated with intention to reflect 
                 your vision and the spirit of the moment.
               </p>
               <p className="font-serif text-lg text-stone-700 text-center italic">
@@ -160,7 +160,7 @@ export default function Events() {
               From simple, elegant herbal sachets to luxurious jewelry keepsakes, we collaborate with you to create 
               ritual favors that feel intentional, beautiful, and unforgettable—designed to honor both the occasion 
               and the people you share it with. In keeping true with our mission, our focus is on delivering a special 
-              message of love, peace, and happiness in each Spirit Bloom.
+              message of love, peace, and happiness in each Bloom Satchel.
             </p>
           </motion.div>
 
@@ -174,7 +174,7 @@ export default function Events() {
             <div className="text-center mb-8">
               <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">Examples of Custom Curations</h2>
               <p className="font-sans text-stone-600 max-w-2xl mx-auto">
-                A glimpse at the unique additions we can include in your bespoke Spirit Bloom.
+                A glimpse at the unique additions we can include in your bespoke Bloom Satchel.
               </p>
             </div>
 
@@ -220,7 +220,7 @@ export default function Events() {
           >
             <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">Let's Create Something Beautiful</h2>
             <p className="font-sans text-stone-600 mb-6 max-w-2xl mx-auto">
-              Every event is unique, and we'd love to help craft a Spirit Bloom that perfectly honors your special occasion. 
+              Every event is unique, and we'd love to help craft a Bloom Satchel that perfectly honors your special occasion. 
               Reach out to discuss your vision, customization options, and pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

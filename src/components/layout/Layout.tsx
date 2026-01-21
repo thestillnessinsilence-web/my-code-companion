@@ -181,7 +181,7 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="font-serif text-lg text-white">Crystal Bloomery</span>
               </Link>
               <p className="text-xs leading-relaxed text-stone-500 mb-3">
-                Handcrafted and assembled in the heart of the Appalachian mountains. Crystals and herbs woven together—each Spirit Bloom carries a unique blessing curated for you.
+                Handcrafted and assembled in the heart of the Appalachian mountains. Crystals and herbs woven together—each Bloom Satchel carries a unique blessing curated for you.
               </p>
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/crystalbloomery" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="Instagram">

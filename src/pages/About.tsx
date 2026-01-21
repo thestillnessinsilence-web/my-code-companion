@@ -16,7 +16,7 @@ export default function About() {
     {
       icon: Heart,
       title: "Intention & Love",
-      description: "Every Spirit Bloom is crafted with pure intention, love, and sacred energy."
+      description: "Every Bloom Satchel is crafted with pure intention, love, and sacred energy."
     },
     {
       icon: Leaf,
@@ -37,32 +37,32 @@ export default function About() {
 
   const faqItems = [
     {
-      question: "What is a Spirit Bloom?",
-      answer: "A Spirit Bloom is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
+      question: "What is a Bloom Satchel?",
+      answer: "A Bloom Satchel is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
     },
     {
-      question: "What materials are included in each Spirit Bloom?",
-      answer: "Each Spirit Bloom includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal message from the universe channeled just for you. Some bags may also have a special gift not listed! It's a mystery after all!"
+      question: "What materials are included in each Bloom Satchel?",
+      answer: "Each Bloom Satchel includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal message from the universe channeled just for you. Some bags may also have a special gift not listed! It's a mystery after all!"
     },
     {
-      question: "Where is Spirit Bloom made?",
-      answer: "All Spirit Bloom bags are hand-assembled in the heart of the Appalachian Mountains in Asheville, North Carolina. We work in rhythm with nature, honoring the lineage of herbal wisdom that has been passed down through generations in this sacred region."
+      question: "Where is Bloom Satchel made?",
+      answer: "All Bloom Satchel bags are hand-assembled in the heart of the Appalachian Mountains in Asheville, North Carolina. We work in rhythm with nature, honoring the lineage of herbal wisdom that has been passed down through generations in this sacred region."
     },
     {
       question: "How are the crystals selected for my bag?",
-      answer: "Each crystal is intuitively chosen for the recipient. We cleanse all crystals under moonlight and charge them with healing intentions before they are placed in your Spirit Bloom. The selection process is guided by spiritual intuition to ensure the stones resonate with your energy."
+      answer: "Each crystal is intuitively chosen for the recipient. We cleanse all crystals under moonlight and charge them with healing intentions before they are placed in your Bloom Satchel. The selection process is guided by spiritual intuition to ensure the stones resonate with your energy."
     },
     {
       question: "Are the teas safe to consume?",
-      answer: "Yes, all teas included in our Spirit Bloom bags are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming and speak to your health care provider."
+      answer: "Yes, all teas included in our Bloom Satchel bags are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming and speak to your health care provider."
     },
     {
-      question: "How should I use my Spirit Bloom?",
+      question: "How should I use my Bloom Satchel?",
       answer: "Find a quiet, peaceful space. Unwrap your velvet satchel and discover the contents within. Brew your organic floral tea while holding your crystals. Enter a meditative state, close your eyes, and let the energy flow through you. Finally, read your personal message from the universe and receive the guidance meant for you."
     },
     {
-      question: "Can I purchase a Spirit Bloom as a gift?",
-      answer: "Absolutely! A Spirit Bloom makes a meaningful gift for birthdays, weddings, baby showers, and other special occasions. Each bag arrives beautifully presented and ready to gift. The intuitive nature of our selection process means the bag will resonate with whoever receives it."
+      question: "Can I purchase a Bloom Satchel as a gift?",
+      answer: "Absolutely! A Bloom Satchel makes a meaningful gift for birthdays, weddings, baby showers, and other special occasions. Each bag arrives beautifully presented and ready to gift. The intuitive nature of our selection process means the bag will resonate with whoever receives it."
     },
     {
       question: "Do you offer custom or bulk orders for events?",
@@ -73,11 +73,11 @@ export default function About() {
   const policyItems = [
     {
       question: "Shipping Information",
-      answer: "We are pleased to offer FREE standard shipping on all orders.\n\nPlease allow 1-3 business days for us to intuitively select, prepare, and dispatch your mystery Spirit Bloom. Once shipped, you will receive a confirmation email with tracking information."
+      answer: "We are pleased to offer FREE standard shipping on all orders.\n\nPlease allow 1-3 business days for us to intuitively select, prepare, and dispatch your mystery Bloom Satchel. Once shipped, you will receive a confirmation email with tracking information."
     },
     {
       question: "Return & Refund Policy",
-      answer: "Due to the intuitive, small-batch, and mystery nature of our ceremony kits, all sales are final. We do not accept returns or exchanges on opened or unopened Spirit Bloom bags.\n\n**Your Happiness Matters**\nWe are a small business and truly value your peace of mind. If your item arrives damaged, or if you have serious concerns about your experience, please reach out to us at crystalbloomery@gmail.com. We welcome feedback and promise to work directly with you to find a fair resolution in case of an unusual circumstance."
+      answer: "Due to the intuitive, small-batch, and mystery nature of our ceremony kits, all sales are final. We do not accept returns or exchanges on opened or unopened Bloom Satchel bags.\n\n**Your Happiness Matters**\nWe are a small business and truly value your peace of mind. If your item arrives damaged, or if you have serious concerns about your experience, please reach out to us at crystalbloomery@gmail.com. We welcome feedback and promise to work directly with you to find a fair resolution in case of an unusual circumstance."
     }
   ];
 
@@ -186,7 +186,7 @@ export default function About() {
         >
           <h2 className="font-serif text-2xl sm:text-3xl text-center text-stone-800 mb-4">Frequently Asked Questions</h2>
           <p className="font-sans text-stone-600 text-center mb-8 max-w-2xl mx-auto">
-            Everything you need to know about Spirit Bloom and how to use it.
+            Everything you need to know about Bloom Satchels and how to use them.
           </p>
           
           <Accordion type="single" collapsible className="space-y-3">
@@ -268,7 +268,7 @@ export default function About() {
           className="text-center"
         >
           <p className="font-serif text-lg sm:text-xl text-stone-700 italic mb-6">
-            "Each Spirit Bloom is a sacred offering, crafted with reverence for the healing power of nature."
+            "Each Bloom Satchel is a sacred offering, crafted with reverence for the healing power of nature."
           </p>
           <div className="w-16 h-px bg-[#9b6cb0]/40 mx-auto mb-8" />
           <p className="font-sans text-stone-600 mb-8">

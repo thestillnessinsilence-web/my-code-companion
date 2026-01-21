@@ -49,7 +49,7 @@ export const CartDrawer = () => {
               <div className="text-center">
                 <ShoppingBag className="h-12 w-12 text-stone-300 mx-auto mb-4" strokeWidth={1} />
                 <p className="font-sans text-stone-500">Your bag is empty</p>
-                <p className="font-sans text-sm text-stone-400 mt-1">Add a Spirit Bloom to begin</p>
+                <p className="font-sans text-sm text-stone-400 mt-1">Add a Bloom Satchel to begin</p>
               </div>
             </div>
           ) : (

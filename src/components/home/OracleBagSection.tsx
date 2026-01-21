@@ -11,7 +11,7 @@ export default function OracleBagSection() {
     {
       number: '01',
       title: 'Unwrap the Velvet Satchel',
-      description: 'Find a quiet, peaceful space. Gently open your Spirit Blooms and discover the crystals, herbs, soy candle, and Appalachian artwork made just for you.',
+      description: 'Find a quiet, peaceful space. Gently open your Bloom Satchel and discover the crystals, herbs, soy candle, and Appalachian artwork made just for you.',
       image: oracleBagWildflowers,
       alt: 'Red velvet Oracle Bag resting on a rustic wooden desk next to a vase of wildflowers and an open journal near a window.'
     },
@@ -64,7 +64,7 @@ export default function OracleBagSection() {
             Our Signature Creation
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-stone-800 mb-6">
-            Spirit Blooms
+            Bloom Satchels
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto" />
         </motion.div>
@@ -97,12 +97,12 @@ export default function OracleBagSection() {
             transition={{ duration: 0.8 }}
           >
           <p className="font-serif text-xl sm:text-2xl text-stone-700 leading-relaxed mb-8">
-              Each Spirit Bloom is a sacred vessel containing carefully selected healing crystals, 
+              Each Bloom Satchel is a sacred vessel containing carefully selected healing crystals, 
               floral tea, and a personalized message from the universe.
             </p>
             <p className="font-sans text-stone-600 leading-relaxed mb-8">
               More than just a gift, it's a bridge to ancient wisdom. Whether for yourself or someone 
-              special, Spirit Blooms arrives carrying energies uniquely attuned to its recipient. 
+              special, your Bloom Satchel arrives carrying energies uniquely attuned to its recipient. 
               The crystals are cleansed under moonlight, and each blessing is channeled with deep 
               intention and love.
             </p>
@@ -111,7 +111,7 @@ export default function OracleBagSection() {
               className="inline-flex items-center gap-3 text-[#10665c] font-sans text-sm tracking-widest uppercase group"
             >
               <span className="border-b border-[#10665c]/30 pb-1 group-hover:border-[#10665c] transition-colors">
-                Discover Your Spirit Blooms
+                Discover Your Bloom Satchel
               </span>
               <span className="group-hover:translate-x-2 transition-transform">→</span>
             </Link>
@@ -135,7 +135,7 @@ export default function OracleBagSection() {
             </h3>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mx-auto mb-6" />
             <p className="font-sans text-sm text-stone-600 max-w-2xl mx-auto leading-relaxed">
-              Your Spirit Bloom is more than a gift—it's a sacred ceremony for peace and developing your intuition. Follow these steps to unlock its full healing potential and connect with the universe's wisdom.
+              Your Bloom Satchel is more than a gift—it's a sacred ceremony for peace and developing your intuition. Follow these steps to unlock its full healing potential and connect with the universe's wisdom.
             </p>
           </motion.div>
 
