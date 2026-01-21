@@ -17,17 +17,28 @@ export const ZODIAC_SIGNS = [
 const sampleProducts = [
   {
     id: '1',
-    name: 'Winter Bloom',
-    description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
-    price: 48,
+    name: 'Oracle Bloom',
+    description: 'A curated collection of healing crystals accompanied by a personalized message from the universe, perfect for those beginning their crystal journey.',
+    price: 22,
     images: [
       greenVelvetRitualBag,
       meditationRitualKit
     ],
-    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
+    features: ['Hand-selected crystals', 'Message from the oracle', 'Crystal information cards']
   },
   {
     id: '2',
+    name: 'Winter Bloom',
+    description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
+    price: 48,
+    images: [
+      meditationRitualKit,
+      greenVelvetRitualBag
+    ],
+    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
+  },
+  {
+    id: '3',
     name: 'Astro Bloom',
     description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy.',
     price: 69,
