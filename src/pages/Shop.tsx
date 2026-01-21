@@ -17,7 +17,7 @@ export default function Shop() {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const fetchedProducts = await fetchShopifyProducts(50, 'product_type:Bloom Satchel');
+        const fetchedProducts = await fetchShopifyProducts(50);
         setProducts(fetchedProducts);
       } catch (error) {
         console.error('Failed to load products:', error);
