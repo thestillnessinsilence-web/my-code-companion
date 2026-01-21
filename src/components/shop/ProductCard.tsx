@@ -182,7 +182,7 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
                     {birthDate ? format(birthDate, "MMMM d, yyyy") : <span>Select your birth date...</span>}
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0 bg-white" align="start">
+                <PopoverContent className="w-auto p-0 bg-white z-50" align="start">
                   <Calendar
                     mode="single"
                     selected={birthDate}
@@ -191,6 +191,9 @@ export default function ProductCard({ product, onAddToCart, isAdding }: ProductC
                       date > new Date() || date < new Date("1900-01-01")
                     }
                     initialFocus
+                    captionLayout="dropdown-buttons"
+                    fromYear={1920}
+                    toYear={new Date().getFullYear()}
                     className={cn("p-3 pointer-events-auto")}
                   />
                 </PopoverContent>
