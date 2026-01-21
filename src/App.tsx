@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { CartProvider } from "@/context/CartContext";
+import { useCartSync } from "@/hooks/useCartSync";
 import Layout from "@/components/layout/Layout";
 
 // Eager load critical pages
@@ -42,11 +42,17 @@ const PageLoader = () => (
   </div>
 );
 
+// Cart sync wrapper component
+function CartSyncWrapper({ children }: { children: React.ReactNode }) {
+  useCartSync();
+  return <>{children}</>;
+}
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <CartProvider>
+        <CartSyncWrapper>
           <Toaster />
           <Sonner />
           <BrowserRouter>
@@ -76,7 +82,7 @@ const App = () => (
               </Suspense>
             </Layout>
           </BrowserRouter>
-        </CartProvider>
+        </CartSyncWrapper>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>

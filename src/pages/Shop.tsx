@@ -1,83 +1,53 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import ProductCard from '@/components/shop/ProductCard';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { useCart } from '@/context/CartContext';
-import meditationRitualKit from '@/assets/meditation-ritual-kit-oracle-bag.png';
-import greenVelvetRitualBag from '@/assets/green-velvet-forest-ritual-bag-crystals.png';
-import meditationSpace from '@/assets/blog/meditation-space.jpg';
-import greenVelvetPouchClosed from '@/assets/green-velvet-pouch-closed.jpg';
+import { fetchShopifyProducts, ShopifyProduct } from '@/lib/shopify';
+import { useCartStore } from '@/stores/cartStore';
+import ShopifyProductCard from '@/components/shop/ShopifyProductCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
-export const ZODIAC_SIGNS = [
-  'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
-  'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'
-] as const;
-// Sample products for display (in production, this would come from a database)
-const sampleProducts = [
-  {
-    id: '1',
-    name: 'Winter Bloom',
-    description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
-    price: 48,
-    images: [
-      meditationRitualKit,
-      greenVelvetRitualBag
-    ],
-    imageAlt: 'Meditation ritual kit with crystals, tea, and candle',
-    features: ['Moon-blessed crystals', 'Organic herbal tea', 'Sacred Message just for you', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
-  },
-  {
-    id: '2',
-    name: 'Oracle Bloom',
-    description: 'A curated collection of healing crystals accompanied by a personalized message from the oracle.',
-    price: 22,
-    images: [greenVelvetPouchClosed],
-    imageAlt: 'Closed green velvet ritual pouch',
-    features: ['Hand-selected crystals', 'Message from the oracle', 'Crystal information cards']
-  },
-  {
-    id: '3',
-    name: 'Astro Bloom',
-    description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a zodiac chart with crystals and herbs aligned to your zodiac sign.',
-    price: 89,
-    images: [greenVelvetRitualBag],
-    imageAlt: 'Green velvet ritual bag with crystals and herbs',
-    features: ['Seasonally based Zodiac Chart', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Celestial soy candle'],
-    requiresZodiac: true
-  }
-];
-
 export default function Shop() {
+  const [products, setProducts] = useState<ShopifyProduct[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [addingProduct, setAddingProduct] = useState<string | null>(null);
-  const { addToCart } = useCart();
-  const isLoading = false;
-  const products = sampleProducts;
+  const addItem = useCartStore((state) => state.addItem);
+
+  useEffect(() => {
+    async function loadProducts() {
+      try {
+        const fetchedProducts = await fetchShopifyProducts(50, 'product_type:Spirit Bloom');
+        setProducts(fetchedProducts);
+      } catch (error) {
+        console.error('Failed to load products:', error);
+        toast.error('Failed to load products');
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    loadProducts();
+  }, []);
 
   const handleAddToCart = async (
-    product: typeof sampleProducts[0], 
-    zodiacSign?: string
+    product: ShopifyProduct,
+    variantId: string,
+    variantTitle: string,
+    price: { amount: string; currencyCode: string },
+    selectedOptions: Array<{ name: string; value: string }>
   ) => {
-    setAddingProduct(product.id);
+    setAddingProduct(variantId);
     
-    // Build product name with zodiac info if provided
-    let displayName = product.name;
-    if (zodiacSign) {
-      displayName = `${product.name} (${zodiacSign})`;
-    }
-    
-    // Add to cart context
-    addToCart({
-      id: product.id,
-      name: displayName,
-      price: product.price,
-      image_url: product.images?.[0]
+    await addItem({
+      product,
+      variantId,
+      variantTitle,
+      price,
+      quantity: 1,
+      selectedOptions
     });
     
-    await new Promise(resolve => setTimeout(resolve, 300));
-    toast.success(`${product.name} added to your bag`);
+    toast.success(`${product.node.title} added to your bag`);
     setAddingProduct(null);
   };
 
@@ -136,11 +106,11 @@ export default function Shop() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {products.map((product) => (
-              <ProductCard
-                key={product.id}
+              <ShopifyProductCard
+                key={product.node.id}
                 product={product}
                 onAddToCart={handleAddToCart}
-                isAdding={addingProduct === product.id}
+                isAdding={addingProduct}
               />
             ))}
           </div>
