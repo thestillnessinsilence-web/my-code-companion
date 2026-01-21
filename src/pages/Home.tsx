@@ -71,7 +71,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="font-sans text-stone-400 mb-10 max-w-xl mx-auto">
-              Each Oracle Bag is prepared with love and intention. Allow the universe to speak 
+              Each Spirit Bloom is prepared with love and intention. Allow the universe to speak 
               to you through crystals, herbs, and sacred wisdom.
             </p>
             <Link
