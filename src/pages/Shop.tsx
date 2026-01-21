@@ -17,7 +17,7 @@ export const ZODIAC_SIGNS = [
 const sampleProducts = [
   {
     id: '1',
-    name: 'Spirit Bloom: Oracle',
+    name: 'Winter Bloom',
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
     price: 48,
     images: [
@@ -28,7 +28,7 @@ const sampleProducts = [
   },
   {
     id: '2',
-    name: 'Spirit Bloom: Zodiac',
+    name: 'Astro Bloom',
     description: 'A personalized cosmic journey tailored to your unique celestial blueprint. Each bag includes a custom birth chart report with crystals and herbs aligned to your zodiac energy.',
     price: 69,
     images: [
