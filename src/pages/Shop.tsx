@@ -32,7 +32,7 @@ const sampleProducts = [
   {
     id: '2',
     name: 'Oracle Bloom',
-    description: 'A curated collection of healing crystals accompanied by a personalized message from the universe, perfect for those beginning their crystal journey.',
+    description: 'A curated collection of healing crystals accompanied by a personalized message from the oracle.',
     price: 22,
     images: [greenVelvetPouchClosed],
     imageAlt: 'Closed green velvet ritual pouch',
