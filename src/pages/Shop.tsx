@@ -45,7 +45,7 @@ const sampleProducts = [
     price: 89,
     images: [greenVelvetRitualBag],
     imageAlt: 'Green velvet ritual bag with crystals and herbs',
-    features: ['Custom birth chart report', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Birth chart reference card', 'Celestial soy candle'],
+    features: ['Seasonally based Zodiac Chart', 'Zodiac-aligned crystals', 'Astrological herbal blend', 'Personalized cosmic message', 'Celestial soy candle'],
     requiresZodiac: true
   }
 ];
