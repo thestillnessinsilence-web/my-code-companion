@@ -23,11 +23,10 @@ const sampleProducts = [
     description: 'A sacred vessel containing carefully selected healing crystals, dried herbs, organic tea, and a personalized message from the universe.',
     price: 48,
     images: [
-      meditationSpace,
       meditationRitualKit,
       greenVelvetRitualBag
     ],
-    imageAlt: 'Woman meditating in peaceful sacred space with crystals',
+    imageAlt: 'Meditation ritual kit with crystals, tea, and candle',
     features: ['Moon-blessed crystals', 'Organic herbal tea', 'Message from the oracle', 'Appalachian handmade herbage bookmark', 'Crystal information cards', 'Soy candle']
   },
   {
