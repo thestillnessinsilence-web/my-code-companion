@@ -11,12 +11,12 @@ export default function Home() {
     <>
       <Helmet>
         <title>Crystal and Herbal Ceremony Ritual Bags Handmade in Asheville, NC: Crystal Bloomery</title>
-        <meta name="description" content="Find your moment of serenity with Crystal Bloomery. Our signature mystery Spirit Blooms are complete contemplation ceremonies, featuring intuitively chosen crystals, calming tea, and a tea light." />
+        <meta name="description" content="Find your moment of serenity with Crystal Bloomery. Our signature mystery Bloom Satchels are complete contemplation ceremonies, featuring intuitively chosen crystals, calming tea, and a tea light." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Spirit Blooms",
+            "name": "Bloom Satchels",
             "description": "A complete, intuitively curated ceremony designed to nurture your spirit and ground your energy. Handmade in the Blue Ridge Mountains of Asheville, NC, each velvet vessel is a mystery—assembled with intention and components that are meant specifically for the recipient.",
             "image": "https://crystalbloomery.com/images/oracle-bag.jpg",
             "brand": {
@@ -71,7 +71,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="font-sans text-stone-400 mb-10 max-w-xl mx-auto">
-              Each Spirit Bloom is prepared with love and intention. Allow the universe to speak 
+              Each Bloom Satchel is prepared with love and intention. Allow the universe to speak 
               to you through crystals, herbs, and sacred wisdom.
             </p>
             <Link

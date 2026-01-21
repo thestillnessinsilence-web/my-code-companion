@@ -93,7 +93,7 @@ export default function Cart() {
     <>
       <Helmet>
         <title>Your Shopping Bag | Crystal Bloomery</title>
-        <meta name="description" content="Review your Crystal Bloomery order. Secure checkout for handcrafted Spirit Blooms with free shipping." />
+        <meta name="description" content="Review your Crystal Bloomery order. Secure checkout for handcrafted Bloom Satchels with free shipping." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <BreadcrumbSchema items={[
@@ -113,7 +113,7 @@ export default function Cart() {
             </div>
             <h2 className="font-serif text-3xl text-stone-800 mb-3">Your bag is empty</h2>
             <p className="font-sans text-stone-500 mb-10 max-w-sm mx-auto">
-              Discover our Spirit Blooms and begin your journey.
+              Discover our Bloom Satchels and begin your journey.
             </p>
             <Link
               to={createPageUrl('Shop')}
