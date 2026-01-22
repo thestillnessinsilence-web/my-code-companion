@@ -128,7 +128,7 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
       </div>
 
       {/* Content */}
-      <div className="px-4 sm:px-6 flex-1 flex flex-col pb-6">
+      <div className="px-4 sm:px-6 flex-1 flex flex-col pb-6 select-text">
         <h3 className="font-serif text-xl sm:text-2xl text-stone-800 mb-3 select-text">
           {product.node.title}
         </h3>
