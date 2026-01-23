@@ -97,8 +97,9 @@ export default function OracleBagSection() {
             transition={{ duration: 0.8 }}
           >
           <p className="font-serif text-xl sm:text-2xl text-stone-700 leading-relaxed mb-8">
-              Each Bloom Satchel is a sacred vessel containing carefully selected healing crystals, 
-              floral tea, and a personalized message from the universe.
+              Designed to inspire a moment of pause, each Bloom Satchel holds hand-selected stones, 
+              artwork, aromatic floral tea, and a unique note of insight. No two satchels are the same. 
+              For gifts, we offer bespoke note customization to perfectly capture your sentiment.
             </p>
             <p className="font-sans text-stone-600 leading-relaxed mb-8">
               More than just a gift, it's a bridge to ancient wisdom. Whether for yourself or someone 
