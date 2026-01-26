@@ -7,11 +7,45 @@ import { fetchShopifyProducts, ShopifyProduct } from '@/lib/shopify';
 import { useCartStore } from '@/stores/cartStore';
 import ShopifyProductCard from '@/components/shop/ShopifyProductCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+type Category = 'bloom-satchels' | 'flower-essences' | 'crystal-bracelets';
+
+const categoryInfo: Record<Category, { title: string; description: string }> = {
+  'bloom-satchels': {
+    title: 'Bloom Satchels',
+    description: `True clarity requires a pause. A moment to disconnect from external noise and listen to inner wisdom.
+
+Bloom Satchels are the space inbetween the pause.
+
+Pour the tea. Be with Stillness. Feel the Resonance of the Crystals.
+
+Untie the twine to open.
+
+The universe has a message that's been waiting for you.`
+  },
+  'flower-essences': {
+    title: 'Flower Essences',
+    description: `Vibrational remedies crafted from the healing energy of wildflowers and botanicals.
+
+Each essence captures the unique spirit of Appalachian flora, supporting emotional balance and spiritual growth.
+
+Add a few drops to water, tea, or directly under the tongue to invite gentle transformation.`
+  },
+  'crystal-bracelets': {
+    title: 'Crystal Bracelets',
+    description: `Wear your intentions close to your heart with our handcrafted crystal bracelets.
+
+Each piece is strung with carefully selected stones, chosen for their healing properties and natural beauty.
+
+A wearable reminder of your journey toward balance and clarity.`
+  }
+};
 
 export default function Shop() {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [addingProduct, setAddingProduct] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<Category>('bloom-satchels');
   const addItem = useCartStore((state) => state.addItem);
 
   useEffect(() => {
@@ -51,12 +85,14 @@ export default function Shop() {
     setAddingProduct(null);
   };
 
+  const currentCategory = categoryInfo[activeCategory];
+
   return (
     <>
       <Helmet>
         <title>Mystery Crystal & Tea Ceremony Kit | Bloom Satchels</title>
         <meta name="description" content="A complete ritual in a velvet bag. Includes intuitively chosen crystals, herbal tea, and a tea light. Perfect for meditation, contemplation, and peace. What message does the Oracle have for you?" />
-        <meta name="keywords" content="bloom satchels, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
+        <meta name="keywords" content="bloom satchels, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag, flower essences, crystal bracelets" />
         <link rel="canonical" href="https://crystalbloomery.com/shop" />
       </Helmet>
       <BreadcrumbSchema items={[
@@ -64,9 +100,36 @@ export default function Shop() {
         { name: "Shop", url: "https://crystalbloomery.com/shop" }
       ]} />
     <div className="min-h-screen bg-stone-50 pt-32 pb-12">
+      {/* Category Tabs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <Tabs value={activeCategory} onValueChange={(v) => setActiveCategory(v as Category)} className="w-full">
+          <TabsList className="w-full max-w-2xl mx-auto grid grid-cols-3 bg-stone-100 p-1 rounded-full">
+            <TabsTrigger 
+              value="bloom-satchels" 
+              className="rounded-full font-sans text-xs sm:text-sm tracking-wide data-[state=active]:bg-white data-[state=active]:text-stone-800 data-[state=active]:shadow-sm text-stone-600"
+            >
+              Bloom Satchels
+            </TabsTrigger>
+            <TabsTrigger 
+              value="flower-essences" 
+              className="rounded-full font-sans text-xs sm:text-sm tracking-wide data-[state=active]:bg-white data-[state=active]:text-stone-800 data-[state=active]:shadow-sm text-stone-600"
+            >
+              Flower Essences
+            </TabsTrigger>
+            <TabsTrigger 
+              value="crystal-bracelets" 
+              className="rounded-full font-sans text-xs sm:text-sm tracking-wide data-[state=active]:bg-white data-[state=active]:text-stone-800 data-[state=active]:shadow-sm text-stone-600"
+            >
+              Crystal Bracelets
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
+      </div>
+
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">
         <motion.div
+          key={activeCategory}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -76,19 +139,11 @@ export default function Shop() {
             Sacred Offerings
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-800 mb-6">
-            Bloom Satchels
+            {currentCategory.title}
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
-          <p className="font-sans text-sm sm:text-base text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            True clarity requires a pause. A moment to disconnect from external noise and listen to inner wisdom.
-            <br /><br />
-            Bloom Satchels are the space inbetween the pause.
-            <br /><br />
-            Pour the tea. Be with Stillness. Feel the Resonance of the Crystals.
-            <br /><br />
-            Untie the twine to open.
-            <br /><br />
-            The universe has a message that's been waiting for you.
+          <p className="font-sans text-sm sm:text-base text-stone-600 max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
+            {currentCategory.description}
           </p>
         </motion.div>
       </div>
