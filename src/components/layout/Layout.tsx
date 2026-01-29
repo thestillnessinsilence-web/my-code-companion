@@ -220,7 +220,7 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h4 className="font-sans text-xs tracking-widest uppercase text-stone-500 mb-3">Newsletter</h4>
               <NewsletterSignup />
-              <p className="text-xs text-stone-600 mt-2">Wisdom for your unfolding, exclusive offers, and crystal and herbal information.</p>
+              <p className="text-xs text-stone-600 mt-2">Exclusive offers and crystal and herbal information.</p>
               <a href="mailto:crystalbloomery@gmail.com" className="block mt-2 text-xs text-[#b695c8] hover:text-white transition-colors">
                 crystalbloomery@gmail.com
               </a>

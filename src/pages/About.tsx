@@ -274,13 +274,13 @@ export default function About() {
             
             <div className="text-center mb-8">
               <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#7c4d8f] mb-4 block">
-                Join Our Circle
+                Bloom With Us
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">
                 Subscribe to Our Newsletter
               </h2>
               <p className="font-sans text-stone-600 max-w-xl mx-auto">
-                Wisdom for your unfolding, exclusive offers, and crystal and herbal information.
+                Exclusive offers and crystal and herbal information.
               </p>
             </div>
             
