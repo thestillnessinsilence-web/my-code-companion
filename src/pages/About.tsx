@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, Heart, Leaf, Moon } from 'lucide-react';
 import blueRidgeView from '@/assets/asheville-blue-ridge-mountain-view-window.jpg';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import {
   Accordion,
   AccordionContent,
@@ -260,11 +261,40 @@ export default function About() {
           </svg>
         </div>
 
-        {/* Contact CTA */}
+        {/* Newsletter Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
+          className="mb-20"
+        >
+          <div className="relative p-8 sm:p-12 bg-gradient-to-br from-[#f3eef5] to-[#e8f5f2] rounded-lg">
+            <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-[#7c4d8f]/20" />
+            <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-[#10665c]/20" />
+            
+            <div className="text-center mb-8">
+              <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#7c4d8f] mb-4 block">
+                Join Our Circle
+              </span>
+              <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-4">
+                Subscribe to Our Newsletter
+              </h2>
+              <p className="font-sans text-stone-600 max-w-xl mx-auto">
+                Wisdom for your unfolding, exclusive offers, and crystal and herbal information.
+              </p>
+            </div>
+            
+            <div className="max-w-md mx-auto">
+              <NewsletterSignup />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Contact CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center"
         >
           <p className="font-serif text-lg sm:text-xl text-stone-700 italic mb-6">
