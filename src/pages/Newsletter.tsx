@@ -70,11 +70,10 @@ export default function Newsletter() {
               <Sparkles className="w-8 h-8 text-[#7c4d8f]" />
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl text-stone-800 mb-4">
-              Join Our Circle
+              Bloom With Us
             </h1>
             <p className="text-stone-600 leading-relaxed max-w-lg mx-auto">
-              Wisdom for your unfolding, exclusive offers, and crystal and herbal insights 
-              delivered straight to your inbox.
+              Exclusive offers and crystal and herbal insights delivered straight to your inbox.
             </p>
           </div>
 
