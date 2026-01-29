@@ -24,6 +24,7 @@ const BookReading = lazy(() => import("./pages/BookReading"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
+const Newsletter = lazy(() => import("./pages/Newsletter"));
 
 // Lazy load blog posts
 const MoonWater = lazy(() => import("./pages/blog/MoonWater"));
@@ -77,6 +78,7 @@ const App = () => (
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/newsletter" element={<Newsletter />} />
                 <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
