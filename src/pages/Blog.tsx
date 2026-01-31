@@ -7,6 +7,7 @@ import sacredHerbsImg from '@/assets/blog/sacred-herbs.jpg';
 import meditationSpaceImg from '@/assets/blog/meditation-space.jpg';
 import teaCeremonyImg from '@/assets/blog/tea-ceremony.jpg';
 import crystalEnergyImg from '@/assets/blog/crystal-energy.jpg';
+import flowerEssencesImg from '@/assets/blog/flower-essences-dropper-bottles-wildflowers.jpg';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export default function Blog() {
@@ -58,6 +59,14 @@ export default function Blog() {
       excerpt: 'Dive deep into the vibrational frequencies of amethyst, rose quartz, and other powerful healing stones.',
       image: crystalEnergyImg,
       category: 'Crystals'
+    },
+    {
+      slug: 'flower-essences',
+      title: 'The Healing Power of Flower Essences',
+      date: 'January 28, 2026',
+      excerpt: 'Discover how flower essences support emotional balance, from Hildegard of Bingen to Dr. Edward Bach.',
+      image: flowerEssencesImg,
+      category: 'Wellness'
     }
   ];
 

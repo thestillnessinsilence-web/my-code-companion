@@ -33,6 +33,7 @@ const SacredHerbGuide = lazy(() => import("./pages/blog/SacredHerbGuide"));
 const MeditationSpace = lazy(() => import("./pages/blog/MeditationSpace"));
 const TeaCeremonies = lazy(() => import("./pages/blog/TeaCeremonies"));
 const CrystalEnergy = lazy(() => import("./pages/blog/CrystalEnergy"));
+const FlowerEssences = lazy(() => import("./pages/blog/FlowerEssences"));
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
                   <Route path="/blog/meditation-space" element={<MeditationSpace />} />
                   <Route path="/blog/tea-ceremonies" element={<TeaCeremonies />} />
                   <Route path="/blog/crystal-energy" element={<CrystalEnergy />} />
+                  <Route path="/blog/flower-essences" element={<FlowerEssences />} />
                   <Route path="/events" element={<Events />} />
                   <Route path="/wholesale" element={<Wholesale />} />
                   <Route path="/bookreading" element={<BookReading />} />
