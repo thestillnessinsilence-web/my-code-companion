@@ -71,8 +71,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="font-sans text-stone-400 mb-10 max-w-xl mx-auto">
-              Each Bloom Satchel is prepared with love and intention. Allow the universe to speak 
-              to you through crystals, herbs, and sacred wisdom.
+              Each Bloom Satchel is prepared with love and intention.
             </p>
             <Link
               to={createPageUrl('Shop')}
