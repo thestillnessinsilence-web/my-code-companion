@@ -22,7 +22,7 @@ export default function BookReading() {
       icon: Phone,
       title: "Phone Readings",
       location: "Anywhere",
-      description: "Can't make it to Asheville? Connect with the Oracle from wherever you are. Phone readings offer the same intuitive guidance from the comfort of your own sacred space.",
+      description: "Can't make it to Asheville? Connect with us from wherever you are. Phone readings offer the same intuitive guidance from the comfort of your own sacred space.",
       details: [
         "Watercolor aura reading ($5 shipping charge for original watercolor otherwise copy by email)",
         "Mediumship or Tarot Reading available",
