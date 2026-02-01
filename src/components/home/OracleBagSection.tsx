@@ -103,9 +103,7 @@ export default function OracleBagSection() {
             </p>
             <p className="font-sans text-stone-600 leading-relaxed mb-8">
               More than just a gift, it's a bridge to ancient wisdom. Whether for yourself or someone 
-              special, your Bloom Satchel arrives carrying energies uniquely attuned to its recipient. 
-              The crystals are cleansed under moonlight, and each blessing is channeled with deep 
-              intention and love.
+              special, your Bloom Satchel arrives carrying energies uniquely attuned to its recipient.
             </p>
             <Link
               to={createPageUrl('Shop')}
