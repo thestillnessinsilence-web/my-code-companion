@@ -225,7 +225,7 @@ export default function FlowerEssences() {
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>Oral Use:</strong> Place 2-4 drops under the tongue or in a glass of water, 
-                  4 times daily
+                  up to 4 times daily
                 </li>
                 <li>
                   <strong>Topical Application:</strong> Add drops to bath water, body lotion, 
