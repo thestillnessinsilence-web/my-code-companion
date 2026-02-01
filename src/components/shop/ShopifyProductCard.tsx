@@ -61,12 +61,15 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
     }
   };
 
-  // Parse features from description
-  const features = product.node.description
-    .split('Features ')
-    .pop()
-    ?.split(', ')
-    .filter(f => f.length > 0 && f.length < 100) || [];
+  // Parse features from description - only if "Features " is explicitly present
+  const hasFeatures = product.node.description.includes('Features ');
+  const features = hasFeatures
+    ? product.node.description
+        .split('Features ')
+        .pop()
+        ?.split(', ')
+        .filter(f => f.length > 0 && f.length < 100) || []
+    : [];
 
   return (
     <motion.div
