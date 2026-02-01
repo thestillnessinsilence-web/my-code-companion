@@ -258,10 +258,9 @@ export default function FlowerEssences() {
                 for emotional balance and spiritual connection.
               </p>
               <p>
-                Whether you're drawn to flower essences, crystal healing, herbal teas, or all of 
-                the above, remember that these ancient practices share a common thread: the belief 
-                that nature provides what we need for healing, and that emotional wellness is the 
-                foundation of a vibrant life.
+              Whether you're drawn to flower essences, crystal healing, herbal teas, or all of 
+              the above, remember that these ancient practices share a common thread: the belief 
+              that nature can be healing and emotional wellness is the foundation for a happy life.
               </p>
             </div>
           </motion.div>
