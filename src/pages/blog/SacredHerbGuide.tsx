@@ -121,7 +121,7 @@ export default function SacredHerbGuide() {
                 </p>
                 <p className="mt-3">
                   Appalachian grannies kept dried chamomile in their apothecaries for "nervous stomach" and to 
-                  help fussy children sleep. The organic floral tea included in each Oracle Bag is inspired by this gentle tradition.
+                  help fussy children sleep. The organic floral tea included in each Oracle Satchel is inspired by this gentle tradition.
                 </p>
               </div>
 
@@ -202,7 +202,7 @@ export default function SacredHerbGuide() {
               the thoughtfully curated teas in our ceremony kits.
             </p>
             <p>
-              When you open your Oracle Bag and brew the floral tea within, you're connecting 
+              When you open your Oracle Satchel and brew the floral tea within, you're connecting 
               with a lineage of mountain healers, wise women, and plant lovers who understood that the earth 
               provides what we need for body, mind, and spirit.
             </p>

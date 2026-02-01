@@ -150,7 +150,7 @@ export default function TeaCeremonies() {
             <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Spirit Blooms Tea Ritual</h2>
             <p>
               Each Spirit Blooms includes organic herbal tea carefully selected to complement your 
-              crystal and message from the universe experience. Here's a complete ritual for working with your bag:
+              crystal and message from the universe experience. Here's a complete ritual for working with your satchel:
             </p>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
@@ -163,7 +163,7 @@ export default function TeaCeremonies() {
               </li>
               <li>
                 <strong>Heat the Water:</strong> As you heat water, read the tea information included 
-                with your bag. Each blend has unique properties to support your journey.
+                with your satchel. Each blend has unique properties to support your journey.
               </li>
               <li>
                 <strong>Steep Mindfully:</strong> Pour water over the tea and observe the color blooming. 

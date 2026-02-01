@@ -38,9 +38,9 @@ export const CartDrawer = () => {
       </SheetTrigger>
       <SheetContent className="w-full sm:max-w-md flex flex-col h-full bg-stone-50">
         <SheetHeader className="flex-shrink-0 border-b border-stone-200 pb-4">
-          <SheetTitle className="font-serif text-xl text-stone-800">Your Bag</SheetTitle>
+          <SheetTitle className="font-serif text-xl text-stone-800">Your Satchel</SheetTitle>
           <SheetDescription className="font-sans text-sm text-stone-500">
-            {totalItems === 0 ? "Your bag is empty" : `${totalItems} item${totalItems !== 1 ? 's' : ''} in your bag`}
+            {totalItems === 0 ? "Your satchel is empty" : `${totalItems} item${totalItems !== 1 ? 's' : ''} in your satchel`}
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-col flex-1 pt-6 min-h-0">
@@ -48,7 +48,7 @@ export const CartDrawer = () => {
             <div className="flex-1 flex items-center justify-center">
               <div className="text-center">
                 <ShoppingBag className="h-12 w-12 text-stone-300 mx-auto mb-4" strokeWidth={1} />
-                <p className="font-sans text-stone-500">Your bag is empty</p>
+                <p className="font-sans text-stone-500">Your satchel is empty</p>
                 <p className="font-sans text-sm text-stone-400 mt-1">Add a Bloom Satchel to begin</p>
               </div>
             </div>

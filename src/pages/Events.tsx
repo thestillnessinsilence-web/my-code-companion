@@ -66,7 +66,7 @@ export default function Events() {
                     <div>
                       <h3 className="font-serif text-xl text-stone-800 mb-3">Bulk & Custom Orders</h3>
                       <p className="font-sans text-stone-600 leading-relaxed">
-                        We offer bulk pricing for weddings, celebrations, and corporate events. Each bag can be customized 
+                        We offer bulk pricing for weddings, celebrations, and corporate events. Each satchel can be customized 
                         to honor the unique spirit of your occasion while maintaining the sacred intention of Appalachian wisdom.
                       </p>
                     </div>
@@ -111,7 +111,7 @@ export default function Events() {
             </div>
           </div>
 
-          {/* The Bespoke Oracle Bag Section */}
+          {/* The Bespoke Oracle Satchel Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

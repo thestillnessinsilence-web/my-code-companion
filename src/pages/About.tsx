@@ -39,23 +39,23 @@ export default function About() {
   const faqItems = [
     {
       question: "What is a Bloom Satchel?",
-      answer: "A Bloom Satchel is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized message from the universe. Each bag is intuitively assembled to carry unique energies meant specifically for its recipient."
+      answer: "A Bloom Satchel is a sacred vessel containing carefully selected healing crystals, dried Herbary, organic tea, a soy candle, and a personalized message from the universe. Each satchel is intuitively assembled to carry unique energies meant specifically for its recipient."
     },
     {
       question: "What materials are included in each Bloom Satchel?",
-      answer: "Each Bloom Satchel includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal message from the universe channeled just for you. Some bags may also have a special gift not listed! It's a mystery after all!"
+      answer: "Each Bloom Satchel includes: moon-blessed healing crystals, organic loose-leaf floral tea, a soy candle, an Appalachian handmade herbage bookmark, crystal information cards explaining your stones' properties, and a personal message from the universe channeled just for you. Some satchels may also have a special gift not listed! It's a mystery after all!"
     },
     {
       question: "Where is Bloom Satchel made?",
-      answer: "All Bloom Satchel bags are hand-assembled in the heart of the Appalachian Mountains in Asheville, North Carolina. We work in rhythm with nature, honoring the lineage of herbal wisdom that has been passed down through generations in this sacred region."
+      answer: "All Bloom Satchels are hand-assembled in the heart of the Appalachian Mountains in Asheville, North Carolina. We work in rhythm with nature, honoring the lineage of herbal wisdom that has been passed down through generations in this sacred region."
     },
     {
-      question: "How are the crystals selected for my bag?",
+      question: "How are the crystals selected for my satchel?",
       answer: "Each crystal is intuitively chosen for the recipient. We cleanse all crystals under moonlight and charge them with healing intentions before they are placed in your Bloom Satchel. The selection process is guided by spiritual intuition to ensure the stones resonate with your energy."
     },
     {
       question: "Are the teas safe to consume?",
-      answer: "Yes, all teas included in our Bloom Satchel bags are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming and speak to your health care provider."
+      answer: "Yes, all teas included in our Bloom Satchels are made from organic, food-grade ingredients that are safe to brew and drink. Each tea box includes a list of ingredients and their properties. If you have allergies or are pregnant, please review the ingredients before consuming and speak to your health care provider."
     },
     {
       question: "How should I use my Bloom Satchel?",
@@ -63,7 +63,7 @@ export default function About() {
     },
     {
       question: "Can I purchase a Bloom Satchel as a gift?",
-      answer: "Absolutely! A Bloom Satchel makes a meaningful gift for birthdays, weddings, baby showers, and other special occasions. Each bag arrives beautifully presented and ready to gift. The intuitive nature of our selection process means the bag will resonate with whoever receives it."
+      answer: "Absolutely! A Bloom Satchel makes a meaningful gift for birthdays, weddings, baby showers, and other special occasions. Each satchel arrives beautifully presented and ready to gift. The intuitive nature of our selection process means the satchel will resonate with whoever receives it."
     },
     {
       question: "Do you offer custom or bulk orders for events?",

@@ -112,7 +112,7 @@ export default function Blog() {
                 <div className="relative overflow-hidden rounded-lg mb-4 aspect-[4/3] bg-stone-200">
                   <img
                     src={post.image}
-                    alt={`${post.title} - ritual herbal bag crystal ceremony spiritual gift Asheville`}
+                    alt={`${post.title} - ritual herbal satchel crystal ceremony spiritual gift Asheville`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />

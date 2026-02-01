@@ -18,7 +18,7 @@ export default function Home() {
             "@type": "Product",
             "name": "Bloom Satchels",
             "description": "A complete, intuitively curated ceremony designed to nurture your spirit and ground your energy. Handmade in the Blue Ridge Mountains of Asheville, NC, each velvet vessel is a mystery—assembled with intention and components that are meant specifically for the recipient.",
-            "image": "https://crystalbloomery.com/images/oracle-bag.jpg",
+            "image": "https://crystalbloomery.com/images/oracle-satchel.jpg",
             "brand": {
               "@type": "Brand",
               "name": "Crystal Bloomery"
