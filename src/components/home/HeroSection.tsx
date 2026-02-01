@@ -98,8 +98,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="font-sans text-base sm:text-lg text-stone-300 leading-relaxed mb-10 max-w-lg">
-            Handcrafted in the heart of Asheville, North Carolina. Crystals, herbs, and wildcrafted 
-            Appalachian herbs come together—each Bloom Satchel carries a unique resonance, made just for you.
+            Handcrafted in the heart of Asheville, North Carolina. Crystals, herbs and Appalachian wisdom come together—each Bloom Satchel carries a unique resonance, made just for you.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

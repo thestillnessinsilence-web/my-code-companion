@@ -182,7 +182,7 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="font-serif text-lg text-white">Crystal Bloomery</span>
               </Link>
               <p className="text-xs leading-relaxed text-stone-500 mb-3">
-                Handcrafted in the heart of Asheville, North Carolina. Crystals, herbs, and wildcrafted Appalachian artwork come together—each Bloom Satchel carries a unique resonance, made just for you.
+                Handcrafted in the heart of Asheville, North Carolina. Crystals, herbs and Appalachian wisdom come together—each Bloom Satchel carries a unique resonance, made just for you.
               </p>
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/crystalbloomery" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="Instagram">
