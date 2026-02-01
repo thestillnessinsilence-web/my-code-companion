@@ -13,21 +13,21 @@ export default function OracleBagSection() {
       title: 'Unwrap the Velvet Satchel',
       description: 'Find a quiet, peaceful space. Gently open your Bloom Satchel and discover the crystals, herbs, soy candle, and Appalachian artwork made just for you.',
       image: oracleBagWildflowers,
-      alt: 'Red velvet Oracle Bag resting on a rustic wooden desk next to a vase of wildflowers and an open journal near a window.'
+      alt: 'Red velvet Oracle Satchel resting on a rustic wooden desk next to a vase of wildflowers and an open journal near a window.'
     },
     {
       number: '02',
       title: 'Prepare the Flower Tea',
       description: 'Brew the organic floral tea included in your satchel. Each one is unique, be sure to read the properties listed on each tea box.',
       image: herbalRoseTeaRitual,
-      alt: 'Ceramic mug of herbal tea topped with dried rose buds, sitting on a wooden desk next to a red velvet Oracle Bag, a lit tea light, and an open journal for a meditation ritual.'
+      alt: 'Ceramic mug of herbal tea topped with dried rose buds, sitting on a wooden desk next to a red velvet Oracle Satchel, a lit tea light, and an open journal for a meditation ritual.'
     },
     {
       number: '03',
       title: 'Enter Deep Meditation',
       description: 'Hold your crystals and close your eyes. Let the energy flow through you. Read your personal message from the universe and receive the guidance meant for you.',
       image: meditationRitualKit,
-      alt: 'Overhead view of a self-care ritual setup on a low wooden table, featuring a red velvet Oracle Bag, a cup of rose herbal tea, a lit candle, a rolled scroll, and various healing crystals including amazonite and an amethyst heart.'
+      alt: 'Overhead view of a self-care ritual setup on a low wooden table, featuring a red velvet Oracle Satchel, a cup of rose herbal tea, a lit candle, a rolled scroll, and various healing crystals including amazonite and an amethyst heart.'
     },
   ];
 
@@ -71,7 +71,7 @@ export default function OracleBagSection() {
 
         {/* Main Content Grid */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center mb-20">
-          {/* Oracle Bag Photo */}
+          {/* Oracle Satchel Photo */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -82,7 +82,7 @@ export default function OracleBagSection() {
             <div className="relative aspect-square overflow-hidden rounded-lg bg-gradient-to-br from-purple-50 via-stone-50 to-emerald-50">
               <img
                 src={greenVelvetRitualBag}
-                alt="Green velvet ritual bag lying on a mossy wooden surface, filled with pine needles and a scroll, surrounded by amethyst, rose quartz, and dried petals in a sunlit forest setting."
+                alt="Green velvet ritual satchel lying on a mossy wooden surface, filled with pine needles and a scroll, surrounded by amethyst, rose quartz, and dried petals in a sunlit forest setting."
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

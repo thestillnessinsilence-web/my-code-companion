@@ -200,7 +200,7 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
             ) : (
               <span className="flex items-center gap-2 justify-center">
                 <Sparkles className="w-4 h-4" strokeWidth={1} />
-                Add to Bag
+                Add to Satchel
               </span>
             )}
           </button>

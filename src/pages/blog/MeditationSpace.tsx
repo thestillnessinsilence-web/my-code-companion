@@ -147,7 +147,7 @@ export default function MeditationSpace() {
             <h2 className="font-serif text-2xl text-stone-800 mt-8 mb-4">Setting Up Your Spirit Blooms Ritual Space</h2>
             <p>
               Your Spirit Blooms contains everything you need for a meaningful meditation ritual. Here's how 
-              to create a dedicated space for working with your bag:
+              to create a dedicated space for working with your satchel:
             </p>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
@@ -156,7 +156,7 @@ export default function MeditationSpace() {
               </li>
               <li>
                 <strong>Tea Station:</strong> Keep a small electric kettle nearby for brewing the organic 
-                tea included in your bag. A favorite mug adds to the ritual.
+                tea included in your satchel. A favorite mug adds to the ritual.
               </li>
               <li>
                 <strong>Journal Space:</strong> Have a journal and pen ready for recording insights from 

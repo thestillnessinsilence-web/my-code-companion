@@ -61,7 +61,7 @@ export default function Cart() {
     const newQuantity = currentQuantity + delta;
     if (newQuantity <= 0) {
       removeFromCart(id);
-      toast.success('Item removed from bag');
+      toast.success('Item removed from satchel');
     } else if (newQuantity > 50) {
       toast.error('Maximum 50 bags allowed per order');
     } else {
@@ -71,7 +71,7 @@ export default function Cart() {
 
   const handleRemoveItem = (id: string) => {
     removeFromCart(id);
-    toast.success('Item removed from bag');
+    toast.success('Item removed from satchel');
   };
 
   const subtotal = totalPrice;
@@ -92,7 +92,7 @@ export default function Cart() {
   return (
     <>
       <Helmet>
-        <title>Your Shopping Bag | Crystal Bloomery</title>
+        <title>Your Shopping Satchel | Crystal Bloomery</title>
         <meta name="description" content="Review your Crystal Bloomery order. Secure checkout for handcrafted Bloom Satchels with free shipping." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
@@ -111,7 +111,7 @@ export default function Cart() {
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#e8f5f2] to-[#f3eef5] flex items-center justify-center mx-auto mb-8 shadow-sm">
               <ShoppingBag className="w-8 h-8 text-[#10665c]" strokeWidth={1.5} />
             </div>
-            <h2 className="font-serif text-3xl text-stone-800 mb-3">Your bag is empty</h2>
+            <h2 className="font-serif text-3xl text-stone-800 mb-3">Your satchel is empty</h2>
             <p className="font-sans text-stone-500 mb-10 max-w-sm mx-auto">
               Discover our Bloom Satchels and begin your journey.
             </p>
@@ -453,7 +453,7 @@ export default function Cart() {
           >
             {/* Header */}
             <div className="flex items-center justify-between">
-              <h1 className="font-serif text-3xl text-stone-800">Your Bag</h1>
+              <h1 className="font-serif text-3xl text-stone-800">Your Satchel</h1>
               <span className="font-sans text-sm text-stone-500 bg-stone-200/50 px-3 py-1 rounded-full">
                 {cartItems.reduce((sum, item) => sum + item.quantity, 0)} {cartItems.reduce((sum, item) => sum + item.quantity, 0) === 1 ? 'item' : 'items'}
               </span>

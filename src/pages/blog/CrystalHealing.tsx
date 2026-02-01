@@ -211,7 +211,7 @@ export default function CrystalHealing() {
               another. Trust your experience and allow your relationship with your crystals to develop naturally.
             </p>
             <p>
-              Each Oracle Bag from Crystal Bloomery includes carefully selected crystals along with information 
+              Each Oracle Satchel from Crystal Bloomery includes carefully selected crystals along with information 
               cards explaining their traditional properties, helping you begin your crystal journey with guidance 
               and intention.
             </p>

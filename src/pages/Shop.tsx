@@ -57,7 +57,7 @@ export default function Shop() {
       selectedOptions
     });
     
-    toast.success(`${product.node.title} added to your bag`);
+    toast.success(`${product.node.title} added to your satchel`);
     setAddingProduct(null);
   };
 
@@ -65,8 +65,8 @@ export default function Shop() {
     <>
       <Helmet>
         <title>Mystery Crystal & Tea Ceremony Kit | Bloom Satchels</title>
-        <meta name="description" content="A complete ritual in a velvet bag. Includes intuitively chosen crystals, herbal tea, and a tea light. Perfect for meditation, contemplation, and peace. What message does the Oracle have for you?" />
-        <meta name="keywords" content="bloom satchels, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual bag" />
+        <meta name="description" content="A complete ritual in a velvet satchel. Includes intuitively chosen crystals, herbal tea, and a tea light. Perfect for meditation, contemplation, and peace. What message does the Oracle have for you?" />
+        <meta name="keywords" content="bloom satchels, crystal healing, herbal tea, ceremony kit, spiritual gifts, Asheville crystals, handmade ritual satchel" />
         <link rel="canonical" href="https://crystalbloomery.com/shop" />
       </Helmet>
       <BreadcrumbSchema items={[
