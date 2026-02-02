@@ -158,7 +158,7 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
               {product.node.options[0]?.name || 'Select Option'} *
             </label>
             <Select value={selectedVariantId} onValueChange={setSelectedVariantId}>
-              <SelectTrigger className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0]">
+              <SelectTrigger className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0] cursor-pointer">
                 <SelectValue placeholder="Choose..." />
               </SelectTrigger>
               <SelectContent className="bg-white border-stone-200 z-[100]">
