@@ -161,7 +161,7 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
               <SelectTrigger className="w-full bg-white border-stone-200 focus:ring-[#9b6cb0] focus:border-[#9b6cb0]">
                 <SelectValue placeholder="Choose..." />
               </SelectTrigger>
-              <SelectContent className="bg-white border-stone-200">
+              <SelectContent className="bg-white border-stone-200 z-[100]">
                 {product.node.variants.edges.map((variant) => (
                   <SelectItem 
                     key={variant.node.id} 
