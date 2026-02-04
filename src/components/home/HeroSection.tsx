@@ -101,21 +101,13 @@ export default function HeroSection() {
             Handcrafted in the heart of Asheville, North Carolina. Crystals, herbs and Appalachian wisdom come together—each Bloom Satchel carries a unique resonance, made just for you.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              to={createPageUrl('Shop')}
-              className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#10665c] to-[#0d534a] text-white px-8 py-4 font-sans text-sm tracking-widest uppercase transition-all hover:shadow-lg hover:shadow-emerald-900/30"
-            >
-              Shop Bloom Satchels
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
-            <Link
-              to={createPageUrl('About')}
-              className="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-8 py-4 font-sans text-sm tracking-widest uppercase transition-all hover:bg-white/10"
-            >
-              Our Story
-            </Link>
-          </div>
+          <Link
+            to={createPageUrl('Shop')}
+            className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#10665c] to-[#0d534a] text-white px-8 py-4 font-sans text-sm tracking-widest uppercase transition-all hover:shadow-lg hover:shadow-emerald-900/30"
+          >
+            Shop Bloom Satchels
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </motion.div>
       </div>
 
