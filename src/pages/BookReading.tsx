@@ -12,10 +12,10 @@ export default function BookReading() {
       location: "Asheville, NC",
       description: "Experience a deeply personal intuitive reading in the heart of the Blue Ridge Mountains. Reading will take place at the Crystal Bloomery workshop.",
       details: [
-        "Watercolor aura reading",
-        "Mediumship or Tarot Reading available",
-        "$60 for 30 minutes",
-        "Reading notes sent to you by email"
+        "Watercolor aura reading.",
+        "Mediumship or Tarot Reading available.",
+        "$60 for 30 minutes.",
+        "Reading notes sent to you by email."
       ]
     },
     {
@@ -24,10 +24,10 @@ export default function BookReading() {
       location: "Anywhere",
       description: "Can't make it to Asheville? Connect with us from wherever you are. Phone readings offer the same intuitive guidance from the comfort of your own sacred space.",
       details: [
-        "Watercolor aura reading ($5 shipping charge for original watercolor otherwise copy by email)",
-        "Mediumship or Tarot Reading available",
-        "$60 for 30 minutes",
-        "Reading notes sent to you by email"
+        "Watercolor aura reading ($5 shipping charge for original watercolor otherwise copy by email).",
+        "Mediumship or Tarot Reading available.",
+        "$60 for 30 minutes.",
+        "Reading notes sent to you by email."
       ]
     }
   ];
