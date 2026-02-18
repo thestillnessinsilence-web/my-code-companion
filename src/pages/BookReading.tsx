@@ -62,7 +62,7 @@ export default function BookReading() {
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
             <p className="font-sans text-stone-600 max-w-2xl mx-auto leading-relaxed text-lg">
-              Receive personalized intuitive guidance through crystal energy and oracle wisdom. 
+              Receive personalized intuitive guidance. 
               Available in-person in Asheville, NC or via phone from anywhere.
             </p>
           </motion.div>
