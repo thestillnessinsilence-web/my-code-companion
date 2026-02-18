@@ -90,7 +90,7 @@ export default function Wholesale() {
             Partner With Us
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-800 mb-6">
-            Wholesale Crystal Ceremony Kits
+            Wholesale Bloom Satchels
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-stone-600 max-w-2xl mx-auto leading-relaxed text-lg">
