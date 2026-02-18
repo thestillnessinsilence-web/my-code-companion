@@ -39,7 +39,7 @@ export default function Events() {
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9b6cb0] to-transparent mx-auto mb-8" />
           <p className="font-sans text-stone-600 max-w-2xl mx-auto leading-relaxed text-lg">
-            Celebrate life's sacred moments with custom Bloom Satchel gifts for weddings and special events.
+            Celebrate life's sacred moments with custom Bloom Satchel gifts for weddings and other special events.
           </p>
         </motion.div>
       </div>
