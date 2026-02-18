@@ -103,6 +103,7 @@ export default function Events() {
                         <li>• Corporate Retreats & Team Events</li>
                         <li>• Memorial Services & Celebrations of Life</li>
                         <li>• Spiritual Gatherings & Ceremonies</li>
+                        <li>• Charity Events</li>
                       </ul>
                     </div>
                   </div>
