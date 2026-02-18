@@ -130,7 +130,7 @@ export default function Events() {
               <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto mb-8">
                 Move beyond the ordinary. Our signature velvet Bloom Satchel is a thoughtfully crafted, fully customizable 
                 meaningful favor designed to hold the unique energy of your gathering. Whether celebrating a wedding, hosting 
-                a private retreat, or marking a meaningful milestone, each Bloom Satchel is curated with intention to reflect 
+                a private retreat, or marking an important milestone, each Bloom Satchel is curated with intention to reflect 
                 your vision and the spirit of the moment.
               </p>
               <p className="font-serif text-lg text-stone-700 text-center italic">
