@@ -122,14 +122,14 @@ export default function Events() {
             <div className="text-center mb-8">
               <h2 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2">The Bespoke Bloom Satchel</h2>
               <p className="font-sans text-sm tracking-wide text-[#7c4d8f] uppercase">
-                A Custom Ritual Favor for Weddings & Private Events
+                A Custom Meaningful Favor for Weddings & Private Events
               </p>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm p-8 sm:p-10 rounded-lg border border-stone-200 mb-8">
               <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto mb-8">
                 Move beyond the ordinary. Our signature velvet Bloom Satchel is a thoughtfully crafted, fully customizable 
-                ritual favor designed to hold the unique energy of your gathering. Whether celebrating a wedding, hosting 
+                meaningful favor designed to hold the unique energy of your gathering. Whether celebrating a wedding, hosting 
                 a private retreat, or marking a meaningful milestone, each Bloom Satchel is curated with intention to reflect 
                 your vision and the spirit of the moment.
               </p>
@@ -159,7 +159,7 @@ export default function Events() {
 
             <p className="font-sans text-stone-600 leading-relaxed text-center max-w-3xl mx-auto">
               From simple, elegant herbal sachets to luxurious jewelry keepsakes, we collaborate with you to create 
-              ritual favors that feel intentional, beautiful, and unforgettable—designed to honor both the occasion 
+              meaningful favors that feel intentional, beautiful, and unforgettable—designed to honor both the occasion 
               and the people you share it with. In keeping true with our mission, our focus is on delivering a special 
               message of love, peace, and happiness in each Bloom Satchel.
             </p>
