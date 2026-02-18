@@ -46,7 +46,7 @@ export default function Blog() {
     },
     {
       slug: 'tea-ceremonies',
-      title: 'The Art of Tea Ceremonies',
+      title: 'The Art of Energy in Motion',
       date: 'December 20, 2025',
       excerpt: 'Transform your daily tea into a mindful ceremony with our guide to sacred tea practices.',
       image: teaCeremonyImg,
