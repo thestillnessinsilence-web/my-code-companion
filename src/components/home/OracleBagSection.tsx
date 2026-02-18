@@ -134,7 +134,7 @@ export default function OracleBagSection() {
             </h3>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mx-auto mb-6" />
             <p className="font-sans text-sm text-stone-600 max-w-2xl mx-auto leading-relaxed">
-              Your Bloom Satchel is more than a gift—it's a sacred ceremony for peace and developing your intuition. Follow these steps to unlock its full healing potential and connect with the universe's wisdom.
+              It's a moment of pause to allow for the development of peace and gratitude. Through pause a spaciousness is created allowing for joy and wisdom to flow through.
             </p>
           </motion.div>
 
