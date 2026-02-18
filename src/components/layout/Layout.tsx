@@ -45,9 +45,8 @@ export default function Layout({ children }: LayoutProps) {
       { name: 'Newsletter', page: 'Newsletter' },
       { name: 'Contact', page: 'Contact' }
     ]},
-    { name: 'Wholesale', page: 'Wholesale', submenu: [
-      { name: 'Events', page: 'Events' }
-    ]},
+    { name: 'Wholesale', page: 'Wholesale' },
+    { name: 'Events', page: 'Events' },
   ];
 
   return (
