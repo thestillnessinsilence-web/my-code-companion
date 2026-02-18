@@ -167,10 +167,9 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
                     key={variant.node.id} 
                     value={variant.node.id} 
                     className="cursor-pointer hover:bg-stone-50"
-                    disabled={!variant.node.availableForSale}
+                    disabled={false}
                   >
                     {variant.node.title}
-                    {!variant.node.availableForSale && ' (Sold Out)'}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -185,7 +184,7 @@ export default function ShopifyProductCard({ product, onAddToCart, isAdding }: S
           </span>
           <button
             onClick={handleAddToCart}
-            disabled={isAdding === selectedVariantId || !selectedVariant?.availableForSale}
+            disabled={isAdding === selectedVariantId}
             className="relative bg-gradient-to-r from-[#d4af37] to-[#c9a961] hover:from-[#c9a961] hover:to-[#d4af37] text-stone-900 font-sans text-xs tracking-widest uppercase px-6 sm:px-8 py-3 sm:py-4 shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
             style={{
               borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
